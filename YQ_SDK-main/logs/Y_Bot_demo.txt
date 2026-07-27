@@ -1,0 +1,1850 @@
+[[30m2026-07-26 21:27:24.632[0m] [LOG] [I] [32mStart_Init_Device
+[0m
+[[30m21:27:24[0m][I] [32mYAML_Driver_Version 0.0.1[0m
+[[30m21:27:24[0m][I] [32mYAML_Driver_Version_RST: 0.0.0[0m
+[[30m21:27:24[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13878 all:10[0m
+[[30m21:27:24[0m][I] [35mAdd_Device_To_Map: [0m[93mMain_Switch_Board[0m
+[[30m21:27:24[0m][I] [35mSave_ETH_Device_To_Map:[0m[93mMain_Switch_Board[0m
+[[30m21:27:24[0m][I] [35mMain_CMD_Get_Info# [0m[93m1 0 0 0 1[0m
+[[30m21:27:24[0m][I] [35mMain_IO_Mod# [0m[93m0[0m
+[[30m21:27:24[0m][I] [35mMain_CMD_Can_ID# [0m[93m101[0m
+[[30m21:27:24[0m][I] [35mMain_CMD_Port# [0m[93m15100[0m
+[[30m21:27:24[0m][I] [35mMain_CMD_ETH_IP# [0m[93m192.168.3.101[0m
+[[30m21:27:24[0m][I] [35mMain_CMD_PC_IP# [0m[93m192.168.3.245[0m
+[[30m21:27:24[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m1000[0m
+[[30m21:27:24[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m21:27:24[0m][I] Main_Switch_Board Init GO
+[[30m21:27:24[0m][I] Main_Switch_Board IS Init OK
+[[30m21:27:24[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13879 all:10[0m
+[[30m21:27:24[0m][I] [35mAdd_Device_To_Map: [0m[93mAuto_Set_Id_0[0m
+[[30m21:27:24[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m2[0m
+[[30m21:27:24[0m][I] [32mDevice NUM: 8[0m
+[[30m21:27:24[0m][I] [34mSet Device [0m[93m[4mMotor_1[0m[34m ID To: [0m[33m10[0m
+[[30m21:27:24[0m][I] [34mSet Device [0m[93m[4mMotor_2[0m[34m ID To: [0m[33m11[0m
+[[30m21:27:24[0m][I] [34mSet Device [0m[93m[4mMotor_3[0m[34m ID To: [0m[33m12[0m
+[[30m21:27:24[0m][I] [34mSet Device [0m[93m[4mMotor_4[0m[34m ID To: [0m[33m13[0m
+[[30m21:27:24[0m][I] [34mSet Device [0m[93m[4mMotor_5[0m[34m ID To: [0m[33m14[0m
+[[30m21:27:24[0m][I] [34mSet Device [0m[93m[4mMotor_6[0m[34m ID To: [0m[33m15[0m
+[[30m21:27:24[0m][I] [34mSet Device [0m[93m[4mMotor_7[0m[34m ID To: [0m[33m16[0m
+[[30m21:27:24[0m][I] [34mSet Device [0m[93m[4mMotor_8[0m[34m ID To: [0m[33m17[0m
+[[30m21:27:24[0m][I] [32mAuto_Set_Id_0 IS Init OK[0m
+[[30m21:27:24[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13880 all:10[0m
+[[30m21:27:24[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_1[0m
+[[30m21:27:24[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m21:27:24[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m21:27:24[0m][I] [35mMain_CMD_Can_ID# [0m[93m10[0m
+[[30m21:27:24[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m21:27:24[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m21:27:24[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m21:27:24[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m21:27:24[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m21:27:24[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:24[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:24[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m21:27:24[0m][I] [35mMotor_1 IS Init OK EN:[0m[93m1[0m
+[[30m21:27:24[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13881 all:10[0m
+[[30m21:27:24[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_2[0m
+[[30m21:27:24[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m21:27:24[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m21:27:24[0m][I] [35mMain_CMD_Can_ID# [0m[93m11[0m
+[[30m21:27:24[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m21:27:24[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m21:27:24[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m21:27:24[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m21:27:24[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m21:27:24[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:24[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:24[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m21:27:24[0m][I] [35mMotor_2 IS Init OK EN:[0m[93m1[0m
+[[30m21:27:24[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13882 all:10[0m
+[[30m21:27:24[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_3[0m
+[[30m21:27:24[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m21:27:24[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m21:27:24[0m][I] [35mMain_CMD_Can_ID# [0m[93m12[0m
+[[30m21:27:24[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m21:27:24[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m21:27:24[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m21:27:24[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m21:27:24[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m21:27:24[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:24[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:25[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m21:27:25[0m][I] [35mMotor_3 IS Init OK EN:[0m[93m1[0m
+[[30m21:27:25[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13883 all:10[0m
+[[30m21:27:25[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_4[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m21:27:25[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_Can_ID# [0m[93m13[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m21:27:25[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m21:27:25[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:25[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:25[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m21:27:25[0m][I] [35mMotor_4 IS Init OK EN:[0m[93m1[0m
+[[30m21:27:25[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13884 all:10[0m
+[[30m21:27:25[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_5[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m21:27:25[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_Can_ID# [0m[93m14[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m21:27:25[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m21:27:25[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:25[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:25[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m21:27:25[0m][I] [35mMotor_5 IS Init OK EN:[0m[93m1[0m
+[[30m21:27:25[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13885 all:10[0m
+[[30m21:27:25[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_6[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m21:27:25[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_Can_ID# [0m[93m15[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m21:27:25[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m21:27:25[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:25[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:25[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m21:27:25[0m][I] [35mMotor_6 IS Init OK EN:[0m[93m1[0m
+[[30m21:27:25[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13886 all:10[0m
+[[30m21:27:25[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_7[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m21:27:25[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_Can_ID# [0m[93m16[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m21:27:25[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m21:27:25[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:25[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:25[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m21:27:25[0m][I] [35mMotor_7 IS Init OK EN:[0m[93m1[0m
+[[30m21:27:25[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13887 all:10[0m
+[[30m21:27:25[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_8[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m21:27:25[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_Can_ID# [0m[93m17[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m21:27:25[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m21:27:25[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m21:27:25[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:25[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:25[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m21:27:25[0m][I] [35mMotor_8 IS Init OK EN:[0m[93m1[0m
+[[30m21:27:25[0m][I] [96m:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::[0m
+[[30m21:27:25[0m][I] [35mDevice_Name: [0m[93mAuto_Set_Id_0 ID: 1[0m[94m Online: 2[0m
+[[30m21:27:25[0m][I] [35mDevice_Name: [0m[93mMain_Switch_Board ID: 101[0m[94m Online: 1[0m
+[[30m21:27:25[0m][I] [35mDevice_Name: [0m[93mMotor_1 ID: 10[0m[94m Online: 1[0m
+[[30m21:27:25[0m][I] [35mDevice_Name: [0m[93mMotor_2 ID: 11[0m[94m Online: 1[0m
+[[30m21:27:25[0m][I] [35mDevice_Name: [0m[93mMotor_3 ID: 12[0m[94m Online: 1[0m
+[[30m21:27:25[0m][I] [35mDevice_Name: [0m[93mMotor_4 ID: 13[0m[94m Online: 1[0m
+[[30m21:27:25[0m][I] [35mDevice_Name: [0m[93mMotor_5 ID: 14[0m[94m Online: 1[0m
+[[30m21:27:25[0m][I] [35mDevice_Name: [0m[93mMotor_6 ID: 15[0m[94m Online: 1[0m
+[[30m21:27:25[0m][I] [35mDevice_Name: [0m[93mMotor_7 ID: 16[0m[94m Online: 1[0m
+[[30m21:27:25[0m][I] [35mDevice_Name: [0m[93mMotor_8 ID: 17[0m[94m Online: 1[0m
+[[30m21:27:25[0m][I] [94m[4m[1mInit_end![0m
+[[30m2026-07-26 21:27:33.108[0m] [LOG] [I] [32mStart_Init_Device
+[0m
+[[30m21:27:33[0m][I] [32mYAML_Driver_Version 0.0.1[0m
+[[30m21:27:33[0m][I] [32mYAML_Driver_Version_RST: 0.0.0[0m
+[[30m21:27:33[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13878 all:10[0m
+[[30m21:27:33[0m][I] [35mAdd_Device_To_Map: [0m[93mMain_Switch_Board[0m
+[[30m21:27:33[0m][I] [35mSave_ETH_Device_To_Map:[0m[93mMain_Switch_Board[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Get_Info# [0m[93m1 0 0 0 1[0m
+[[30m21:27:33[0m][I] [35mMain_IO_Mod# [0m[93m0[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Can_ID# [0m[93m101[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Port# [0m[93m15100[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_ETH_IP# [0m[93m192.168.3.101[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_PC_IP# [0m[93m192.168.3.245[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m1000[0m
+[[30m21:27:33[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m21:27:33[0m][I] Main_Switch_Board Init GO
+[[30m21:27:33[0m][I] Main_Switch_Board IS Init OK
+[[30m21:27:33[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13879 all:10[0m
+[[30m21:27:33[0m][I] [35mAdd_Device_To_Map: [0m[93mAuto_Set_Id_0[0m
+[[30m21:27:33[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m2[0m
+[[30m21:27:33[0m][I] [32mDevice NUM: 8[0m
+[[30m21:27:33[0m][I] [34mSet Device [0m[93m[4mMotor_1[0m[34m ID To: [0m[33m10[0m
+[[30m21:27:33[0m][I] [34mSet Device [0m[93m[4mMotor_2[0m[34m ID To: [0m[33m11[0m
+[[30m21:27:33[0m][I] [34mSet Device [0m[93m[4mMotor_3[0m[34m ID To: [0m[33m12[0m
+[[30m21:27:33[0m][I] [34mSet Device [0m[93m[4mMotor_4[0m[34m ID To: [0m[33m13[0m
+[[30m21:27:33[0m][I] [34mSet Device [0m[93m[4mMotor_5[0m[34m ID To: [0m[33m14[0m
+[[30m21:27:33[0m][I] [34mSet Device [0m[93m[4mMotor_6[0m[34m ID To: [0m[33m15[0m
+[[30m21:27:33[0m][I] [34mSet Device [0m[93m[4mMotor_7[0m[34m ID To: [0m[33m16[0m
+[[30m21:27:33[0m][I] [34mSet Device [0m[93m[4mMotor_8[0m[34m ID To: [0m[33m17[0m
+[[30m21:27:33[0m][I] [32mAuto_Set_Id_0 IS Init OK[0m
+[[30m21:27:33[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13880 all:10[0m
+[[30m21:27:33[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_1[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m21:27:33[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Can_ID# [0m[93m10[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m21:27:33[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m21:27:33[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:33[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:33[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m21:27:33[0m][I] [35mMotor_1 IS Init OK EN:[0m[93m1[0m
+[[30m21:27:33[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13881 all:10[0m
+[[30m21:27:33[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_2[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m21:27:33[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Can_ID# [0m[93m11[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m21:27:33[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m21:27:33[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:33[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:33[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m21:27:33[0m][I] [35mMotor_2 IS Init OK EN:[0m[93m1[0m
+[[30m21:27:33[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13882 all:10[0m
+[[30m21:27:33[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_3[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m21:27:33[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Can_ID# [0m[93m12[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m21:27:33[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m21:27:33[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:33[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:33[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m21:27:33[0m][I] [35mMotor_3 IS Init OK EN:[0m[93m1[0m
+[[30m21:27:33[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13883 all:10[0m
+[[30m21:27:33[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_4[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m21:27:33[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Can_ID# [0m[93m13[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m21:27:33[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m21:27:33[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:33[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:33[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m21:27:33[0m][I] [35mMotor_4 IS Init OK EN:[0m[93m1[0m
+[[30m21:27:33[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13884 all:10[0m
+[[30m21:27:33[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_5[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m21:27:33[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Can_ID# [0m[93m14[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m21:27:33[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m21:27:33[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:33[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:33[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m21:27:33[0m][I] [35mMotor_5 IS Init OK EN:[0m[93m1[0m
+[[30m21:27:33[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13885 all:10[0m
+[[30m21:27:33[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_6[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m21:27:33[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Can_ID# [0m[93m15[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m21:27:33[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m21:27:33[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:33[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:33[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m21:27:33[0m][I] [35mMotor_6 IS Init OK EN:[0m[93m1[0m
+[[30m21:27:33[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13886 all:10[0m
+[[30m21:27:33[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_7[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m21:27:33[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Can_ID# [0m[93m16[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m21:27:33[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m21:27:33[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:33[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:33[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m21:27:33[0m][I] [35mMotor_7 IS Init OK EN:[0m[93m1[0m
+[[30m21:27:33[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13887 all:10[0m
+[[30m21:27:33[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_8[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m21:27:33[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Can_ID# [0m[93m17[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m21:27:33[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m21:27:33[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m21:27:33[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:33[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m21:27:33[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m21:27:33[0m][I] [35mMotor_8 IS Init OK EN:[0m[93m1[0m
+[[30m21:27:33[0m][I] [96m:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::[0m
+[[30m21:27:33[0m][I] [35mDevice_Name: [0m[93mAuto_Set_Id_0 ID: 1[0m[94m Online: 2[0m
+[[30m21:27:33[0m][I] [35mDevice_Name: [0m[93mMain_Switch_Board ID: 101[0m[94m Online: 1[0m
+[[30m21:27:33[0m][I] [35mDevice_Name: [0m[93mMotor_1 ID: 10[0m[94m Online: 1[0m
+[[30m21:27:33[0m][I] [35mDevice_Name: [0m[93mMotor_2 ID: 11[0m[94m Online: 1[0m
+[[30m21:27:33[0m][I] [35mDevice_Name: [0m[93mMotor_3 ID: 12[0m[94m Online: 1[0m
+[[30m21:27:33[0m][I] [35mDevice_Name: [0m[93mMotor_4 ID: 13[0m[94m Online: 1[0m
+[[30m21:27:33[0m][I] [35mDevice_Name: [0m[93mMotor_5 ID: 14[0m[94m Online: 1[0m
+[[30m21:27:33[0m][I] [35mDevice_Name: [0m[93mMotor_6 ID: 15[0m[94m Online: 1[0m
+[[30m21:27:33[0m][I] [35mDevice_Name: [0m[93mMotor_7 ID: 16[0m[94m Online: 1[0m
+[[30m21:27:33[0m][I] [35mDevice_Name: [0m[93mMotor_8 ID: 17[0m[94m Online: 1[0m
+[[30m21:27:33[0m][I] [94m[4m[1mInit_end![0m
+[[30m2026-07-26 23:06:39.699[0m] [LOG] [I] [32mStart_Init_Device
+[0m
+[[30m23:06:39[0m][I] [32mYAML_Driver_Version 0.0.1[0m
+[[30m23:06:39[0m][I] [32mYAML_Driver_Version_RST: 0.0.0[0m
+[[30m23:06:39[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13878 all:10[0m
+[[30m23:06:39[0m][I] [35mAdd_Device_To_Map: [0m[93mMain_Switch_Board[0m
+[[30m23:06:39[0m][I] [35mSave_ETH_Device_To_Map:[0m[93mMain_Switch_Board[0m
+[[30m23:06:39[0m][I] [35mMain_CMD_Get_Info# [0m[93m1 0 0 0 1[0m
+[[30m23:06:39[0m][I] [35mMain_IO_Mod# [0m[93m0[0m
+[[30m23:06:39[0m][I] [35mMain_CMD_Can_ID# [0m[93m101[0m
+[[30m23:06:39[0m][I] [35mMain_CMD_Port# [0m[93m15100[0m
+[[30m23:06:39[0m][I] [35mMain_CMD_ETH_IP# [0m[93m192.168.3.101[0m
+[[30m23:06:39[0m][I] [35mMain_CMD_PC_IP# [0m[93m192.168.3.245[0m
+[[30m23:06:39[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m1000[0m
+[[30m23:06:39[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:06:39[0m][I] Main_Switch_Board Init GO
+[[30m23:06:40[0m][I] Main_Switch_Board IS Init OK
+[[30m23:06:40[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13879 all:10[0m
+[[30m23:06:40[0m][I] [35mAdd_Device_To_Map: [0m[93mAuto_Set_Id_0[0m
+[[30m23:06:40[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m2[0m
+[[30m23:06:40[0m][I] [32mDevice NUM: 8[0m
+[[30m23:06:40[0m][I] [34mSet Device [0m[93m[4mMotor_1[0m[34m ID To: [0m[33m10[0m
+[[30m23:06:40[0m][I] [34mSet Device [0m[93m[4mMotor_2[0m[34m ID To: [0m[33m11[0m
+[[30m23:06:40[0m][I] [34mSet Device [0m[93m[4mMotor_3[0m[34m ID To: [0m[33m12[0m
+[[30m23:06:40[0m][I] [34mSet Device [0m[93m[4mMotor_4[0m[34m ID To: [0m[33m13[0m
+[[30m23:06:40[0m][I] [34mSet Device [0m[93m[4mMotor_5[0m[34m ID To: [0m[33m14[0m
+[[30m23:06:40[0m][I] [34mSet Device [0m[93m[4mMotor_6[0m[34m ID To: [0m[33m15[0m
+[[30m23:06:40[0m][I] [34mSet Device [0m[93m[4mMotor_7[0m[34m ID To: [0m[33m16[0m
+[[30m23:06:40[0m][I] [34mSet Device [0m[93m[4mMotor_8[0m[34m ID To: [0m[33m17[0m
+[[30m23:06:40[0m][I] [32mAuto_Set_Id_0 IS Init OK[0m
+[[30m23:06:40[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13880 all:10[0m
+[[30m23:06:40[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_1[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:06:40[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_Can_ID# [0m[93m10[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:06:40[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:06:40[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:06:40[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:06:40[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:06:40[0m][I] [35mMotor_1 IS Init OK EN:[0m[93m1[0m
+[[30m23:06:40[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13881 all:10[0m
+[[30m23:06:40[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_2[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:06:40[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_Can_ID# [0m[93m11[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:06:40[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:06:40[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:06:40[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:06:40[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:06:40[0m][I] [35mMotor_2 IS Init OK EN:[0m[93m1[0m
+[[30m23:06:40[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13882 all:10[0m
+[[30m23:06:40[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_3[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:06:40[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_Can_ID# [0m[93m12[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:06:40[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:06:40[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:06:40[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:06:40[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:06:40[0m][I] [35mMotor_3 IS Init OK EN:[0m[93m1[0m
+[[30m23:06:40[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13883 all:10[0m
+[[30m23:06:40[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_4[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:06:40[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_Can_ID# [0m[93m13[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:06:40[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:06:40[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:06:40[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:06:40[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:06:40[0m][I] [35mMotor_4 IS Init OK EN:[0m[93m1[0m
+[[30m23:06:40[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13884 all:10[0m
+[[30m23:06:40[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_5[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:06:40[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_Can_ID# [0m[93m14[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:06:40[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:06:40[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:06:40[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:06:40[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:06:40[0m][I] [35mMotor_5 IS Init OK EN:[0m[93m1[0m
+[[30m23:06:40[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13885 all:10[0m
+[[30m23:06:40[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_6[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:06:40[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_Can_ID# [0m[93m15[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:06:40[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:06:40[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:06:40[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:06:40[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:06:40[0m][I] [35mMotor_6 IS Init OK EN:[0m[93m1[0m
+[[30m23:06:40[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13886 all:10[0m
+[[30m23:06:40[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_7[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:06:40[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_Can_ID# [0m[93m16[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:06:40[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:06:40[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:06:40[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:06:40[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:06:40[0m][I] [35mMotor_7 IS Init OK EN:[0m[93m1[0m
+[[30m23:06:40[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13887 all:10[0m
+[[30m23:06:40[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_8[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:06:40[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_Can_ID# [0m[93m17[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:06:40[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:06:40[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:06:40[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:06:40[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:06:40[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:06:40[0m][I] [35mMotor_8 IS Init OK EN:[0m[93m1[0m
+[[30m23:06:40[0m][I] [96m:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::[0m
+[[30m23:06:40[0m][I] [35mDevice_Name: [0m[93mAuto_Set_Id_0 ID: 1[0m[94m Online: 2[0m
+[[30m23:06:40[0m][I] [35mDevice_Name: [0m[93mMain_Switch_Board ID: 101[0m[94m Online: 1[0m
+[[30m23:06:40[0m][I] [35mDevice_Name: [0m[93mMotor_1 ID: 10[0m[94m Online: 1[0m
+[[30m23:06:40[0m][I] [35mDevice_Name: [0m[93mMotor_2 ID: 11[0m[94m Online: 1[0m
+[[30m23:06:40[0m][I] [35mDevice_Name: [0m[93mMotor_3 ID: 12[0m[94m Online: 1[0m
+[[30m23:06:40[0m][I] [35mDevice_Name: [0m[93mMotor_4 ID: 13[0m[94m Online: 1[0m
+[[30m23:06:40[0m][I] [35mDevice_Name: [0m[93mMotor_5 ID: 14[0m[94m Online: 1[0m
+[[30m23:06:40[0m][I] [35mDevice_Name: [0m[93mMotor_6 ID: 15[0m[94m Online: 1[0m
+[[30m23:06:40[0m][I] [35mDevice_Name: [0m[93mMotor_7 ID: 16[0m[94m Online: 1[0m
+[[30m23:06:40[0m][I] [35mDevice_Name: [0m[93mMotor_8 ID: 17[0m[94m Online: 1[0m
+[[30m23:06:40[0m][I] [94m[4m[1mInit_end![0m
+[[30m2026-07-26 23:10:01.518[0m] [LOG] [I] [32mStart_Init_Device
+[0m
+[[30m23:10:01[0m][I] [32mYAML_Driver_Version 0.0.1[0m
+[[30m23:10:01[0m][I] [32mYAML_Driver_Version_RST: 0.0.0[0m
+[[30m23:10:01[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13878 all:10[0m
+[[30m23:10:01[0m][I] [35mAdd_Device_To_Map: [0m[93mMain_Switch_Board[0m
+[[30m23:10:01[0m][I] [35mSave_ETH_Device_To_Map:[0m[93mMain_Switch_Board[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_Get_Info# [0m[93m1 0 0 0 1[0m
+[[30m23:10:01[0m][I] [35mMain_IO_Mod# [0m[93m0[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_Can_ID# [0m[93m101[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_Port# [0m[93m15100[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_ETH_IP# [0m[93m192.168.3.101[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_PC_IP# [0m[93m192.168.3.245[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m1000[0m
+[[30m23:10:01[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:10:01[0m][I] Main_Switch_Board Init GO
+[[30m23:10:01[0m][I] Main_Switch_Board IS Init OK
+[[30m23:10:01[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13879 all:10[0m
+[[30m23:10:01[0m][I] [35mAdd_Device_To_Map: [0m[93mAuto_Set_Id_0[0m
+[[30m23:10:01[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m2[0m
+[[30m23:10:01[0m][I] [32mDevice NUM: 8[0m
+[[30m23:10:01[0m][I] [34mSet Device [0m[93m[4mMotor_1[0m[34m ID To: [0m[33m10[0m
+[[30m23:10:01[0m][I] [34mSet Device [0m[93m[4mMotor_2[0m[34m ID To: [0m[33m11[0m
+[[30m23:10:01[0m][I] [34mSet Device [0m[93m[4mMotor_3[0m[34m ID To: [0m[33m12[0m
+[[30m23:10:01[0m][I] [34mSet Device [0m[93m[4mMotor_4[0m[34m ID To: [0m[33m13[0m
+[[30m23:10:01[0m][I] [34mSet Device [0m[93m[4mMotor_5[0m[34m ID To: [0m[33m14[0m
+[[30m23:10:01[0m][I] [34mSet Device [0m[93m[4mMotor_6[0m[34m ID To: [0m[33m15[0m
+[[30m23:10:01[0m][I] [34mSet Device [0m[93m[4mMotor_7[0m[34m ID To: [0m[33m16[0m
+[[30m23:10:01[0m][I] [34mSet Device [0m[93m[4mMotor_8[0m[34m ID To: [0m[33m17[0m
+[[30m23:10:01[0m][I] [32mAuto_Set_Id_0 IS Init OK[0m
+[[30m23:10:01[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13880 all:10[0m
+[[30m23:10:01[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_1[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:10:01[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_Can_ID# [0m[93m10[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:10:01[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:10:01[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:10:01[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:10:01[0m][W] [33mMotor_1 -> Start_Foc_No_FB Time: 0[0m
+[[30m23:10:01[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:10:01[0m][I] [35mMotor_1 IS Init OK EN:[0m[93m1[0m
+[[30m23:10:01[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13881 all:10[0m
+[[30m23:10:01[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_2[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:10:01[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_Can_ID# [0m[93m11[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:10:01[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:10:01[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:10:01[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:10:01[0m][W] [33mMotor_2 -> Start_Foc_No_FB Time: 0[0m
+[[30m23:10:01[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:10:01[0m][I] [35mMotor_2 IS Init OK EN:[0m[93m1[0m
+[[30m23:10:01[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13882 all:10[0m
+[[30m23:10:01[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_3[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:10:01[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_Can_ID# [0m[93m12[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:10:01[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:10:01[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:10:01[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:10:01[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:10:01[0m][I] [35mMotor_3 IS Init OK EN:[0m[93m1[0m
+[[30m23:10:01[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13883 all:10[0m
+[[30m23:10:01[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_4[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:10:01[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_Can_ID# [0m[93m13[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:10:01[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:10:01[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:10:01[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:10:02[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:10:02[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:10:02[0m][I] [35mMotor_4 IS Init OK EN:[0m[93m1[0m
+[[30m23:10:02[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13884 all:10[0m
+[[30m23:10:02[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_5[0m
+[[30m23:10:02[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:10:02[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:10:02[0m][I] [35mMain_CMD_Can_ID# [0m[93m14[0m
+[[30m23:10:02[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:10:02[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:10:02[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:10:02[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:10:02[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:10:02[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:10:02[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:10:02[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:10:02[0m][I] [35mMotor_5 IS Init OK EN:[0m[93m1[0m
+[[30m23:10:02[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13885 all:10[0m
+[[30m23:10:02[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_6[0m
+[[30m23:10:02[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:10:02[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:10:02[0m][I] [35mMain_CMD_Can_ID# [0m[93m15[0m
+[[30m23:10:02[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:10:02[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:10:02[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:10:02[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:10:02[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:10:02[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:10:02[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:10:02[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:10:02[0m][I] [35mMotor_6 IS Init OK EN:[0m[93m1[0m
+[[30m23:10:02[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13886 all:10[0m
+[[30m23:10:02[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_7[0m
+[[30m23:10:02[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:10:02[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:10:02[0m][I] [35mMain_CMD_Can_ID# [0m[93m16[0m
+[[30m23:10:02[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:10:02[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:10:02[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:10:02[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:10:02[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:10:02[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:10:02[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:10:02[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:10:02[0m][I] [35mMotor_7 IS Init OK EN:[0m[93m1[0m
+[[30m23:10:02[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13887 all:10[0m
+[[30m23:10:02[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_8[0m
+[[30m23:10:02[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:10:02[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:10:02[0m][I] [35mMain_CMD_Can_ID# [0m[93m17[0m
+[[30m23:10:02[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:10:02[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:10:02[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:10:02[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:10:02[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:10:02[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:10:02[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:10:02[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:10:02[0m][I] [35mMotor_8 IS Init OK EN:[0m[93m1[0m
+[[30m23:10:02[0m][I] [96m:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::[0m
+[[30m23:10:02[0m][I] [35mDevice_Name: [0m[93mAuto_Set_Id_0 ID: 1[0m[94m Online: 2[0m
+[[30m23:10:02[0m][I] [35mDevice_Name: [0m[93mMain_Switch_Board ID: 101[0m[94m Online: 1[0m
+[[30m23:10:02[0m][I] [35mDevice_Name: [0m[93mMotor_1 ID: 10[0m[94m Online: 1[0m
+[[30m23:10:02[0m][I] [35mDevice_Name: [0m[93mMotor_2 ID: 11[0m[94m Online: 1[0m
+[[30m23:10:02[0m][I] [35mDevice_Name: [0m[93mMotor_3 ID: 12[0m[94m Online: 1[0m
+[[30m23:10:02[0m][I] [35mDevice_Name: [0m[93mMotor_4 ID: 13[0m[94m Online: 1[0m
+[[30m23:10:02[0m][I] [35mDevice_Name: [0m[93mMotor_5 ID: 14[0m[94m Online: 1[0m
+[[30m23:10:02[0m][I] [35mDevice_Name: [0m[93mMotor_6 ID: 15[0m[94m Online: 1[0m
+[[30m23:10:02[0m][I] [35mDevice_Name: [0m[93mMotor_7 ID: 16[0m[94m Online: 1[0m
+[[30m23:10:02[0m][I] [35mDevice_Name: [0m[93mMotor_8 ID: 17[0m[94m Online: 1[0m
+[[30m23:10:02[0m][I] [94m[4m[1mInit_end![0m
+[[30m2026-07-26 23:12:49.294[0m] [LOG] [I] [32mStart_Init_Device
+[0m
+[[30m23:12:49[0m][I] [32mYAML_Driver_Version 0.0.1[0m
+[[30m23:12:49[0m][I] [32mYAML_Driver_Version_RST: 0.0.0[0m
+[[30m23:12:49[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13878 all:10[0m
+[[30m23:12:49[0m][I] [35mAdd_Device_To_Map: [0m[93mMain_Switch_Board[0m
+[[30m23:12:49[0m][I] [35mSave_ETH_Device_To_Map:[0m[93mMain_Switch_Board[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Get_Info# [0m[93m1 0 0 0 1[0m
+[[30m23:12:49[0m][I] [35mMain_IO_Mod# [0m[93m0[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Can_ID# [0m[93m101[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Port# [0m[93m15100[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_ETH_IP# [0m[93m192.168.3.101[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_PC_IP# [0m[93m192.168.3.245[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m1000[0m
+[[30m23:12:49[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:12:49[0m][I] Main_Switch_Board Init GO
+[[30m23:12:49[0m][I] Main_Switch_Board IS Init OK
+[[30m23:12:49[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13879 all:10[0m
+[[30m23:12:49[0m][I] [35mAdd_Device_To_Map: [0m[93mAuto_Set_Id_0[0m
+[[30m23:12:49[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m2[0m
+[[30m23:12:49[0m][I] [32mDevice NUM: 8[0m
+[[30m23:12:49[0m][I] [34mSet Device [0m[93m[4mMotor_1[0m[34m ID To: [0m[33m10[0m
+[[30m23:12:49[0m][I] [34mSet Device [0m[93m[4mMotor_2[0m[34m ID To: [0m[33m11[0m
+[[30m23:12:49[0m][I] [34mSet Device [0m[93m[4mMotor_3[0m[34m ID To: [0m[33m12[0m
+[[30m23:12:49[0m][I] [34mSet Device [0m[93m[4mMotor_4[0m[34m ID To: [0m[33m13[0m
+[[30m23:12:49[0m][I] [34mSet Device [0m[93m[4mMotor_5[0m[34m ID To: [0m[33m14[0m
+[[30m23:12:49[0m][I] [34mSet Device [0m[93m[4mMotor_6[0m[34m ID To: [0m[33m15[0m
+[[30m23:12:49[0m][I] [34mSet Device [0m[93m[4mMotor_7[0m[34m ID To: [0m[33m16[0m
+[[30m23:12:49[0m][I] [34mSet Device [0m[93m[4mMotor_8[0m[34m ID To: [0m[33m17[0m
+[[30m23:12:49[0m][I] [32mAuto_Set_Id_0 IS Init OK[0m
+[[30m23:12:49[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13880 all:10[0m
+[[30m23:12:49[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_1[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:12:49[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Can_ID# [0m[93m10[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:12:49[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:12:49[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:12:49[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:12:49[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:12:49[0m][I] [35mMotor_1 IS Init OK EN:[0m[93m1[0m
+[[30m23:12:49[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13881 all:10[0m
+[[30m23:12:49[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_2[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:12:49[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Can_ID# [0m[93m11[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:12:49[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:12:49[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:12:49[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:12:49[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:12:49[0m][I] [35mMotor_2 IS Init OK EN:[0m[93m1[0m
+[[30m23:12:49[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13882 all:10[0m
+[[30m23:12:49[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_3[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:12:49[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Can_ID# [0m[93m12[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:12:49[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:12:49[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:12:49[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:12:49[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:12:49[0m][I] [35mMotor_3 IS Init OK EN:[0m[93m1[0m
+[[30m23:12:49[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13883 all:10[0m
+[[30m23:12:49[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_4[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:12:49[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Can_ID# [0m[93m13[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:12:49[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:12:49[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:12:49[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:12:49[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:12:49[0m][I] [35mMotor_4 IS Init OK EN:[0m[93m1[0m
+[[30m23:12:49[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13884 all:10[0m
+[[30m23:12:49[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_5[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:12:49[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Can_ID# [0m[93m14[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:12:49[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:12:49[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:12:49[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:12:49[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:12:49[0m][I] [35mMotor_5 IS Init OK EN:[0m[93m1[0m
+[[30m23:12:49[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13885 all:10[0m
+[[30m23:12:49[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_6[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:12:49[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Can_ID# [0m[93m15[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:12:49[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:12:49[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:12:49[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:12:49[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:12:49[0m][I] [35mMotor_6 IS Init OK EN:[0m[93m1[0m
+[[30m23:12:49[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13886 all:10[0m
+[[30m23:12:49[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_7[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:12:49[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Can_ID# [0m[93m16[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:12:49[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:12:49[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:12:49[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:12:49[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:12:49[0m][I] [35mMotor_7 IS Init OK EN:[0m[93m1[0m
+[[30m23:12:49[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13887 all:10[0m
+[[30m23:12:49[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_8[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:12:49[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Can_ID# [0m[93m17[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:12:49[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:12:49[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:12:49[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:12:49[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:12:49[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:12:49[0m][I] [35mMotor_8 IS Init OK EN:[0m[93m1[0m
+[[30m23:12:49[0m][I] [96m:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::[0m
+[[30m23:12:49[0m][I] [35mDevice_Name: [0m[93mAuto_Set_Id_0 ID: 1[0m[94m Online: 2[0m
+[[30m23:12:49[0m][I] [35mDevice_Name: [0m[93mMain_Switch_Board ID: 101[0m[94m Online: 1[0m
+[[30m23:12:49[0m][I] [35mDevice_Name: [0m[93mMotor_1 ID: 10[0m[94m Online: 1[0m
+[[30m23:12:49[0m][I] [35mDevice_Name: [0m[93mMotor_2 ID: 11[0m[94m Online: 1[0m
+[[30m23:12:49[0m][I] [35mDevice_Name: [0m[93mMotor_3 ID: 12[0m[94m Online: 1[0m
+[[30m23:12:49[0m][I] [35mDevice_Name: [0m[93mMotor_4 ID: 13[0m[94m Online: 1[0m
+[[30m23:12:49[0m][I] [35mDevice_Name: [0m[93mMotor_5 ID: 14[0m[94m Online: 1[0m
+[[30m23:12:49[0m][I] [35mDevice_Name: [0m[93mMotor_6 ID: 15[0m[94m Online: 1[0m
+[[30m23:12:49[0m][I] [35mDevice_Name: [0m[93mMotor_7 ID: 16[0m[94m Online: 1[0m
+[[30m23:12:49[0m][I] [35mDevice_Name: [0m[93mMotor_8 ID: 17[0m[94m Online: 1[0m
+[[30m23:12:49[0m][I] [94m[4m[1mInit_end![0m
+[[30m2026-07-26 23:17:00.804[0m] [LOG] [I] [32mStart_Init_Device
+[0m
+[[30m23:17:00[0m][I] [32mYAML_Driver_Version 0.0.1[0m
+[[30m23:17:00[0m][I] [32mYAML_Driver_Version_RST: 0.0.0[0m
+[[30m23:17:00[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13878 all:10[0m
+[[30m23:17:00[0m][I] [35mAdd_Device_To_Map: [0m[93mMain_Switch_Board[0m
+[[30m23:17:00[0m][I] [35mSave_ETH_Device_To_Map:[0m[93mMain_Switch_Board[0m
+[[30m23:17:00[0m][I] [35mMain_CMD_Get_Info# [0m[93m1 0 0 0 1[0m
+[[30m23:17:00[0m][I] [35mMain_IO_Mod# [0m[93m0[0m
+[[30m23:17:00[0m][I] [35mMain_CMD_Can_ID# [0m[93m101[0m
+[[30m23:17:00[0m][I] [35mMain_CMD_Port# [0m[93m15100[0m
+[[30m23:17:00[0m][I] [35mMain_CMD_ETH_IP# [0m[93m192.168.3.101[0m
+[[30m23:17:00[0m][I] [35mMain_CMD_PC_IP# [0m[93m192.168.3.245[0m
+[[30m23:17:00[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m1000[0m
+[[30m23:17:00[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:00[0m][I] Main_Switch_Board Init GO
+[[30m23:17:01[0m][I] Main_Switch_Board IS Init OK
+[[30m23:17:01[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13879 all:10[0m
+[[30m23:17:01[0m][I] [35mAdd_Device_To_Map: [0m[93mAuto_Set_Id_0[0m
+[[30m23:17:01[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m2[0m
+[[30m23:17:01[0m][I] [32mDevice NUM: 8[0m
+[[30m23:17:01[0m][I] [34mSet Device [0m[93m[4mMotor_1[0m[34m ID To: [0m[33m10[0m
+[[30m23:17:01[0m][I] [34mSet Device [0m[93m[4mMotor_2[0m[34m ID To: [0m[33m11[0m
+[[30m23:17:01[0m][I] [34mSet Device [0m[93m[4mMotor_3[0m[34m ID To: [0m[33m12[0m
+[[30m23:17:01[0m][I] [34mSet Device [0m[93m[4mMotor_4[0m[34m ID To: [0m[33m13[0m
+[[30m23:17:01[0m][I] [34mSet Device [0m[93m[4mMotor_5[0m[34m ID To: [0m[33m14[0m
+[[30m23:17:01[0m][I] [34mSet Device [0m[93m[4mMotor_6[0m[34m ID To: [0m[33m15[0m
+[[30m23:17:01[0m][I] [34mSet Device [0m[93m[4mMotor_7[0m[34m ID To: [0m[33m16[0m
+[[30m23:17:01[0m][I] [34mSet Device [0m[93m[4mMotor_8[0m[34m ID To: [0m[33m17[0m
+[[30m23:17:01[0m][I] [32mAuto_Set_Id_0 IS Init OK[0m
+[[30m23:17:01[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13880 all:10[0m
+[[30m23:17:01[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_1[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:01[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_Can_ID# [0m[93m10[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:01[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:01[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:01[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:01[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:01[0m][I] [35mMotor_1 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:01[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13881 all:10[0m
+[[30m23:17:01[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_2[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:01[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_Can_ID# [0m[93m11[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:01[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:01[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:01[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:01[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:01[0m][I] [35mMotor_2 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:01[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13882 all:10[0m
+[[30m23:17:01[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_3[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:01[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_Can_ID# [0m[93m12[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:01[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:01[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:01[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:01[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:01[0m][I] [35mMotor_3 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:01[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13883 all:10[0m
+[[30m23:17:01[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_4[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:01[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_Can_ID# [0m[93m13[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:01[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:01[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:01[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:01[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:01[0m][I] [35mMotor_4 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:01[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13884 all:10[0m
+[[30m23:17:01[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_5[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:01[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_Can_ID# [0m[93m14[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:01[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:01[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:01[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:01[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:01[0m][I] [35mMotor_5 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:01[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13885 all:10[0m
+[[30m23:17:01[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_6[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:01[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_Can_ID# [0m[93m15[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:01[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:01[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:01[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:01[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:01[0m][I] [35mMotor_6 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:01[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13886 all:10[0m
+[[30m23:17:01[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_7[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:01[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_Can_ID# [0m[93m16[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:01[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:01[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:01[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:01[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:01[0m][I] [35mMotor_7 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:01[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13887 all:10[0m
+[[30m23:17:01[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_8[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:01[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_Can_ID# [0m[93m17[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:01[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:01[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:01[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:01[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:01[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:01[0m][I] [35mMotor_8 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:01[0m][I] [96m:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::[0m
+[[30m23:17:01[0m][I] [35mDevice_Name: [0m[93mAuto_Set_Id_0 ID: 1[0m[94m Online: 2[0m
+[[30m23:17:01[0m][I] [35mDevice_Name: [0m[93mMain_Switch_Board ID: 101[0m[94m Online: 1[0m
+[[30m23:17:01[0m][I] [35mDevice_Name: [0m[93mMotor_1 ID: 10[0m[94m Online: 1[0m
+[[30m23:17:01[0m][I] [35mDevice_Name: [0m[93mMotor_2 ID: 11[0m[94m Online: 1[0m
+[[30m23:17:01[0m][I] [35mDevice_Name: [0m[93mMotor_3 ID: 12[0m[94m Online: 1[0m
+[[30m23:17:01[0m][I] [35mDevice_Name: [0m[93mMotor_4 ID: 13[0m[94m Online: 1[0m
+[[30m23:17:01[0m][I] [35mDevice_Name: [0m[93mMotor_5 ID: 14[0m[94m Online: 1[0m
+[[30m23:17:01[0m][I] [35mDevice_Name: [0m[93mMotor_6 ID: 15[0m[94m Online: 1[0m
+[[30m23:17:01[0m][I] [35mDevice_Name: [0m[93mMotor_7 ID: 16[0m[94m Online: 1[0m
+[[30m23:17:01[0m][I] [35mDevice_Name: [0m[93mMotor_8 ID: 17[0m[94m Online: 1[0m
+[[30m23:17:01[0m][I] [94m[4m[1mInit_end![0m
+[[30m2026-07-26 23:17:08.239[0m] [LOG] [I] [32mStart_Init_Device
+[0m
+[[30m23:17:08[0m][I] [32mYAML_Driver_Version 0.0.1[0m
+[[30m23:17:08[0m][I] [32mYAML_Driver_Version_RST: 0.0.0[0m
+[[30m23:17:08[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13878 all:10[0m
+[[30m23:17:08[0m][I] [35mAdd_Device_To_Map: [0m[93mMain_Switch_Board[0m
+[[30m23:17:08[0m][I] [35mSave_ETH_Device_To_Map:[0m[93mMain_Switch_Board[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Get_Info# [0m[93m1 0 0 0 1[0m
+[[30m23:17:08[0m][I] [35mMain_IO_Mod# [0m[93m0[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Can_ID# [0m[93m101[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Port# [0m[93m15100[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_ETH_IP# [0m[93m192.168.3.101[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_PC_IP# [0m[93m192.168.3.245[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m1000[0m
+[[30m23:17:08[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:08[0m][I] Main_Switch_Board Init GO
+[[30m23:17:08[0m][I] Main_Switch_Board IS Init OK
+[[30m23:17:08[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13879 all:10[0m
+[[30m23:17:08[0m][I] [35mAdd_Device_To_Map: [0m[93mAuto_Set_Id_0[0m
+[[30m23:17:08[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m2[0m
+[[30m23:17:08[0m][I] [32mDevice NUM: 8[0m
+[[30m23:17:08[0m][I] [34mSet Device [0m[93m[4mMotor_1[0m[34m ID To: [0m[33m10[0m
+[[30m23:17:08[0m][I] [34mSet Device [0m[93m[4mMotor_2[0m[34m ID To: [0m[33m11[0m
+[[30m23:17:08[0m][I] [34mSet Device [0m[93m[4mMotor_3[0m[34m ID To: [0m[33m12[0m
+[[30m23:17:08[0m][I] [34mSet Device [0m[93m[4mMotor_4[0m[34m ID To: [0m[33m13[0m
+[[30m23:17:08[0m][I] [34mSet Device [0m[93m[4mMotor_5[0m[34m ID To: [0m[33m14[0m
+[[30m23:17:08[0m][I] [34mSet Device [0m[93m[4mMotor_6[0m[34m ID To: [0m[33m15[0m
+[[30m23:17:08[0m][I] [34mSet Device [0m[93m[4mMotor_7[0m[34m ID To: [0m[33m16[0m
+[[30m23:17:08[0m][I] [34mSet Device [0m[93m[4mMotor_8[0m[34m ID To: [0m[33m17[0m
+[[30m23:17:08[0m][I] [32mAuto_Set_Id_0 IS Init OK[0m
+[[30m23:17:08[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13880 all:10[0m
+[[30m23:17:08[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_1[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:08[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Can_ID# [0m[93m10[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:08[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:08[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:08[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:08[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:08[0m][I] [35mMotor_1 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:08[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13881 all:10[0m
+[[30m23:17:08[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_2[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:08[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Can_ID# [0m[93m11[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:08[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:08[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:08[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:08[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:08[0m][I] [35mMotor_2 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:08[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13882 all:10[0m
+[[30m23:17:08[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_3[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:08[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Can_ID# [0m[93m12[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:08[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:08[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:08[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:08[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:08[0m][I] [35mMotor_3 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:08[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13883 all:10[0m
+[[30m23:17:08[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_4[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:08[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Can_ID# [0m[93m13[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:08[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:08[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:08[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:08[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:08[0m][I] [35mMotor_4 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:08[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13884 all:10[0m
+[[30m23:17:08[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_5[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:08[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Can_ID# [0m[93m14[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:08[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:08[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:08[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:08[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:08[0m][I] [35mMotor_5 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:08[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13885 all:10[0m
+[[30m23:17:08[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_6[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:08[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Can_ID# [0m[93m15[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:08[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:08[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:08[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:08[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:08[0m][I] [35mMotor_6 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:08[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13886 all:10[0m
+[[30m23:17:08[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_7[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:08[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Can_ID# [0m[93m16[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:08[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:08[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:08[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:08[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:08[0m][I] [35mMotor_7 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:08[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13887 all:10[0m
+[[30m23:17:08[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_8[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:08[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Can_ID# [0m[93m17[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:08[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:08[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:08[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:08[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:08[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:08[0m][I] [35mMotor_8 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:08[0m][I] [96m:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::[0m
+[[30m23:17:08[0m][I] [35mDevice_Name: [0m[93mAuto_Set_Id_0 ID: 1[0m[94m Online: 2[0m
+[[30m23:17:08[0m][I] [35mDevice_Name: [0m[93mMain_Switch_Board ID: 101[0m[94m Online: 1[0m
+[[30m23:17:08[0m][I] [35mDevice_Name: [0m[93mMotor_1 ID: 10[0m[94m Online: 1[0m
+[[30m23:17:08[0m][I] [35mDevice_Name: [0m[93mMotor_2 ID: 11[0m[94m Online: 1[0m
+[[30m23:17:08[0m][I] [35mDevice_Name: [0m[93mMotor_3 ID: 12[0m[94m Online: 1[0m
+[[30m23:17:08[0m][I] [35mDevice_Name: [0m[93mMotor_4 ID: 13[0m[94m Online: 1[0m
+[[30m23:17:08[0m][I] [35mDevice_Name: [0m[93mMotor_5 ID: 14[0m[94m Online: 1[0m
+[[30m23:17:08[0m][I] [35mDevice_Name: [0m[93mMotor_6 ID: 15[0m[94m Online: 1[0m
+[[30m23:17:08[0m][I] [35mDevice_Name: [0m[93mMotor_7 ID: 16[0m[94m Online: 1[0m
+[[30m23:17:08[0m][I] [35mDevice_Name: [0m[93mMotor_8 ID: 17[0m[94m Online: 1[0m
+[[30m23:17:08[0m][I] [94m[4m[1mInit_end![0m
+[[30m2026-07-26 23:17:10.813[0m] [LOG] [I] [32mStart_Init_Device
+[0m
+[[30m23:17:10[0m][I] [32mYAML_Driver_Version 0.0.1[0m
+[[30m23:17:10[0m][I] [32mYAML_Driver_Version_RST: 0.0.0[0m
+[[30m23:17:10[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13878 all:10[0m
+[[30m23:17:10[0m][I] [35mAdd_Device_To_Map: [0m[93mMain_Switch_Board[0m
+[[30m23:17:10[0m][I] [35mSave_ETH_Device_To_Map:[0m[93mMain_Switch_Board[0m
+[[30m23:17:10[0m][I] [35mMain_CMD_Get_Info# [0m[93m1 0 0 0 1[0m
+[[30m23:17:10[0m][I] [35mMain_IO_Mod# [0m[93m0[0m
+[[30m23:17:10[0m][I] [35mMain_CMD_Can_ID# [0m[93m101[0m
+[[30m23:17:10[0m][I] [35mMain_CMD_Port# [0m[93m15100[0m
+[[30m23:17:10[0m][I] [35mMain_CMD_ETH_IP# [0m[93m192.168.3.101[0m
+[[30m23:17:10[0m][I] [35mMain_CMD_PC_IP# [0m[93m192.168.3.245[0m
+[[30m23:17:10[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m1000[0m
+[[30m23:17:10[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:10[0m][I] Main_Switch_Board Init GO
+[[30m23:17:11[0m][I] Main_Switch_Board IS Init OK
+[[30m23:17:11[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13879 all:10[0m
+[[30m23:17:11[0m][I] [35mAdd_Device_To_Map: [0m[93mAuto_Set_Id_0[0m
+[[30m23:17:11[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m2[0m
+[[30m23:17:11[0m][I] [32mDevice NUM: 8[0m
+[[30m23:17:11[0m][I] [34mSet Device [0m[93m[4mMotor_1[0m[34m ID To: [0m[33m10[0m
+[[30m23:17:11[0m][I] [34mSet Device [0m[93m[4mMotor_2[0m[34m ID To: [0m[33m11[0m
+[[30m23:17:11[0m][I] [34mSet Device [0m[93m[4mMotor_3[0m[34m ID To: [0m[33m12[0m
+[[30m23:17:11[0m][I] [34mSet Device [0m[93m[4mMotor_4[0m[34m ID To: [0m[33m13[0m
+[[30m23:17:11[0m][I] [34mSet Device [0m[93m[4mMotor_5[0m[34m ID To: [0m[33m14[0m
+[[30m23:17:11[0m][I] [34mSet Device [0m[93m[4mMotor_6[0m[34m ID To: [0m[33m15[0m
+[[30m23:17:11[0m][I] [34mSet Device [0m[93m[4mMotor_7[0m[34m ID To: [0m[33m16[0m
+[[30m23:17:11[0m][I] [34mSet Device [0m[93m[4mMotor_8[0m[34m ID To: [0m[33m17[0m
+[[30m23:17:11[0m][I] [32mAuto_Set_Id_0 IS Init OK[0m
+[[30m23:17:11[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13880 all:10[0m
+[[30m23:17:11[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_1[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:11[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_Can_ID# [0m[93m10[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:11[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:11[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:11[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:11[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:11[0m][I] [35mMotor_1 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:11[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13881 all:10[0m
+[[30m23:17:11[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_2[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:11[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_Can_ID# [0m[93m11[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:11[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:11[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:11[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:11[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:11[0m][I] [35mMotor_2 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:11[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13882 all:10[0m
+[[30m23:17:11[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_3[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:11[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_Can_ID# [0m[93m12[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:11[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:11[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:11[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:11[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:11[0m][I] [35mMotor_3 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:11[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13883 all:10[0m
+[[30m23:17:11[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_4[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:11[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_Can_ID# [0m[93m13[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:11[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:11[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:11[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:11[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:11[0m][I] [35mMotor_4 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:11[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13884 all:10[0m
+[[30m23:17:11[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_5[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:11[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_Can_ID# [0m[93m14[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:11[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:11[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:11[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:11[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:11[0m][I] [35mMotor_5 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:11[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13885 all:10[0m
+[[30m23:17:11[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_6[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:11[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_Can_ID# [0m[93m15[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:11[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:11[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:11[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:11[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:11[0m][I] [35mMotor_6 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:11[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13886 all:10[0m
+[[30m23:17:11[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_7[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:11[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_Can_ID# [0m[93m16[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:11[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:11[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:11[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:11[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:11[0m][I] [35mMotor_7 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:11[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13887 all:10[0m
+[[30m23:17:11[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_8[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:11[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_Can_ID# [0m[93m17[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:11[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:11[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:11[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:11[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:11[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:11[0m][I] [35mMotor_8 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:11[0m][I] [96m:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::[0m
+[[30m23:17:11[0m][I] [35mDevice_Name: [0m[93mAuto_Set_Id_0 ID: 1[0m[94m Online: 2[0m
+[[30m23:17:11[0m][I] [35mDevice_Name: [0m[93mMain_Switch_Board ID: 101[0m[94m Online: 1[0m
+[[30m23:17:11[0m][I] [35mDevice_Name: [0m[93mMotor_1 ID: 10[0m[94m Online: 1[0m
+[[30m23:17:11[0m][I] [35mDevice_Name: [0m[93mMotor_2 ID: 11[0m[94m Online: 1[0m
+[[30m23:17:11[0m][I] [35mDevice_Name: [0m[93mMotor_3 ID: 12[0m[94m Online: 1[0m
+[[30m23:17:11[0m][I] [35mDevice_Name: [0m[93mMotor_4 ID: 13[0m[94m Online: 1[0m
+[[30m23:17:11[0m][I] [35mDevice_Name: [0m[93mMotor_5 ID: 14[0m[94m Online: 1[0m
+[[30m23:17:11[0m][I] [35mDevice_Name: [0m[93mMotor_6 ID: 15[0m[94m Online: 1[0m
+[[30m23:17:11[0m][I] [35mDevice_Name: [0m[93mMotor_7 ID: 16[0m[94m Online: 1[0m
+[[30m23:17:11[0m][I] [35mDevice_Name: [0m[93mMotor_8 ID: 17[0m[94m Online: 1[0m
+[[30m23:17:11[0m][I] [94m[4m[1mInit_end![0m
+[[30m2026-07-26 23:17:14.373[0m] [LOG] [I] [32mStart_Init_Device
+[0m
+[[30m23:17:14[0m][I] [32mYAML_Driver_Version 0.0.1[0m
+[[30m23:17:14[0m][I] [32mYAML_Driver_Version_RST: 0.0.0[0m
+[[30m23:17:14[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13878 all:10[0m
+[[30m23:17:14[0m][I] [35mAdd_Device_To_Map: [0m[93mMain_Switch_Board[0m
+[[30m23:17:14[0m][I] [35mSave_ETH_Device_To_Map:[0m[93mMain_Switch_Board[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Get_Info# [0m[93m1 0 0 0 1[0m
+[[30m23:17:14[0m][I] [35mMain_IO_Mod# [0m[93m0[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Can_ID# [0m[93m101[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Port# [0m[93m15100[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_ETH_IP# [0m[93m192.168.3.101[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_PC_IP# [0m[93m192.168.3.245[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m1000[0m
+[[30m23:17:14[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:14[0m][I] Main_Switch_Board Init GO
+[[30m23:17:14[0m][I] Main_Switch_Board IS Init OK
+[[30m23:17:14[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13879 all:10[0m
+[[30m23:17:14[0m][I] [35mAdd_Device_To_Map: [0m[93mAuto_Set_Id_0[0m
+[[30m23:17:14[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m2[0m
+[[30m23:17:14[0m][I] [32mDevice NUM: 8[0m
+[[30m23:17:14[0m][I] [34mSet Device [0m[93m[4mMotor_1[0m[34m ID To: [0m[33m10[0m
+[[30m23:17:14[0m][I] [34mSet Device [0m[93m[4mMotor_2[0m[34m ID To: [0m[33m11[0m
+[[30m23:17:14[0m][I] [34mSet Device [0m[93m[4mMotor_3[0m[34m ID To: [0m[33m12[0m
+[[30m23:17:14[0m][I] [34mSet Device [0m[93m[4mMotor_4[0m[34m ID To: [0m[33m13[0m
+[[30m23:17:14[0m][I] [34mSet Device [0m[93m[4mMotor_5[0m[34m ID To: [0m[33m14[0m
+[[30m23:17:14[0m][I] [34mSet Device [0m[93m[4mMotor_6[0m[34m ID To: [0m[33m15[0m
+[[30m23:17:14[0m][I] [34mSet Device [0m[93m[4mMotor_7[0m[34m ID To: [0m[33m16[0m
+[[30m23:17:14[0m][I] [34mSet Device [0m[93m[4mMotor_8[0m[34m ID To: [0m[33m17[0m
+[[30m23:17:14[0m][I] [32mAuto_Set_Id_0 IS Init OK[0m
+[[30m23:17:14[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13880 all:10[0m
+[[30m23:17:14[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_1[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:14[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Can_ID# [0m[93m10[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:14[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:14[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:14[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:14[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:14[0m][I] [35mMotor_1 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:14[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13881 all:10[0m
+[[30m23:17:14[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_2[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:14[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Can_ID# [0m[93m11[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:14[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:14[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:14[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:14[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:14[0m][I] [35mMotor_2 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:14[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13882 all:10[0m
+[[30m23:17:14[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_3[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:14[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Can_ID# [0m[93m12[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:14[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:14[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:14[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:14[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:14[0m][I] [35mMotor_3 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:14[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13883 all:10[0m
+[[30m23:17:14[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_4[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:14[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Can_ID# [0m[93m13[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:14[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:14[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:14[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:14[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:14[0m][I] [35mMotor_4 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:14[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13884 all:10[0m
+[[30m23:17:14[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_5[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:14[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Can_ID# [0m[93m14[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:14[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:14[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:14[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:14[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:14[0m][I] [35mMotor_5 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:14[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13885 all:10[0m
+[[30m23:17:14[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_6[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:14[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Can_ID# [0m[93m15[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:14[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:14[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:14[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:14[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:14[0m][I] [35mMotor_6 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:14[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13886 all:10[0m
+[[30m23:17:14[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_7[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:14[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Can_ID# [0m[93m16[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:14[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:14[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:14[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:14[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:14[0m][I] [35mMotor_7 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:14[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13887 all:10[0m
+[[30m23:17:14[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_8[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:14[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Can_ID# [0m[93m17[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:14[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:14[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:14[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:14[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:14[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:14[0m][I] [35mMotor_8 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:14[0m][I] [96m:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::[0m
+[[30m23:17:14[0m][I] [35mDevice_Name: [0m[93mAuto_Set_Id_0 ID: 1[0m[94m Online: 2[0m
+[[30m23:17:14[0m][I] [35mDevice_Name: [0m[93mMain_Switch_Board ID: 101[0m[94m Online: 1[0m
+[[30m23:17:14[0m][I] [35mDevice_Name: [0m[93mMotor_1 ID: 10[0m[94m Online: 1[0m
+[[30m23:17:14[0m][I] [35mDevice_Name: [0m[93mMotor_2 ID: 11[0m[94m Online: 1[0m
+[[30m23:17:14[0m][I] [35mDevice_Name: [0m[93mMotor_3 ID: 12[0m[94m Online: 1[0m
+[[30m23:17:14[0m][I] [35mDevice_Name: [0m[93mMotor_4 ID: 13[0m[94m Online: 1[0m
+[[30m23:17:14[0m][I] [35mDevice_Name: [0m[93mMotor_5 ID: 14[0m[94m Online: 1[0m
+[[30m23:17:14[0m][I] [35mDevice_Name: [0m[93mMotor_6 ID: 15[0m[94m Online: 1[0m
+[[30m23:17:14[0m][I] [35mDevice_Name: [0m[93mMotor_7 ID: 16[0m[94m Online: 1[0m
+[[30m23:17:14[0m][I] [35mDevice_Name: [0m[93mMotor_8 ID: 17[0m[94m Online: 1[0m
+[[30m23:17:14[0m][I] [94m[4m[1mInit_end![0m
+[[30m2026-07-26 23:17:20.006[0m] [LOG] [I] [32mStart_Init_Device
+[0m
+[[30m23:17:20[0m][I] [32mYAML_Driver_Version 0.0.1[0m
+[[30m23:17:20[0m][I] [32mYAML_Driver_Version_RST: 0.0.0[0m
+[[30m23:17:20[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13878 all:10[0m
+[[30m23:17:20[0m][I] [35mAdd_Device_To_Map: [0m[93mMain_Switch_Board[0m
+[[30m23:17:20[0m][I] [35mSave_ETH_Device_To_Map:[0m[93mMain_Switch_Board[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Get_Info# [0m[93m1 0 0 0 1[0m
+[[30m23:17:20[0m][I] [35mMain_IO_Mod# [0m[93m0[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Can_ID# [0m[93m101[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Port# [0m[93m15100[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_ETH_IP# [0m[93m192.168.3.101[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_PC_IP# [0m[93m192.168.3.245[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m1000[0m
+[[30m23:17:20[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:20[0m][I] Main_Switch_Board Init GO
+[[30m23:17:20[0m][I] Main_Switch_Board IS Init OK
+[[30m23:17:20[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13879 all:10[0m
+[[30m23:17:20[0m][I] [35mAdd_Device_To_Map: [0m[93mAuto_Set_Id_0[0m
+[[30m23:17:20[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m2[0m
+[[30m23:17:20[0m][I] [32mDevice NUM: 8[0m
+[[30m23:17:20[0m][I] [34mSet Device [0m[93m[4mMotor_1[0m[34m ID To: [0m[33m10[0m
+[[30m23:17:20[0m][I] [34mSet Device [0m[93m[4mMotor_2[0m[34m ID To: [0m[33m11[0m
+[[30m23:17:20[0m][I] [34mSet Device [0m[93m[4mMotor_3[0m[34m ID To: [0m[33m12[0m
+[[30m23:17:20[0m][I] [34mSet Device [0m[93m[4mMotor_4[0m[34m ID To: [0m[33m13[0m
+[[30m23:17:20[0m][I] [34mSet Device [0m[93m[4mMotor_5[0m[34m ID To: [0m[33m14[0m
+[[30m23:17:20[0m][I] [34mSet Device [0m[93m[4mMotor_6[0m[34m ID To: [0m[33m15[0m
+[[30m23:17:20[0m][I] [34mSet Device [0m[93m[4mMotor_7[0m[34m ID To: [0m[33m16[0m
+[[30m23:17:20[0m][I] [34mSet Device [0m[93m[4mMotor_8[0m[34m ID To: [0m[33m17[0m
+[[30m23:17:20[0m][I] [32mAuto_Set_Id_0 IS Init OK[0m
+[[30m23:17:20[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13880 all:10[0m
+[[30m23:17:20[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_1[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:20[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Can_ID# [0m[93m10[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:20[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:20[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:20[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:20[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:20[0m][I] [35mMotor_1 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:20[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13881 all:10[0m
+[[30m23:17:20[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_2[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:20[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Can_ID# [0m[93m11[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:20[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:20[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:20[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:20[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:20[0m][I] [35mMotor_2 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:20[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13882 all:10[0m
+[[30m23:17:20[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_3[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:20[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Can_ID# [0m[93m12[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:20[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:20[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:20[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:20[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:20[0m][I] [35mMotor_3 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:20[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13883 all:10[0m
+[[30m23:17:20[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_4[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:20[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Can_ID# [0m[93m13[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:20[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:20[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:20[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:20[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:20[0m][I] [35mMotor_4 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:20[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13884 all:10[0m
+[[30m23:17:20[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_5[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:20[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Can_ID# [0m[93m14[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:20[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:20[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:20[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:20[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:20[0m][I] [35mMotor_5 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:20[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13885 all:10[0m
+[[30m23:17:20[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_6[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:20[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Can_ID# [0m[93m15[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:20[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:20[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:20[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:20[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:20[0m][I] [35mMotor_6 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:20[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13886 all:10[0m
+[[30m23:17:20[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_7[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:20[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Can_ID# [0m[93m16[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:20[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:20[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:20[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:20[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:20[0m][I] [35mMotor_7 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:20[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13887 all:10[0m
+[[30m23:17:20[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_8[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:20[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Can_ID# [0m[93m17[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:20[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:20[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:20[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:20[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:20[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:20[0m][I] [35mMotor_8 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:20[0m][I] [96m:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::[0m
+[[30m23:17:20[0m][I] [35mDevice_Name: [0m[93mAuto_Set_Id_0 ID: 1[0m[94m Online: 2[0m
+[[30m23:17:20[0m][I] [35mDevice_Name: [0m[93mMain_Switch_Board ID: 101[0m[94m Online: 1[0m
+[[30m23:17:20[0m][I] [35mDevice_Name: [0m[93mMotor_1 ID: 10[0m[94m Online: 1[0m
+[[30m23:17:20[0m][I] [35mDevice_Name: [0m[93mMotor_2 ID: 11[0m[94m Online: 1[0m
+[[30m23:17:20[0m][I] [35mDevice_Name: [0m[93mMotor_3 ID: 12[0m[94m Online: 1[0m
+[[30m23:17:20[0m][I] [35mDevice_Name: [0m[93mMotor_4 ID: 13[0m[94m Online: 1[0m
+[[30m23:17:20[0m][I] [35mDevice_Name: [0m[93mMotor_5 ID: 14[0m[94m Online: 1[0m
+[[30m23:17:20[0m][I] [35mDevice_Name: [0m[93mMotor_6 ID: 15[0m[94m Online: 1[0m
+[[30m23:17:20[0m][I] [35mDevice_Name: [0m[93mMotor_7 ID: 16[0m[94m Online: 1[0m
+[[30m23:17:20[0m][I] [35mDevice_Name: [0m[93mMotor_8 ID: 17[0m[94m Online: 1[0m
+[[30m23:17:20[0m][I] [94m[4m[1mInit_end![0m
+[[30m2026-07-26 23:17:23.369[0m] [LOG] [I] [32mStart_Init_Device
+[0m
+[[30m23:17:23[0m][I] [32mYAML_Driver_Version 0.0.1[0m
+[[30m23:17:23[0m][I] [32mYAML_Driver_Version_RST: 0.0.0[0m
+[[30m23:17:23[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13878 all:10[0m
+[[30m23:17:23[0m][I] [35mAdd_Device_To_Map: [0m[93mMain_Switch_Board[0m
+[[30m23:17:23[0m][I] [35mSave_ETH_Device_To_Map:[0m[93mMain_Switch_Board[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_Get_Info# [0m[93m1 0 0 0 1[0m
+[[30m23:17:23[0m][I] [35mMain_IO_Mod# [0m[93m0[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_Can_ID# [0m[93m101[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_Port# [0m[93m15100[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_ETH_IP# [0m[93m192.168.3.101[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_PC_IP# [0m[93m192.168.3.245[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m1000[0m
+[[30m23:17:23[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:23[0m][I] Main_Switch_Board Init GO
+[[30m23:17:23[0m][I] Main_Switch_Board IS Init OK
+[[30m23:17:23[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13879 all:10[0m
+[[30m23:17:23[0m][I] [35mAdd_Device_To_Map: [0m[93mAuto_Set_Id_0[0m
+[[30m23:17:23[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m2[0m
+[[30m23:17:23[0m][I] [32mDevice NUM: 8[0m
+[[30m23:17:23[0m][I] [34mSet Device [0m[93m[4mMotor_1[0m[34m ID To: [0m[33m10[0m
+[[30m23:17:23[0m][I] [34mSet Device [0m[93m[4mMotor_2[0m[34m ID To: [0m[33m11[0m
+[[30m23:17:23[0m][I] [34mSet Device [0m[93m[4mMotor_3[0m[34m ID To: [0m[33m12[0m
+[[30m23:17:23[0m][I] [34mSet Device [0m[93m[4mMotor_4[0m[34m ID To: [0m[33m13[0m
+[[30m23:17:23[0m][I] [34mSet Device [0m[93m[4mMotor_5[0m[34m ID To: [0m[33m14[0m
+[[30m23:17:23[0m][I] [34mSet Device [0m[93m[4mMotor_6[0m[34m ID To: [0m[33m15[0m
+[[30m23:17:23[0m][I] [34mSet Device [0m[93m[4mMotor_7[0m[34m ID To: [0m[33m16[0m
+[[30m23:17:23[0m][I] [34mSet Device [0m[93m[4mMotor_8[0m[34m ID To: [0m[33m17[0m
+[[30m23:17:23[0m][I] [32mAuto_Set_Id_0 IS Init OK[0m
+[[30m23:17:23[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13880 all:10[0m
+[[30m23:17:23[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_1[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:23[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_Can_ID# [0m[93m10[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:23[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:23[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:23[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:23[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:23[0m][I] [35mMotor_1 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:23[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13881 all:10[0m
+[[30m23:17:23[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_2[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:23[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_Can_ID# [0m[93m11[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:23[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:23[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:23[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:23[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:23[0m][I] [35mMotor_2 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:23[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13882 all:10[0m
+[[30m23:17:23[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_3[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:23[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_Can_ID# [0m[93m12[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:23[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:23[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:23[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:23[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:23[0m][I] [35mMotor_3 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:23[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13883 all:10[0m
+[[30m23:17:23[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_4[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:23[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_Can_ID# [0m[93m13[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:23[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:23[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:23[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:23[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:23[0m][I] [35mMotor_4 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:23[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13884 all:10[0m
+[[30m23:17:23[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_5[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:23[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_Can_ID# [0m[93m14[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:23[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:23[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:23[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:23[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:23[0m][I] [35mMotor_5 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:23[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13885 all:10[0m
+[[30m23:17:23[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_6[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:23[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_Can_ID# [0m[93m15[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:23[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:23[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:23[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:23[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:23[0m][I] [35mMotor_6 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:23[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13886 all:10[0m
+[[30m23:17:23[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_7[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:23[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_Can_ID# [0m[93m16[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:23[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:23[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:23[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:23[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:24[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:24[0m][I] [35mMotor_7 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:24[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13887 all:10[0m
+[[30m23:17:24[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_8[0m
+[[30m23:17:24[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:24[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:24[0m][I] [35mMain_CMD_Can_ID# [0m[93m17[0m
+[[30m23:17:24[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:24[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:24[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:24[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:24[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:24[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:24[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:24[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:24[0m][I] [35mMotor_8 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:24[0m][I] [96m:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::[0m
+[[30m23:17:24[0m][I] [35mDevice_Name: [0m[93mAuto_Set_Id_0 ID: 1[0m[94m Online: 2[0m
+[[30m23:17:24[0m][I] [35mDevice_Name: [0m[93mMain_Switch_Board ID: 101[0m[94m Online: 1[0m
+[[30m23:17:24[0m][I] [35mDevice_Name: [0m[93mMotor_1 ID: 10[0m[94m Online: 1[0m
+[[30m23:17:24[0m][I] [35mDevice_Name: [0m[93mMotor_2 ID: 11[0m[94m Online: 1[0m
+[[30m23:17:24[0m][I] [35mDevice_Name: [0m[93mMotor_3 ID: 12[0m[94m Online: 1[0m
+[[30m23:17:24[0m][I] [35mDevice_Name: [0m[93mMotor_4 ID: 13[0m[94m Online: 1[0m
+[[30m23:17:24[0m][I] [35mDevice_Name: [0m[93mMotor_5 ID: 14[0m[94m Online: 1[0m
+[[30m23:17:24[0m][I] [35mDevice_Name: [0m[93mMotor_6 ID: 15[0m[94m Online: 1[0m
+[[30m23:17:24[0m][I] [35mDevice_Name: [0m[93mMotor_7 ID: 16[0m[94m Online: 1[0m
+[[30m23:17:24[0m][I] [35mDevice_Name: [0m[93mMotor_8 ID: 17[0m[94m Online: 1[0m
+[[30m23:17:24[0m][I] [94m[4m[1mInit_end![0m
+[[30m2026-07-26 23:17:49.796[0m] [LOG] [I] [32mStart_Init_Device
+[0m
+[[30m23:17:49[0m][I] [32mYAML_Driver_Version 0.0.1[0m
+[[30m23:17:49[0m][I] [32mYAML_Driver_Version_RST: 0.0.0[0m
+[[30m23:17:49[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13878 all:10[0m
+[[30m23:17:49[0m][I] [35mAdd_Device_To_Map: [0m[93mMain_Switch_Board[0m
+[[30m23:17:49[0m][I] [35mSave_ETH_Device_To_Map:[0m[93mMain_Switch_Board[0m
+[[30m23:17:49[0m][I] [35mMain_CMD_Get_Info# [0m[93m1 0 0 0 1[0m
+[[30m23:17:49[0m][I] [35mMain_IO_Mod# [0m[93m0[0m
+[[30m23:17:49[0m][I] [35mMain_CMD_Can_ID# [0m[93m101[0m
+[[30m23:17:49[0m][I] [35mMain_CMD_Port# [0m[93m15100[0m
+[[30m23:17:49[0m][I] [35mMain_CMD_ETH_IP# [0m[93m192.168.3.101[0m
+[[30m23:17:49[0m][I] [35mMain_CMD_PC_IP# [0m[93m192.168.3.245[0m
+[[30m23:17:49[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m1000[0m
+[[30m23:17:49[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:49[0m][I] Main_Switch_Board Init GO
+[[30m23:17:50[0m][I] Main_Switch_Board IS Init OK
+[[30m23:17:50[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13879 all:10[0m
+[[30m23:17:50[0m][I] [35mAdd_Device_To_Map: [0m[93mAuto_Set_Id_0[0m
+[[30m23:17:50[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m2[0m
+[[30m23:17:50[0m][I] [32mDevice NUM: 8[0m
+[[30m23:17:50[0m][I] [34mSet Device [0m[93m[4mMotor_1[0m[34m ID To: [0m[33m10[0m
+[[30m23:17:50[0m][I] [34mSet Device [0m[93m[4mMotor_2[0m[34m ID To: [0m[33m11[0m
+[[30m23:17:50[0m][I] [34mSet Device [0m[93m[4mMotor_3[0m[34m ID To: [0m[33m12[0m
+[[30m23:17:50[0m][I] [34mSet Device [0m[93m[4mMotor_4[0m[34m ID To: [0m[33m13[0m
+[[30m23:17:50[0m][I] [34mSet Device [0m[93m[4mMotor_5[0m[34m ID To: [0m[33m14[0m
+[[30m23:17:50[0m][I] [34mSet Device [0m[93m[4mMotor_6[0m[34m ID To: [0m[33m15[0m
+[[30m23:17:50[0m][I] [34mSet Device [0m[93m[4mMotor_7[0m[34m ID To: [0m[33m16[0m
+[[30m23:17:50[0m][I] [34mSet Device [0m[93m[4mMotor_8[0m[34m ID To: [0m[33m17[0m
+[[30m23:17:50[0m][I] [32mAuto_Set_Id_0 IS Init OK[0m
+[[30m23:17:50[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13880 all:10[0m
+[[30m23:17:50[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_1[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:50[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_Can_ID# [0m[93m10[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:50[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:50[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:50[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:50[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:50[0m][I] [35mMotor_1 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:50[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13881 all:10[0m
+[[30m23:17:50[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_2[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:50[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_Can_ID# [0m[93m11[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:50[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:50[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:50[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:50[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:50[0m][I] [35mMotor_2 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:50[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13882 all:10[0m
+[[30m23:17:50[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_3[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:50[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_Can_ID# [0m[93m12[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:50[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:50[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:50[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:50[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:50[0m][I] [35mMotor_3 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:50[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13883 all:10[0m
+[[30m23:17:50[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_4[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:50[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_Can_ID# [0m[93m13[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:50[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:50[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:50[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:50[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:50[0m][I] [35mMotor_4 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:50[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13884 all:10[0m
+[[30m23:17:50[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_5[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:50[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_Can_ID# [0m[93m14[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:50[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:50[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:50[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:50[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:50[0m][I] [35mMotor_5 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:50[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13885 all:10[0m
+[[30m23:17:50[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_6[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:50[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_Can_ID# [0m[93m15[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:50[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:50[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:50[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:50[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:50[0m][I] [35mMotor_6 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:50[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13886 all:10[0m
+[[30m23:17:50[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_7[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:50[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_Can_ID# [0m[93m16[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:50[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:50[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:50[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:50[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:50[0m][I] [35mMotor_7 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:50[0m][I] [96m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>this:13887 all:10[0m
+[[30m23:17:50[0m][I] [35mAdd_Device_To_Map: [0m[93mMotor_8[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_Get_Info# [0m[93m2 0 0 1 0[0m
+[[30m23:17:50[0m][I] [35mMain_IO_Mod# [0m[93m2[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_Can_ID# [0m[93m17[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_UDP_Send_Speed# [0m[93m65535[0m
+[[30m23:17:50[0m][I] [35mDevice->IS_Online_In_Init: [0m[93m1[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_Port# [0m[93m65535[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_ETH_IP# [0m[93mNC[0m
+[[30m23:17:50[0m][I] [35mMain_CMD_PC_IP# [0m[93mNC[0m
+[[30m23:17:50[0m][I] [35mMotor_CMD_Coil_Temp_Alarm_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:50[0m][I] [35mMotor_CMD_Coil_Temp_Protect_Threshold# [0m[93m-1.000000[0m
+[[30m23:17:50[0m][I] [35mPrivate_Data_Size: [0m[93m2228872[0m
+[[30m23:17:50[0m][I] [35mMotor_8 IS Init OK EN:[0m[93m1[0m
+[[30m23:17:50[0m][I] [96m:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::[0m
+[[30m23:17:50[0m][I] [35mDevice_Name: [0m[93mAuto_Set_Id_0 ID: 1[0m[94m Online: 2[0m
+[[30m23:17:50[0m][I] [35mDevice_Name: [0m[93mMain_Switch_Board ID: 101[0m[94m Online: 1[0m
+[[30m23:17:50[0m][I] [35mDevice_Name: [0m[93mMotor_1 ID: 10[0m[94m Online: 1[0m
+[[30m23:17:50[0m][I] [35mDevice_Name: [0m[93mMotor_2 ID: 11[0m[94m Online: 1[0m
+[[30m23:17:50[0m][I] [35mDevice_Name: [0m[93mMotor_3 ID: 12[0m[94m Online: 1[0m
+[[30m23:17:50[0m][I] [35mDevice_Name: [0m[93mMotor_4 ID: 13[0m[94m Online: 1[0m
+[[30m23:17:50[0m][I] [35mDevice_Name: [0m[93mMotor_5 ID: 14[0m[94m Online: 1[0m
+[[30m23:17:50[0m][I] [35mDevice_Name: [0m[93mMotor_6 ID: 15[0m[94m Online: 1[0m
+[[30m23:17:50[0m][I] [35mDevice_Name: [0m[93mMotor_7 ID: 16[0m[94m Online: 1[0m
+[[30m23:17:50[0m][I] [35mDevice_Name: [0m[93mMotor_8 ID: 17[0m[94m Online: 1[0m
+[[30m23:17:50[0m][I] [94m[4m[1mInit_end![0m
