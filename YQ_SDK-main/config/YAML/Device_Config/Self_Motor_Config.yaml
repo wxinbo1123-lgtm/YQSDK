@@ -1,0 +1,98 @@
+
+config:
+  Init_Config: &Init_Config
+    Save_All_Config: false 
+    Motor_EN_In_Init: true
+    Set_Zero_In_Init: false
+    Set_Config_In_Init: false
+    Set_Pid_Config_In_Init: false
+    Motor_Cal_In_Init: false
+
+  # #保存参数到FLASH
+  # Init_Config: &Init_Config
+  #   Save_All_Config: true #不可常true 仅保存参数的时候开一次 否则快速损耗flash寿命
+  #   Motor_EN_In_Init: false
+  #   Set_Zero_In_Init: false
+  #   Set_Config_In_Init: true
+  #   Set_Pid_Config_In_Init: true
+  #   Motor_Cal_In_Init: true
+
+  Self_10MM_Motor_default_config: &Self_10MM_Motor_default_config
+    #Zero
+    Motor_Set_Zero_Offest: 0.0
+
+    #Config
+    Motor_Mod: Motor_MIT_Control
+    Motor_Heart_Beat: 0
+    Motor_Pole_Pairs: 1
+    Motor_AB_Mirror: true
+    Motor_current_sample_offset: 10
+
+    MD_K: 10
+    Dead_Time: 1
+    V_IC_MU_FORCE: 200
+    IC_MU_SPEED: 1
+    V_rated: 700
+
+    DI_I_MAX: 1.0            
+    I_Hardware_Max: 2
+    Current_Amplifier_Gain: 15
+    Motor_CMD_I_To_Force_K: 1.0
+    Ceil_Temperature_Alarm_Th: 90     # 电机过温告警阈值
+    Ceil_Temperature_Protect_Th: 100  # 电机过温保护阈值
+    NTC_Bx: 4334                      # 热敏电阻 B 值
+
+    Gear_Ratio: 22
+    Gear_multiple: 50
+    
+    # Pid_Config
+    Electricity_D_P: 200000
+    Electricity_D_I: 20000
+    Electricity_D_OUT_MAX: 0.9
+    Electricity_D_Integration_MAX: 0.9
+    Electricity_Q_P: 200000
+    Electricity_Q_I: 20000
+    Electricity_Q_OUT_MAX: 0.9
+    Electricity_Q_Integration_MAX: 0.9
+
+
+  Self_13MM_Motor_default_config: &Self_13MM_Motor_default_config
+    <<: *Init_Config 
+    
+    #Zero
+    Motor_Set_Zero_Offest: 0.0
+
+    #Config
+    Motor_Mod: Motor_MIT_Control
+    Motor_Heart_Beat: 0
+    Motor_Pole_Pairs: 1
+    Motor_AB_Mirror: true
+    Motor_current_sample_offset: 10
+
+    MD_K: 20
+    Dead_Time: 1
+    V_IC_MU_FORCE: 200
+    IC_MU_SPEED: 1
+    V_rated: 400
+
+    DI_I_MAX: 0.5                 
+    I_Hardware_Max: 2
+    Current_Amplifier_Gain: 16
+    Motor_CMD_I_To_Force_K: 1.0
+    Ceil_Temperature_Alarm_Th: 70   # 电机过温告警阈值
+    Ceil_Temperature_Protect_Th: 90 # 电机过温保护阈值
+    NTC_Bx: 4334                    # 热敏电阻 B 值
+
+    Gear_Ratio: 54
+    Gear_multiple: 10
+
+    #Pid_Config
+    Electricity_D_P: 200000
+    Electricity_D_I: 20000
+    Electricity_D_OUT_MAX: 0.90
+    Electricity_D_Integration_MAX: 0.90
+    Electricity_Q_P: 200000
+    Electricity_Q_I: 20000
+    Electricity_Q_OUT_MAX: 0.90
+    Electricity_Q_Integration_MAX: 0.90
+

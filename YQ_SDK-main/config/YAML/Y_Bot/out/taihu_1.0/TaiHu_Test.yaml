@@ -1,0 +1,170 @@
+Base_Node: 
+  - Name: Main_Switch_Board
+    Range_Name: Motor
+    DeviceType: Switch_Board # Motor_Device IMU_Device Key_Device Switch_Board Custom_Device
+    Id: 101
+    #Rec_Id_Offest: [1408, 1024]
+    CH: Head_Flag_CH0
+    IO_Mod: Main_CMD_IO_Mod_ETH_To_CAN
+    PC_IP: *PC_IP
+    IP: 192.168.3.101
+    Port: 15100
+    Up_Data_Speed: 2000
+    DeviceConfig:
+      Can_S:
+        - Can_Instance: 1
+          <<: *Classic_Can_1M
+
+    child:
+      # - Name: left_limb_iliopsoas  #left_shoulder_pitch
+      #   DeviceType: TaiHu_Custom_Motor
+      #   Id: 1  # **需要手动配电机ID，需与先前上位机实际烧录的电机ID对应
+      #   CH: Head_Flag_Switch_CH1
+      #   IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+      #   DeviceConfig: *TaiHu_4052_Motor_config
+
+      # - Name: left_limb_quadriceps #left_shoulder_roll
+      #   DeviceType: TaiHu_Custom_Motor
+      #   Id: 2
+      #   CH: Head_Flag_Switch_CH1
+      #   IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+      #   DeviceConfig: *TaiHu_4052_Motor_config
+      -  
+        Name: left_limb_iliopsoas  #left_shoulder_pitch
+        DeviceType: TaiHu_Custom_Motor
+        Id: 2  # **需要手动配电机ID，需与先前上位机实际烧录的电机ID对应
+        CH: Head_Flag_Switch_CH1
+        IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+        DeviceConfig: *TaiHu_4052_Motor_config
+
+      - Name: left_limb_quadriceps #left_shoulder_roll
+        DeviceType: TaiHu_Custom_Motor
+        Id: 16  # 实际电机CAN ID=16
+        CH: Head_Flag_Switch_CH1
+        IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+        DeviceConfig: *TaiHu_4052_Motor_config
+
+      - Name: left_limb_hamstring  #left_shoulder_yaw
+        DeviceType: TaiHu_Custom_Motor
+        Id: 14
+        CH: Head_Flag_Switch_CH1
+        IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+        DeviceConfig: *TaiHu_4052_Motor_config
+
+      # - Name: left_limb_hamstring  #left_shoulder_yaw
+      #   DeviceType: TaiHu_Custom_Motor#
+      #   Id: 13
+      #   CH: Head_Flag_Switch_CH1
+      #   IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+      #   DeviceConfig: *TaiHu_4052_Motor_config
+
+      # - Name: left_elbow
+      #   DeviceType: TaiHu_Custom_Motor
+      #   Id: 14
+      #   CH: Head_Flag_Switch_CH1
+      #   IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+      #   DeviceConfig: *TaiHu_6070_Motor_config
+
+      # - Name: left_wrist_yaw
+      #   DeviceType: TaiHu_Custom_Motor
+      #   Id: 15
+      #   CH: Head_Flag_Switch_CH1
+      #   IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+      #   DeviceConfig: *TaiHu_6070_Motor_config
+
+      # - Name: left_wrist_pitch
+      #   DeviceType: TaiHu_Custom_Motor
+      #   Id: 16
+      #   CH: Head_Flag_Switch_CH1
+      #   IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+      #   DeviceConfig: *TaiHu_6070_Motor_config
+
+      # - Name: left_wrist_roll
+      #   DeviceType: TaiHu_Custom_Motor
+      #   Id: 17
+      #   CH: Head_Flag_Switch_CH1
+      #   IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+      #   DeviceConfig: *TaiHu_6070_Motor_config
+        
+      # - Name: right_limb_hamstring #right_shoulder_pitch
+      #   DeviceType: TaiHu_Custom_Motor
+      #   Id: 14
+      #   CH: Head_Flag_Switch_CH1
+      #   IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+      #   DeviceConfig: *TaiHu_4052_Motor_config
+
+      # - Name: right_limb_hamstring #right_shoulder_roll
+      #   DeviceType: TaiHu_Custom_Motor
+      #   Id: 15
+      #   CH: Head_Flag_Switch_CH1
+      #   IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+      #   DeviceConfig: *TaiHu_4052_Motor_config
+
+      # - Name: right_limb_hamstring #right_shoulder_yaw
+      #   DeviceType: TaiHu_Custom_Motor
+      #   Id: 16
+      #   CH: Head_Flag_Switch_CH1
+      #   IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+      #   DeviceConfig: *TaiHu_4052_Motor_config
+      - Name: right_limb_iliopsoas #right_shoulder_pitch
+        DeviceType: TaiHu_Custom_Motor
+        Id: 11
+        CH: Head_Flag_Switch_CH1
+        IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+        DeviceConfig: *TaiHu_4052_Motor_config
+
+      - Name: right_limb_quadriceps #right_shoulder_roll
+        DeviceType: TaiHu_Custom_Motor
+        Id: 15
+        CH: Head_Flag_Switch_CH1
+        IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+        DeviceConfig: *TaiHu_4052_Motor_config
+
+      - Name: right_limb_hamstring #right_shoulder_yaw
+        DeviceType: TaiHu_Custom_Motor
+        Id: 13
+        CH: Head_Flag_Switch_CH1
+        IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+        DeviceConfig: *TaiHu_4052_Motor_config
+
+      # - Name: right_elbow
+      #   DeviceType: TaiHu_Custom_Motor
+      #   Id: 24
+      #   CH: Head_Flag_Switch_CH1
+      #   IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+      #   DeviceConfig: *TaiHu_6070_Motor_config
+
+      # - Name: right_wrist_yaw
+      #   DeviceType: TaiHu_Custom_Motor
+      #   Id: 25
+      #   CH: Head_Flag_Switch_CH1
+      #   IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+      #   DeviceConfig: *TaiHu_6070_Motor_config
+
+      # - Name: right_wrist_pitch
+      #   DeviceType: TaiHu_Custom_Motor
+      #   Id: 26
+      #   CH: Head_Flag_Switch_CH1
+      #   IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+      #   DeviceConfig: *TaiHu_6070_Motor_config
+
+      # - Name: right_wrist_roll
+      #   DeviceType: TaiHu_Custom_Motor
+      #   Id: 27
+      #   CH: Head_Flag_Switch_CH1
+      #   IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+      #   DeviceConfig: *TaiHu_6070_Motor_config
+
+      # - Name: head_pitch
+      #   DeviceType: TaiHu_Custom_Motor
+      #   Id: 1
+      #   CH: Head_Flag_Switch_CH1
+      #   IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+      #   DeviceConfig: *TaiHu_6070_Motor_config
+
+      # - Name: head_yaw
+      #   DeviceType: TaiHu_Custom_Motor
+      #   Id: 2
+      #   CH: Head_Flag_Switch_CH1
+      #   IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+      #   DeviceConfig: *TaiHu_6070_Motor_config

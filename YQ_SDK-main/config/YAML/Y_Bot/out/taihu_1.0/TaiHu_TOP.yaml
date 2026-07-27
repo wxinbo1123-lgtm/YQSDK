@@ -1,0 +1,10 @@
+DriverVersion: 0.0.1 #驱动多个电机时，需末位非0
+
+Name: Motor
+PC_IP: &PC_IP 192.168.3.245
+Broadcast_IP: 192.168.3.255
+
+import:
+  Motor_Config2: "TaiHu_Config.yaml"
+  Can_Config : "../../Device_Config/Can_Config.yaml"
+  Motors: "TaiHu_Test.yaml"

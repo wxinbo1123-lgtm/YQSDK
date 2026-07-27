@@ -1,0 +1,479 @@
+DriverVersion: 0.0.1
+
+# Log_Path: log_dir
+# Log_Name: name
+Log_Max_Size: 5
+# Debug_Level: debug
+# Debug_Level: info
+# Debug_Level: warn
+# Debug_Level: err
+# Debug_Level: critical
+# Debug_Level: _off
+
+Name: Motor
+PC_IP: &PC_IP 192.168.3.245
+Broadcast_IP: 192.168.3.255
+
+
+config_path__home_bobo12138_桌面_YQ_SDK-main_bin__config_YAML_X_Hand_out_mz_g_10____Device_Config_Serial_Configyaml:
+  Serial_1_Config: &Serial_1_Config
+    - Serial_CH: USART1
+      Serial_menu: 1
+      Serial_EN: true
+      Serial_Baud: 115200
+      Serial_ID: 200
+      WordLength: UART_WORDLENGTH_8B
+      Stm_Tx_Rx_GPIO:
+        Tx_GPIO: GPIOA
+        Rx_GPIO: GPIOA
+        Tx_GPIO_PIN: GPIO_PIN_9
+        Rx_GPIO_PIN: GPIO_PIN_10
+      Other_Config:
+        GPIO_AF: GPIO_AF7_USART1
+        Serial_interrupt: USART1_IRQn
+        TX_DMA: DMA_REQUEST_USART1_TX
+        RX_DMA: DMA_REQUEST_USART1_RX
+        TX_DMA_STREAM: DMA1_Stream1
+        RX_DMA_STREAM: DMA1_Stream0
+
+  Serial_485_Config: &Serial_485_Config
+    - Serial_CH: UART5
+      Serial_menu: 5
+      Serial_EN: true
+      Serial_Baud: 115200
+      Serial_ID: 200
+      WordLength: UART_WORDLENGTH_8B
+      Stm_Tx_Rx_GPIO:
+        Tx_GPIO: GPIOC
+        Rx_GPIO: GPIOD
+        Tx_GPIO_PIN: GPIO_PIN_12
+        Rx_GPIO_PIN: GPIO_PIN_2
+      Other_Config:
+        GPIO_AF: GPIO_AF8_UART5
+        Serial_interrupt: UART5_IRQn
+        TX_DMA: DMA_REQUEST_UART5_TX
+        RX_DMA: DMA_REQUEST_UART5_RX
+        TX_DMA_STREAM: DMA1_Stream1
+        RX_DMA_STREAM: DMA1_Stream0
+      485_Enable:
+        GPIO_DE_Port: GPIOC
+        GPIO_DE_Pin: GPIO_PIN_8
+
+  Serial_General_Config: &Serial_General_Config
+    Serial_CH: USART1
+    Serial_menu: 1
+    Serial_EN: true
+    Serial_Baud: 115200
+    Serial_ID: 200
+    WordLength: UART_WORDLENGTH_8B
+
+  Serial_1_DMA_Config: &Serial_1_DMA_Config
+    GPIO_AF: GPIO_AF7_USART1
+    Serial_interrupt: USART1_IRQn
+    TX_DMA: DMA_REQUEST_USART1_TX
+    RX_DMA: DMA_REQUEST_USART1_RX
+    TX_DMA_STREAM: DMA1_Stream1
+    RX_DMA_STREAM: DMA1_Stream0
+
+  Serial_4_DMA_Config: &Serial_4_DMA_Config
+    GPIO_AF: GPIO_AF8_UART4
+    Serial_interrupt: UART4_IRQn
+    TX_DMA: DMA_REQUEST_UART4_TX
+    RX_DMA: DMA_REQUEST_UART4_RX
+    TX_DMA_STREAM: DMA1_Stream3
+    RX_DMA_STREAM: DMA1_Stream2
+
+  Serial_5_DMA_Config: &Serial_5_DMA_Config
+    GPIO_AF: GPIO_AF8_UART5
+    Serial_interrupt: UART5_IRQn
+    TX_DMA: DMA_REQUEST_UART5_TX
+    RX_DMA: DMA_REQUEST_UART5_RX
+    TX_DMA_STREAM: DMA1_Stream1
+    RX_DMA_STREAM: DMA1_Stream0
+
+config_path__home_bobo12138_桌面_YQ_SDK-main_bin__config_YAML_X_Hand_out_mz_g_10____Device_Config_Can_Configyaml:
+  FD_Can_2M_4M: &FD_Can_2M_4M
+      Can_EN: true
+      Can_FrameFormat: FDCAN_FRAME_FD_BRS  # Classic; FD_NO_BRS
+      Can_Mode: FDCAN_MODE_NORMAL
+      Can_AutoRetransmission: true
+      Can_TransmitPause: false
+      Can_ProtocolException: false
+      Can_Nominal_Prescaler: 1
+      Can_Nominal_SyncJumpWidth: 9        # 应满足: SyncJumpWidth <= TimeSeg2
+      Can_Nominal_TimeSeg1: 30
+      Can_Nominal_TimeSeg2: 9
+      Can_Data_Prescaler: 1
+      Can_Data_SyncJumpWidth: 4
+      Can_Data_TimeSeg1: 15
+      Can_Data_TimeSeg2: 4
+      Can_StdFiltersNbr: 4
+      Can_ExtFiltersNbr: 4
+      Can_RxFifo0ElmtsNbr: 32
+      Can_RxFifo0ElmtSize: FDCAN_DATA_BYTES_64
+      Can_RxFifo1ElmtsNbr: 0
+      Can_RxFifo1ElmtSize: FDCAN_DATA_BYTES_64
+      Can_RxBuffersNbr: 0
+      Can_RxBufferSize: FDCAN_DATA_BYTES_64
+      Can_TxEventsNbr: 0
+      Can_TxBuffersNbr: 0
+      Can_TxFifoQueueElmtsNbr: 16
+      Can_TxFifoQueueMode: FDCAN_TX_FIFO_OPERATION
+      Can_TxElmtSize: FDCAN_DATA_BYTES_64
+      Can_Set_Complete: true  # 每路 CAN 必须要有且为 true, 否则主控不会写入寄存器
+
+  FD_Can_2M_2M: &FD_Can_2M_2M
+      Can_EN: true
+      Can_FrameFormat: FDCAN_FRAME_FD_BRS  # 开启BRS（关键修改）
+      Can_Mode: FDCAN_MODE_NORMAL
+      Can_AutoRetransmission: true
+      Can_TransmitPause: false
+      Can_ProtocolException: false
+      Can_Nominal_Prescaler: 1
+      Can_Nominal_SyncJumpWidth: 9        # SJW ≤ TimeSeg2
+      Can_Nominal_TimeSeg1: 30
+      Can_Nominal_TimeSeg2: 9
+      Can_Data_Prescaler: 1
+      Can_Data_SyncJumpWidth: 9           # SJW ≤ TimeSeg2
+      Can_Data_TimeSeg1: 30
+      Can_Data_TimeSeg2: 9
+      Can_StdFiltersNbr: 4
+      Can_ExtFiltersNbr: 4
+      Can_RxFifo0ElmtsNbr: 32
+      Can_RxFifo0ElmtSize: FDCAN_DATA_BYTES_64
+      Can_RxFifo1ElmtsNbr: 0
+      Can_RxFifo1ElmtSize: FDCAN_DATA_BYTES_64
+      Can_RxBuffersNbr: 0
+      Can_RxBufferSize: FDCAN_DATA_BYTES_64
+      Can_TxEventsNbr: 0
+      Can_TxBuffersNbr: 0
+      Can_TxFifoQueueElmtsNbr: 16
+      Can_TxFifoQueueMode: FDCAN_TX_FIFO_OPERATION
+      Can_TxElmtSize: FDCAN_DATA_BYTES_64
+      Can_Set_Complete: true
+
+  FD_Can_1M_5M: &FD_Can_1M_5M
+      Can_EN: true
+      Can_FrameFormat: FDCAN_FRAME_FD_BRS  # Classic; FD_NO_BRS
+      Can_Mode: FDCAN_MODE_NORMAL
+      Can_AutoRetransmission: true
+      Can_TransmitPause: false
+      Can_ProtocolException: false
+      Can_Nominal_Prescaler: 1
+      Can_Nominal_SyncJumpWidth: 16        # 应满足: SyncJumpWidth <= TimeSeg2
+      Can_Nominal_TimeSeg1: 63
+      Can_Nominal_TimeSeg2: 16
+      Can_Data_Prescaler: 1
+      Can_Data_SyncJumpWidth: 7
+      Can_Data_TimeSeg1: 8
+      Can_Data_TimeSeg2: 7
+      Can_StdFiltersNbr: 4
+      Can_ExtFiltersNbr: 4
+      Can_RxFifo0ElmtsNbr: 32
+      Can_RxFifo0ElmtSize: FDCAN_DATA_BYTES_64
+      Can_RxFifo1ElmtsNbr: 0
+      Can_RxFifo1ElmtSize: FDCAN_DATA_BYTES_64
+      Can_RxBuffersNbr: 0
+      Can_RxBufferSize: FDCAN_DATA_BYTES_64
+      Can_TxEventsNbr: 0
+      Can_TxBuffersNbr: 0
+      Can_TxFifoQueueElmtsNbr: 16
+      Can_TxFifoQueueMode: FDCAN_TX_FIFO_OPERATION
+      Can_TxElmtSize: FDCAN_DATA_BYTES_64
+      Can_Set_Complete: true  # 每路 CAN 必须要有且为 true, 否则主控不会写入寄存器
+
+
+  Classic_Can_1M: &Classic_Can_1M
+      Can_EN: true
+      Can_FrameFormat: FDCAN_FRAME_CLASSIC  # Classic; FD_NO_BRS
+      Can_Mode: FDCAN_MODE_NORMAL
+      Can_AutoRetransmission: true
+      Can_TransmitPause: false
+      Can_ProtocolException: false
+      Can_Nominal_Prescaler: 2
+      Can_Nominal_SyncJumpWidth: 9        # 应满足: SyncJumpWidth <= TimeSeg2
+      Can_Nominal_TimeSeg1: 30
+      Can_Nominal_TimeSeg2: 9
+      Can_Data_Prescaler: 1
+      Can_Data_SyncJumpWidth: 4
+      Can_Data_TimeSeg1: 15
+      Can_Data_TimeSeg2: 4
+      Can_StdFiltersNbr: 4
+      Can_ExtFiltersNbr: 4
+      Can_RxFifo0ElmtsNbr: 32
+      Can_RxFifo0ElmtSize: FDCAN_DATA_BYTES_64
+      Can_RxFifo1ElmtsNbr: 0
+      Can_RxFifo1ElmtSize: FDCAN_DATA_BYTES_64
+      Can_RxBuffersNbr: 0
+      Can_RxBufferSize: FDCAN_DATA_BYTES_64
+      Can_TxEventsNbr: 0
+      Can_TxBuffersNbr: 0
+      Can_TxFifoQueueElmtsNbr: 16
+      Can_TxFifoQueueMode: FDCAN_TX_FIFO_OPERATION
+      Can_TxElmtSize: FDCAN_DATA_BYTES_64
+      Can_Set_Complete: true  # 每路 CAN 必须要有且为 true, 否则主控不会写入寄存器
+
+config_path__home_bobo12138_桌面_YQ_SDK-main_bin__config_YAML_X_Hand_out_mz_g_10_configyaml:
+  : &Run_Auto_Set_Id false
+  : &Auto_Set_Id_Save false
+  
+  Usr_Motor_Init_Config: &Usr_Motor_Init_Config
+    Save_All_Config: false 
+    Motor_EN_In_Init: true
+    Set_Zero_In_Init: false
+    Set_Config_In_Init: false
+    Set_Pid_Config_In_Init: false
+    Motor_Cal_In_Init: false
+
+  # #保存参数到FLASH
+  # Usr_Motor_Init_Config: &Usr_Motor_Init_Config
+  #   Save_All_Config: true #不可常true 仅保存参数的时候开一次 否则快速损耗flash寿命
+  #   Motor_EN_In_Init: false
+  #   Set_Zero_In_Init: false
+  #   Set_Config_In_Init: true
+  #   Set_Pid_Config_In_Init: true
+  #   Motor_Cal_In_Init: true
+
+  # Usr_Motor_Init_Config: &Usr_Motor_Init_Config
+  #   Save_All_Config: false 
+  #   Motor_EN_In_Init: false
+  #   Set_Zero_In_Init: false
+  #   Set_Config_In_Init: false
+  #   Set_Pid_Config_In_Init: false
+  #   Motor_Cal_In_Init: false
+
+
+config_path__home_bobo12138_桌面_YQ_SDK-main_bin__config_YAML_X_Hand_out_mz_g_10____Device_Config_MZ_22mm_G21yaml:
+  Init_Config: &Init_Config
+    Save_All_Config: false 
+    Motor_EN_In_Init: true
+    Set_Zero_In_Init: false
+    Set_Config_In_Init: false
+    Set_Pid_Config_In_Init: false
+    Motor_Cal_In_Init: false
+
+  # #保存参数到FLASH
+  # Init_Config: &Init_Config
+  #   Save_All_Config: true #不可常true 仅保存参数的时候开一次 否则快速损耗flash寿命
+  #   Motor_EN_In_Init: false
+  #   Set_Zero_In_Init: false
+  #   Set_Config_In_Init: true
+  #   Set_Pid_Config_In_Init: true
+  #   Motor_Cal_In_Init: true
+
+MZ_22MM_G21_Motor_default_config: &MZ_22MM_G21_Motor_default_config
+    #Zero
+    Motor_Set_Zero_Offest: 0.0
+
+    #Config
+    Motor_Mod: Motor_MIT_Control
+    Motor_Heart_Beat: 0
+    Motor_Pole_Pairs: 2
+    Motor_AB_Mirror: false
+    Motor_current_sample_offset: 10
+
+    MD_K: 10
+    Dead_Time: 1
+    V_IC_MU_FORCE: 200
+    IC_MU_SPEED: 1
+    V_rated: 400
+
+    DI_I_MAX: 0.98                     #Rated current 0.98A          
+    I_Hardware_Max: 2
+    Current_Amplifier_Gain: 15
+    Motor_CMD_I_To_Force_K: 1.0
+    Ceil_Temperature_Alarm_Th: 255    # 电机过温告警阈值
+    Ceil_Temperature_Protect_Th: 255 # 电机过温保护阈值
+    NTC_Bx: 3434                      # 热敏电阻 B 值
+
+    Gear_Ratio: 21.0
+    Gear_multiple: 1.0
+    
+    # Pid_Config
+    Electricity_D_P: 200000
+    Electricity_D_I: 20000
+    Electricity_D_OUT_MAX: 0.9
+    Electricity_D_Integration_MAX: 0.9
+    Electricity_Q_P: 200000
+    Electricity_Q_I: 20000
+    Electricity_Q_OUT_MAX: 0.9
+    Electricity_Q_Integration_MAX: 0.9
+
+MZ_22MM_G35_Motor_default_config: &MZ_22MM_G35_Motor_default_config
+    #Zero
+    Motor_Set_Zero_Offest: 0.0
+
+    #Config
+    Motor_Mod: Motor_MIT_Control
+    Motor_Heart_Beat: 0
+    Motor_Pole_Pairs: 2
+    Motor_AB_Mirror: false
+    Motor_current_sample_offset: 10
+
+    MD_K: 10
+    Dead_Time: 1
+    V_IC_MU_FORCE: 200
+    IC_MU_SPEED: 1
+    V_rated: 400
+
+    DI_I_MAX: 0.72                     #Rated current 0.72A          
+    I_Hardware_Max: 2
+    Current_Amplifier_Gain: 15
+    Motor_CMD_I_To_Force_K: 1.0
+    Ceil_Temperature_Alarm_Th: 255    # 电机过温告警阈值
+    Ceil_Temperature_Protect_Th: 255 # 电机过温保护阈值
+    NTC_Bx: 3434                      # 热敏电阻 B 值
+
+    Gear_Ratio: 35.0
+    Gear_multiple: 1.0
+    
+    # Pid_Config
+    Electricity_D_P: 200000
+    Electricity_D_I: 20000
+    Electricity_D_OUT_MAX: 0.9
+    Electricity_D_Integration_MAX: 0.9
+    Electricity_Q_P: 200000
+    Electricity_Q_I: 20000
+    Electricity_Q_OUT_MAX: 0.9
+    Electricity_Q_Integration_MAX: 0.9
+
+config_path__home_bobo12138_桌面_YQ_SDK-main_bin__config_YAML_X_Hand_out_mz_g_10_Devicesyaml:
+  cat_motor_device_config: &cat_motor_device_config
+    <<: *Usr_Motor_Init_Config
+    <<: *MZ_10MM_Motor_default_config
+    Gear_multiple: 40
+
+  Motor_Config_Normal_0: &Motor_Config_Normal_0
+    DeviceType: Motor_Device 
+    CH: Head_Flag_Switch_CH2
+    IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+
+  MotorS_0: &MotorS_0
+    - Name: Motor_1
+      Id: 1
+      <<: *Motor_Config_Normal_0
+      DeviceConfig: 
+        <<: *cat_motor_device_config
+        DI_I_MAX: 0.4
+        Gear_multiple: 16
+        
+    - Name: Motor_2
+      Id: 1
+      <<: *Motor_Config_Normal_0
+      DeviceConfig: 
+        <<: *cat_motor_device_config
+        DI_I_MAX: 0.4
+        Gear_multiple: 4
+
+    - Name: Motor_3
+      Id: 1
+      <<: *Motor_Config_Normal_0
+      DeviceConfig: 
+        <<: *cat_motor_device_config
+
+    - Name: Motor_4
+      Id: 1
+      <<: *Motor_Config_Normal_0
+      DeviceConfig: 
+        <<: *cat_motor_device_config
+
+    - Name: Motor_5
+      Id: 1
+      <<: *Motor_Config_Normal_0
+      DeviceConfig: 
+        <<: *cat_motor_device_config
+
+    - Name: Motor_6
+      Id: 1
+      <<: *Motor_Config_Normal_0
+      DeviceConfig: 
+        <<: *cat_motor_device_config
+
+
+  Auto_Set_Id_DeviceS0: &Auto_Set_Id_DeviceS0
+    - Name: Auto_Set_Id_0
+      DeviceType: Auto_Set_Id 
+      Detect: false
+      Id: 1
+      CH: Head_Flag_Switch_CH2
+      IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+
+      DeviceConfig:
+        Run_Set: *Run_Auto_Set_Id
+        Start_Id: 10
+        Save_Id: *Auto_Set_Id_Save
+        Time_Out_Ms: 1000
+        DeviceList:
+          --: *MotorS_0
+
+  Sensor_Custom: &Sensor_Custom
+    - Name: Tactile_Sensor
+      DeviceType: Tactile_Sensor_Custom
+      Id: 200
+      CH: Head_Flag_Switch_CH14
+      DeviceConfig:
+          Hw_Pressure_Sensor_Async: true  # 开启异步采集模式
+          Hw_Pressure_Sensor_Collection_Interval: 50  # 采集间隔，单位ms(同步模式有效)
+          Hw_Pressure_Sensor_Response_Timeout: 50  # 响应超时时间，单位ms（同步模式有效）
+
+Base_Node_path__home_bobo12138_桌面_YQ_SDK-main_bin__config_YAML_X_Hand_out_mz_g_10_Devicesyaml: 
+  - Name: Main_Switch_Board
+    Range_Name: X_Hand
+    DeviceType: Switch_Board 
+    Id: 101
+    CH: Head_Flag_CH0
+    IO_Mod: Main_CMD_IO_Mod_ETH_To_CAN
+    PC_IP: *PC_IP
+    IP: 192.168.3.101
+    Port: 15100
+    Up_Data_Speed: 1000
+    Heart_Beat: true
+
+    DeviceConfig:
+      PrintMcuTaskStack: false
+      Can_S:
+       - Can_Instance: 1
+         <<: *FD_Can_2M_4M
+       - Can_Instance: 2
+         <<: *FD_Can_2M_4M
+      # Serial_S: *Serial_4_Config
+      Serial_S:
+        - Serial_CH: UART4
+          Serial_menu: 4
+          Serial_Baud: 921600
+          <<: *Serial_General_Config
+          Stm_Tx_Rx_GPIO:
+            Tx_GPIO: GPIOD
+            Rx_GPIO: GPIOD
+            Tx_GPIO_PIN: GPIO_PIN_1
+            Rx_GPIO_PIN: GPIO_PIN_0
+          Other_Config:
+            <<: *Serial_4_DMA_Config
+
+    child:
+      --: *Auto_Set_Id_DeviceS0
+      --: *MotorS_0
+      --: *Sensor_Custom
+
+
+# std::map<std::string, u32> IO_Mod_Map = {
+# {"Main_CMD_IO_Mod_ETH_To_CAN", Main_CMD_IO_Mod_ETH_To_CAN},
+# {"Main_CMD_IO_Mod_ETH_OR_CAN", Main_CMD_IO_Mod_ETH_OR_CAN},
+# {"Main_CMD_IO_Mod_CAN_ONLY", Main_CMD_IO_Mod_CAN_ONLY}};
+
+
+# enum Motor_CONTROL_MOD
+# {
+# Motor_Current_Control = 10,
+# Motor_MIT_Control = 11,
+# Motor_Pos_Control = 12,
+# Motor_Force_Control = 13,
+# Motor_Speed_Control = 14,
+
+# Motor_MOD_END = 100,
+# };
+
+
+
+
+
