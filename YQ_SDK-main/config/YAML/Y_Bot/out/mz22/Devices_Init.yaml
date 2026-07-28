@@ -2,7 +2,7 @@ config:
   cat_motor_device_config: &cat_motor_device_config
     <<: *Usr_Motor_Init_Config
     <<: *MZ_22MM_G21_Motor_default_config
-
+ 
   # cat_motor_device_config35: &cat_motor_device_config35
   #   <<: *Usr_Motor_Init_Config
   #   <<: *MZ_22MM_G35_Motor_default_config

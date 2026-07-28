@@ -390,6 +390,188 @@ config:
             - *75
             - *76
             - *77
+# Taihu 
+  - TaiHu_Motor_Init_Config: &2
+      TaiHu_Motor_Config: &3 true
+      TaiHu_Config_Save_Flash: &4 false
+  - TaiHu_6070_Motor_config:
+      <<: *2
+      TaiHu_Reduction_Ratio: 101
+      TaiHu_Pos_Offest: 0
+      TaiHu_Forward_Vel: 7000
+      TaiHu_Backward_vel: -7000
+      TaiHu_Pos_Kp: 1200
+      TaiHu_Pos_Kd: 500
+      TaiHu_Vel_Kp: 600
+      TaiHu_Vel_Ki: 300
+      TaiHu_Cur_Kp: 3542
+      TaiHu_Cur_Ki: 2510
+  - TaiHu_5060_Motor_config:
+      <<: *2
+      TaiHu_Reduction_Ratio: 101
+      TaiHu_Pos_Offest: 0
+      TaiHu_Forward_Vel: 7000
+      TaiHu_Backward_vel: -7000
+      TaiHu_Pos_Kp: 1200
+      TaiHu_Pos_Kd: 500
+      TaiHu_Vel_Kp: 600
+      TaiHu_Vel_Ki: 300
+      TaiHu_Cur_Kp: 3542
+      TaiHu_Cur_Ki: 2510
+  - TaiHu_4052_Motor_config: &5
+      TaiHu_Reduction_Ratio: 101
+      TaiHu_Pos_Offest: 0
+      TaiHu_Forward_Vel: 7000
+      TaiHu_Backward_vel: -7000
+      TaiHu_Pos_Kp: 10000
+      TaiHu_Pos_Kd: 2000
+      TaiHu_Vel_Kp: 600
+      TaiHu_Vel_Ki: 300
+      TaiHu_Cur_Kp: 3542
+      TaiHu_Cur_Ki: 2510
+      TaiHu_Motor_Config: *3
+      TaiHu_Config_Save_Flash: *4
+  - TaiHu_3040_Motor_config:
+      <<: *2
+      TaiHu_Reduction_Ratio: 101
+      TaiHu_Pos_Offest: 0
+      TaiHu_Forward_Vel: 7000
+      TaiHu_Backward_vel: -7000
+      TaiHu_Pos_Kp: 10000
+      TaiHu_Pos_Kd: 2000
+      TaiHu_Vel_Kp: 600
+      TaiHu_Vel_Ki: 300
+      TaiHu_Cur_Kp: 3542
+      TaiHu_Cur_Ki: 2510
+  - TaiHu_5053_Motor_config:
+      <<: *2
+      TaiHu_Reduction_Ratio: 101
+      TaiHu_Pos_Offest: 0
+      TaiHu_Forward_Vel: 7000
+      TaiHu_Backward_vel: -7000
+      TaiHu_Pos_Kp: 10000
+      TaiHu_Pos_Kd: 2000
+      TaiHu_Vel_Kp: 600
+      TaiHu_Vel_Ki: 300
+      TaiHu_Cur_Kp: 3542
+      TaiHu_Cur_Ki: 2510
+  - FD_Can_2M_4M:
+      Can_EN: true
+      Can_FrameFormat: FDCAN_FRAME_FD_BRS
+      Can_Mode: FDCAN_MODE_NORMAL
+      Can_AutoRetransmission: true
+      Can_TransmitPause: false
+      Can_ProtocolException: false
+      Can_Nominal_Prescaler: 1
+      Can_Nominal_SyncJumpWidth: 9
+      Can_Nominal_TimeSeg1: 30
+      Can_Nominal_TimeSeg2: 9
+      Can_Data_Prescaler: 1
+      Can_Data_SyncJumpWidth: 4
+      Can_Data_TimeSeg1: 15
+      Can_Data_TimeSeg2: 4
+      Can_StdFiltersNbr: 4
+      Can_ExtFiltersNbr: 4
+      Can_RxFifo0ElmtsNbr: 32
+      Can_RxFifo0ElmtSize: FDCAN_DATA_BYTES_64
+      Can_RxFifo1ElmtsNbr: 0
+      Can_RxFifo1ElmtSize: FDCAN_DATA_BYTES_64
+      Can_RxBuffersNbr: 0
+      Can_RxBufferSize: FDCAN_DATA_BYTES_64
+      Can_TxEventsNbr: 0
+      Can_TxBuffersNbr: 0
+      Can_TxFifoQueueElmtsNbr: 16
+      Can_TxFifoQueueMode: FDCAN_TX_FIFO_OPERATION
+      Can_TxElmtSize: FDCAN_DATA_BYTES_64
+      Can_Set_Complete: true
+  - FD_Can_2M_2M:
+      Can_EN: true
+      Can_FrameFormat: FDCAN_FRAME_FD_BRS
+      Can_Mode: FDCAN_MODE_NORMAL
+      Can_AutoRetransmission: true
+      Can_TransmitPause: false
+      Can_ProtocolException: false
+      Can_Nominal_Prescaler: 1
+      Can_Nominal_SyncJumpWidth: 9
+      Can_Nominal_TimeSeg1: 30
+      Can_Nominal_TimeSeg2: 9
+      Can_Data_Prescaler: 1
+      Can_Data_SyncJumpWidth: 9
+      Can_Data_TimeSeg1: 30
+      Can_Data_TimeSeg2: 9
+      Can_StdFiltersNbr: 4
+      Can_ExtFiltersNbr: 4
+      Can_RxFifo0ElmtsNbr: 32
+      Can_RxFifo0ElmtSize: FDCAN_DATA_BYTES_64
+      Can_RxFifo1ElmtsNbr: 0
+      Can_RxFifo1ElmtSize: FDCAN_DATA_BYTES_64
+      Can_RxBuffersNbr: 0
+      Can_RxBufferSize: FDCAN_DATA_BYTES_64
+      Can_TxEventsNbr: 0
+      Can_TxBuffersNbr: 0
+      Can_TxFifoQueueElmtsNbr: 16
+      Can_TxFifoQueueMode: FDCAN_TX_FIFO_OPERATION
+      Can_TxElmtSize: FDCAN_DATA_BYTES_64
+      Can_Set_Complete: true
+  - FD_Can_1M_5M:
+      Can_EN: true
+      Can_FrameFormat: FDCAN_FRAME_FD_BRS
+      Can_Mode: FDCAN_MODE_NORMAL
+      Can_AutoRetransmission: true
+      Can_TransmitPause: false
+      Can_ProtocolException: false
+      Can_Nominal_Prescaler: 1
+      Can_Nominal_SyncJumpWidth: 16
+      Can_Nominal_TimeSeg1: 63
+      Can_Nominal_TimeSeg2: 16
+      Can_Data_Prescaler: 1
+      Can_Data_SyncJumpWidth: 7
+      Can_Data_TimeSeg1: 8
+      Can_Data_TimeSeg2: 7
+      Can_StdFiltersNbr: 4
+      Can_ExtFiltersNbr: 4
+      Can_RxFifo0ElmtsNbr: 32
+      Can_RxFifo0ElmtSize: FDCAN_DATA_BYTES_64
+      Can_RxFifo1ElmtsNbr: 0
+      Can_RxFifo1ElmtSize: FDCAN_DATA_BYTES_64
+      Can_RxBuffersNbr: 0
+      Can_RxBufferSize: FDCAN_DATA_BYTES_64
+      Can_TxEventsNbr: 0
+      Can_TxBuffersNbr: 0
+      Can_TxFifoQueueElmtsNbr: 16
+      Can_TxFifoQueueMode: FDCAN_TX_FIFO_OPERATION
+      Can_TxElmtSize: FDCAN_DATA_BYTES_64
+      Can_Set_Complete: true
+  - Classic_Can_1M:
+      Can_EN: &6 true
+      Can_FrameFormat: &7 FDCAN_FRAME_CLASSIC
+      Can_Mode: &8 FDCAN_MODE_NORMAL
+      Can_AutoRetransmission: &9 true
+      Can_TransmitPause: &10 false
+      Can_ProtocolException: &11 false
+      Can_Nominal_Prescaler: &12 2
+      Can_Nominal_SyncJumpWidth: &13 9
+      Can_Nominal_TimeSeg1: &14 30
+      Can_Nominal_TimeSeg2: &15 9
+      Can_Data_Prescaler: &16 1
+      Can_Data_SyncJumpWidth: &17 4
+      Can_Data_TimeSeg1: &18 15
+      Can_Data_TimeSeg2: &19 4
+      Can_StdFiltersNbr: &20 4
+      Can_ExtFiltersNbr: &21 4
+      Can_RxFifo0ElmtsNbr: &22 32
+      Can_RxFifo0ElmtSize: &23 FDCAN_DATA_BYTES_64
+      Can_RxFifo1ElmtsNbr: &24 0
+      Can_RxFifo1ElmtSize: &25 FDCAN_DATA_BYTES_64
+      Can_RxBuffersNbr: &26 0
+      Can_RxBufferSize: &27 FDCAN_DATA_BYTES_64
+      Can_TxEventsNbr: &28 0
+      Can_TxBuffersNbr: &29 0
+      Can_TxFifoQueueElmtsNbr: &30 16
+      Can_TxFifoQueueMode: &31 FDCAN_TX_FIFO_OPERATION
+      Can_TxElmtSize: &32 FDCAN_DATA_BYTES_64
+      Can_Set_Complete: &33 true
+# 
 MZ_22MM_G21_Motor_default_config:
   Motor_Set_Zero_Offest: *39
   Motor_Mod: *40
@@ -405,7 +587,7 @@ MZ_22MM_G21_Motor_default_config:
   DI_I_MAX: *50
   I_Hardware_Max: *51
   Current_Amplifier_Gain: *52
-  Motor_CMD_I_To_Force_K: *53
+  Motor_CMD_I_To_Force_K: *53 
   Ceil_Temperature_Alarm_Th: *54
   Ceil_Temperature_Protect_Th: *55
   NTC_Bx: *56
@@ -419,9 +601,10 @@ MZ_22MM_G21_Motor_default_config:
   Electricity_Q_I: *64
   Electricity_Q_OUT_MAX: *65
   Electricity_Q_Integration_MAX: *66
+  
 Base_Node:
   - Name: Main_Switch_Board
-    Range_Name: X_Hand
+    Range_Name: Y_Bot
     DeviceType: Switch_Board
     Id: 101
     CH: Head_Flag_CH0
@@ -492,6 +675,36 @@ Base_Node:
           Can_TxFifoQueueMode: *27
           Can_TxElmtSize: *28
           Can_Set_Complete: *29
+      Can_S: #Taihu
+        - Can_Instance: 1
+          Can_EN: *6
+          Can_FrameFormat: *7
+          Can_Mode: *8
+          Can_AutoRetransmission: *9
+          Can_TransmitPause: *10
+          Can_ProtocolException: *11
+          Can_Nominal_Prescaler: *12
+          Can_Nominal_SyncJumpWidth: *13
+          Can_Nominal_TimeSeg1: *14
+          Can_Nominal_TimeSeg2: *15
+          Can_Data_Prescaler: *16
+          Can_Data_SyncJumpWidth: *17
+          Can_Data_TimeSeg1: *18
+          Can_Data_TimeSeg2: *19
+          Can_StdFiltersNbr: *20
+          Can_ExtFiltersNbr: *21
+          Can_RxFifo0ElmtsNbr: *22
+          Can_RxFifo0ElmtSize: *23
+          Can_RxFifo1ElmtsNbr: *24
+          Can_RxFifo1ElmtSize: *25
+          Can_RxBuffersNbr: *26
+          Can_RxBufferSize: *27
+          Can_TxEventsNbr: *28
+          Can_TxBuffersNbr: *29
+          Can_TxFifoQueueElmtsNbr: *30
+          Can_TxFifoQueueMode: *31
+          Can_TxElmtSize: *32
+          Can_Set_Complete: *33
     child:
       - *78
       - *70
@@ -502,3 +715,51 @@ Base_Node:
       - *75
       - *76
       - *77
+      - Name: left_limb_iliopsoas
+        DeviceType: TaiHu_Custom_Motor
+        Id: 1
+        CH: Head_Flag_Switch_CH1
+        IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+        DeviceConfig: *5
+      - Name: left_limb_quadriceps
+        DeviceType: TaiHu_Custom_Motor
+        Id: 2
+        CH: Head_Flag_Switch_CH1
+        IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+        DeviceConfig: *5
+      - Name: left_limb_iliopsoas
+        DeviceType: TaiHu_Custom_Motor
+        Id: 11
+        CH: Head_Flag_Switch_CH1
+        IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+        DeviceConfig: *5
+      - Name: left_limb_quadriceps
+        DeviceType: TaiHu_Custom_Motor
+        Id: 13
+        CH: Head_Flag_Switch_CH1
+        IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+        DeviceConfig: *5
+      - Name: left_limb_hamstring
+        DeviceType: TaiHu_Custom_Motor
+        Id: 15
+        CH: Head_Flag_Switch_CH1
+        IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+        DeviceConfig: *5
+      - Name: right_limb_iliopsoas
+        DeviceType: TaiHu_Custom_Motor
+        Id: 12
+        CH: Head_Flag_Switch_CH1
+        IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+        DeviceConfig: *5
+      - Name: right_limb_quadriceps
+        DeviceType: TaiHu_Custom_Motor
+        Id: 14
+        CH: Head_Flag_Switch_CH1
+        IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+        DeviceConfig: *5
+      - Name: right_limb_hamstring
+        DeviceType: TaiHu_Custom_Motor
+        Id: 16
+        CH: Head_Flag_Switch_CH1
+        IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+        DeviceConfig: *5

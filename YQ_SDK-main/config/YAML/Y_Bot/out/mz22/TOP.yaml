@@ -21,3 +21,6 @@ import:
   Motor_Config1: "../../../Device_Config/MZ_22mm_G21.yaml"
   Motors: "Devices.yaml"
 
+  Motor_Config2: "TaiHu_Config.yaml"
+  Motors2: "TaiHu_Test.yaml"
+

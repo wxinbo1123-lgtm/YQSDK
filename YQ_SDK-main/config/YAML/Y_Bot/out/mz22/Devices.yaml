@@ -12,6 +12,49 @@ config:
     CH: Head_Flag_Switch_CH2
     IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
 
+#  Taihu Anchor
+  TaiHuS_0: &TaihuS_0
+    - Name: left_limb_iliopsoas  #left_shoulder_pitch
+      DeviceType: TaiHu_Custom_Motor
+      Id: 2  # **需要手动配电机ID，需与先前上位机实际烧录的电机ID对应
+      CH: Head_Flag_Switch_CH1
+      IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+      DeviceConfig: *TaiHu_4052_Motor_config
+
+    - Name: left_limb_quadriceps #left_shoulder_roll
+      DeviceType: TaiHu_Custom_Motor
+      Id: 16  # 实际电机CAN ID=16
+      CH: Head_Flag_Switch_CH1
+      IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+      DeviceConfig: *TaiHu_4052_Motor_config
+
+    - Name: left_limb_hamstring  #left_shoulder_yaw
+      DeviceType: TaiHu_Custom_Motor
+      Id: 14
+      CH: Head_Flag_Switch_CH1
+      IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+      DeviceConfig: *TaiHu_4052_Motor_config
+    - Name: right_limb_iliopsoas #right_shoulder_pitch
+      DeviceType: TaiHu_Custom_Motor
+      Id: 11
+      CH: Head_Flag_Switch_CH1
+      IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+      DeviceConfig: *TaiHu_4052_Motor_config
+
+    - Name: right_limb_quadriceps #right_shoulder_roll
+      DeviceType: TaiHu_Custom_Motor
+      Id: 15
+      CH: Head_Flag_Switch_CH1
+      IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+      DeviceConfig: *TaiHu_4052_Motor_config
+
+    - Name: right_limb_hamstring #right_shoulder_yaw
+      DeviceType: TaiHu_Custom_Motor
+      Id: 13
+      CH: Head_Flag_Switch_CH1
+      IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
+      DeviceConfig: *TaiHu_4052_Motor_config
+ 
   MotorS_0: &MotorS_0
     - Name: Motor_1
       Id: 1
@@ -103,9 +146,11 @@ Base_Node:
       PrintMcuTaskStack: false
       Can_S:
        - Can_Instance: 1
-         <<: *FD_Can_2M_4M
+         <<: *Classic_Can_1M 
        - Can_Instance: 2
          <<: *FD_Can_2M_4M
+        # - Can_Instance: 1 #TaiHu_Motor_CAN
+        #   <<: *Classic_Can_1M 
       # Serial_S: *Serial_4_Config
       # Serial_S:
       #   - Serial_CH: UART4
@@ -123,6 +168,8 @@ Base_Node:
     child:
       --: *Auto_Set_Id_DeviceS0
       --: *MotorS_0
+      --: *TaiHuS_0
+
       # --: *Sensor_Custom
 
 

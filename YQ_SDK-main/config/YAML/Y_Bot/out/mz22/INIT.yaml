@@ -22,7 +22,7 @@ import:
 
 
 config:
-  : &Run_Auto_Set_Id true
+  : &Run_Auto_Set_Id true 
   : &Auto_Set_Id_Save true
   
   # 保存参数到FLASH
