@@ -235,7 +235,7 @@ int hardware_init(const string& ADDR, const string& Config)
 #ifndef HAVE_ROS
     filesystem::path exe_path = filesystem::canonical("/proc/self/exe");
     filesystem::path dir_path = exe_path.parent_path();
-    string ADDR = dir_path.string() + "/../config/YAML/Y_bot/out/mz22/TOP.yaml";
+    string ADDR = dir_path.string() + "/../config/YAML/Y_Bot/out/mz22/TOP.yaml";
     string Config = "None";
 //     string Config = R"(
 // PC_IP: 192.168.3.245
@@ -249,20 +249,6 @@ int hardware_init(const string& ADDR, const string& Config)
     if (Y_bot->Init_TOP(ADDR, Config) != 0) {
         cout << "Init_ERR" << endl;
         return -1;
-    }
-#ifndef HAVE_ROS // 宏操作——如果没有定义HAVE_ROS（不在ros里使用，在sdk使用），则继续执行下方配置yaml文件指令(ROS中配置yaml文件路径由外部传入，不需要在代码中获取程序所在目录)
-    filesystem::path exe_path2 = filesystem::canonical("/proc/self/exe");
-    filesystem::path dir_path2 = exe_path.parent_path();
-    std::cout << "程序所在目录: " << dir_path2 << std::endl;
-    string Config2 = "None";
-    string ADDR2 =
-        dir_path2.string() +
-        "/../config/YAML/Y_bot/taihu_1.0/"
-        "TaiHu_TOP.yaml"; // 绝对路径../表示上一级文件夹；dir_path.string()+/等价于../
-#endif
-    if (Y_bot->Init_TOP(ADDR2, Config2) != 0)
-    {
-        cout << "TaiHu_Init_ERR" << endl;
     }
 //
 Main_Switch_Board = Y_bot->Get_Device_For_Name("Main_Switch_Board");
@@ -544,7 +530,7 @@ Main_Switch_Board = Y_bot->Get_Device_For_Name("Main_Switch_Board");
 while(true){
     Get_FB();
     Motor_3_Control->Send_MIT_PD_Control_Data(Motor_3_D, FB_Datas[2].P + 100.0f , 0.0, 0.0, 100.0, 50.0);
-    Motor_4_Control->Send_MIT_PD_Control_Data(Motor_4_D, FB_Datas[2].P - 70.0f , 0.0, 0.0, 100.0, 50.0);
+    Motor_4_Control->Send_MIT_PD_Control_Data(Motor_4_D, FB_Datas[3].P - 70.0f , 0.0, 0.0, 100.0, 50.0);
     cout<< "Motor_3 Move to: " << FB_Datas[2].P << endl;
     Y_bot->Send_Buff_Data();
 
