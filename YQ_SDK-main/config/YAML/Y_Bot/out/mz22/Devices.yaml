@@ -13,7 +13,7 @@ config:
     IO_Mod: Main_CMD_IO_Mod_CAN_ONLY
 
 #  Taihu Anchor
-  TaiHuS_0: &TaihuS_0
+  TaiHuS_0: &TaiHuS_0
     - Name: left_limb_iliopsoas  #left_shoulder_pitch
       DeviceType: TaiHu_Custom_Motor
       Id: 2  # **需要手动配电机ID，需与先前上位机实际烧录的电机ID对应
