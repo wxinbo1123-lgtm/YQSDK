@@ -229,9 +229,7 @@ int hardware_init(const string& ADDR, const string& Config)
     Y_bot->Add_Device_Type(Motor_Device_Type, Motor_Device_Init, Motor_Device_CallBack_F, Motor_Device_Delete_F);
     Y_bot->Add_Device_Type(Auto_Set_Id_Type, Auto_Set_Id_Init, Auto_Set_Id_CallBack_F, Auto_Set_Id_Delete_F);
     // Y_bot->Add_Device_Type("Tactile_Sensor_Custom", Hw_Pressure_Sensor_Init, Hw_Pressure_Sensor_CallBack_F, Hw_Pressure_Sensor_Delete_F);
-    Y_bot->Add_Device_Type("TaiHu_Custom_Motor", Motor_Device_Init_TaiHu,
-                                Motor_Device_CallBack_TaiHu,
-                                Motor_Device_Delete_TaiHu);
+    Y_bot->Add_Device_Type("TaiHu_Custom_Motor", Motor_Device_Init_TaiHu, Motor_Device_CallBack_TaiHu, Motor_Device_Delete_TaiHu);
 #ifndef HAVE_ROS
     filesystem::path exe_path = filesystem::canonical("/proc/self/exe");
     filesystem::path dir_path = exe_path.parent_path();
@@ -326,6 +324,33 @@ Main_Switch_Board = Y_bot->Get_Device_For_Name("Main_Switch_Board");
 
     // Y_bot_Init();
 
+// auto check_ptr = [](const char* name, auto ptr){
+//     if (ptr == nullptr ){
+//         cout << "error: " << name << " is nullptr" << endl;
+//         return false;
+
+//     }
+//     cout << " ok: " << name << endl;
+//     return true;
+// };
+// check_ptr("TaiHu_Device_1", TaiHu_Device_1);
+// check_ptr("TaiHu_Device_T1", TaiHu_Device_T1);
+// check_ptr("TaiHu_Device_2", TaiHu_Device_2);
+// check_ptr("TaiHu_Device_T2", TaiHu_Device_T2);
+// check_ptr("TaiHu_Device_3", TaiHu_Device_3);
+// check_ptr("TaiHu_Device_T3", TaiHu_Device_T3);
+// check_ptr("TaiHu_Device_8", TaiHu_Device_8);
+// check_ptr("TaiHu_Device_T8", TaiHu_Device_T8);
+// check_ptr("TaiHu_Device_9", TaiHu_Device_9);
+// check_ptr("TaiHu_Device_T9", TaiHu_Device_T9);
+// check_ptr("TaiHu_Device_10", TaiHu_Device_10);
+// check_ptr("TaiHu_Device_T10", TaiHu_Device_T10);
+
+
+
+
+    //
+
 #ifndef HAVE_ROS
     Get_FB();
     constexpr int loop_time_step = 1000 * 10000 / 1000; // 1000Hz
@@ -356,7 +381,7 @@ Main_Switch_Board = Y_bot->Get_Device_For_Name("Main_Switch_Board");
     using clock = chrono::steady_clock;
     auto start_time = clock::now();
     /* ------------------- 反复握拳 ------------------- */
-#if 0
+#if 1
     // File export
     // ofstream force_file("pretensioning21_1.txt");
     // if (!force_file.is_open()) {
@@ -436,14 +461,29 @@ Main_Switch_Board = Y_bot->Get_Device_For_Name("Main_Switch_Board");
         if (elapsed_time >=3.0){
             break;
         }
-        Motor_1_Control->Send_MIT_PD_Control_Data(Motor_1_D, 0.0 , 0.0, 0.04f, 0.0, 0.0);
-        Motor_2_Control->Send_MIT_PD_Control_Data(Motor_2_D, 0.0 , 0.0, 0.05f, 0.0, 0.0);
-        Motor_3_Control->Send_MIT_PD_Control_Data(Motor_3_D, 0.0 , 0.0, 0.04f, 0.0, 0.0);
-        Motor_4_Control->Send_MIT_PD_Control_Data(Motor_4_D, 0.0 , 0.0, 0.04f, 0.0, 0.0);
-        Motor_5_Control->Send_MIT_PD_Control_Data(Motor_5_D, 0.0 , 0.0, 0.04f, 0.0, 0.0);
-        Motor_6_Control->Send_MIT_PD_Control_Data(Motor_6_D, 0.0 , 0.0, 0.06f, 0.0, 0.0);
-        Motor_7_Control->Send_MIT_PD_Control_Data(Motor_7_D, 0.0 , 0.0, 0.04f, 0.0, 0.0);
-        Motor_8_Control->Send_MIT_PD_Control_Data(Motor_8_D, 0.0 , 0.0, 0.04f, 0.0, 0.0);
+
+        TaiHu_Device_T1 -> Send_MIT_PD_Control_Data(TaiHu_Device_1,1.0f,0.0f,0.0f,0.0f,0.0f);
+        TaiHu_Device_T2 -> Send_MIT_PD_Control_Data(TaiHu_Device_2,-30.0f,0.0f,0.0f,0.0f,0.0f);
+        TaiHu_Device_T3 -> Send_MIT_PD_Control_Data(TaiHu_Device_3,110.0f,0.0f,0.0f,0.0f,0.0f);
+        TaiHu_Device_T8 -> Send_MIT_PD_Control_Data(TaiHu_Device_8,-20.0f,0.0f,0.0f,0.0f,0.0f);
+        TaiHu_Device_T9 -> Send_MIT_PD_Control_Data(TaiHu_Device_9,20.0f,0.0f,0.0f,0.0f,0.0f);
+        TaiHu_Device_T10 -> Send_MIT_PD_Control_Data(TaiHu_Device_10,110.0f,0.0f,0.0f,0.0f,0.0f);
+        // TaiHu_Device_T1 -> Send_MIT_PD_Control_Data(TaiHu_Device_1, 0.0f,0.0f,300.0f,0.0f,0.0f);
+        // TaiHu_Device_T2 -> Send_MIT_PD_Control_Data(TaiHu_Device_2, 0.0f,0.0f,300.0f,0.0f,0.0f);
+        // TaiHu_Device_T3 -> Send_MIT_PD_Control_Data(TaiHu_Device_3, 0.0f,0.0f,300.0f,0.0f,0.0f);
+        // TaiHu_Device_T8 -> Send_MIT_PD_Control_Data(TaiHu_Device_8, 0.0f,0.0f,300.0f,0.0f,0.0f);
+        // TaiHu_Device_T9 -> Send_MIT_PD_Control_Data(TaiHu_Device_9, 0.0f,0.0f,300.0f,0.0f,0.0f);
+        // TaiHu_Device_T10 -> Send_MIT_PD_Control_Data(TaiHu_Device_10, 0.0f,0.0f,300.0f,0.0f,0.0f);
+        Y_bot->Send_Buff_Data();
+        usleep(500000);
+        Motor_1_Control->Send_MIT_PD_Control_Data(Motor_1_D, 0.0 , 0.0, 0.03f, 0.0, 0.0);
+        Motor_2_Control->Send_MIT_PD_Control_Data(Motor_2_D, 0.0 , 0.0, 0.03f, 0.0, 0.0);
+        Motor_3_Control->Send_MIT_PD_Control_Data(Motor_3_D, 0.0 , 0.0, 0.03f, 0.0, 0.0);
+        Motor_4_Control->Send_MIT_PD_Control_Data(Motor_4_D, 0.0 , 0.0, 0.035f, 0.0, 0.0);
+        Motor_5_Control->Send_MIT_PD_Control_Data(Motor_5_D, 0.0 , 0.0, 0.03f, 0.0, 0.0);
+        Motor_6_Control->Send_MIT_PD_Control_Data(Motor_6_D, 0.0 , 0.0, 0.04f, 0.0, 0.0);
+        Motor_7_Control->Send_MIT_PD_Control_Data(Motor_7_D, 0.0 , 0.0, 0.03f, 0.0, 0.0);
+        Motor_8_Control->Send_MIT_PD_Control_Data(Motor_8_D, 0.0 , 0.0, 0.035f, 0.0, 0.0);
 
         // Motor_1_Control->Send_MIT_PD_Control_Data(Motor_1_D, 0.0 , 0.0, 0.0, 500.0, 100.0);
         // Motor_2_Control->Send_MIT_PD_Control_Data(Motor_2_D, 0.0 , 0.0, 0.0, 500.0, 100.0);
@@ -503,11 +543,22 @@ Main_Switch_Board = Y_bot->Get_Device_For_Name("Main_Switch_Board");
     }
 
 #endif
-#if 0
+#if 1
+const float p[8] = {FB_Datas[0].P,FB_Datas[1].P,FB_Datas[2].P,FB_Datas[3].P,FB_Datas[4].P,FB_Datas[5].P,FB_Datas[6].P,FB_Datas[7].P};
+    float thp[6] = {0.0f,0.0f,0.0f,0.0f,0.0f,0.0f};
+    float thv[6] = {0.0f,0.0f,0.0f,0.0f,0.0f,0.0f};
+    float thf[6] = {0.0f,0.0f,0.0f,0.0f,0.0f,0.0f};
+    TaiHu_Device_T1 -> Get_Motor_FB_Data(TaiHu_Device_1, &thp[0],&thv[0],&thf[0]);
+    TaiHu_Device_T2 -> Get_Motor_FB_Data(TaiHu_Device_2, &thp[1],&thv[1],&thf[1]);
+    TaiHu_Device_T3 -> Get_Motor_FB_Data(TaiHu_Device_3, &thp[2],&thv[2],&thf[2]);
+    TaiHu_Device_T8-> Get_Motor_FB_Data(TaiHu_Device_8, &thp[3],&thv[3],&thf[3]);
+    TaiHu_Device_T9-> Get_Motor_FB_Data(TaiHu_Device_9, &thp[4],&thv[4],&thf[4]);
+    TaiHu_Device_T10 -> Get_Motor_FB_Data(TaiHu_Device_10, &thp[5],&thv[5],&thf[5]);
+ for (int i =0; i<6 ; i++){
+    cout << i+1 << "\t" << thp[i] << endl;
+ }
  while(true){
-    const float p[8] = {FB_Datas[0].P,FB_Datas[1].P,FB_Datas[2].P,FB_Datas[3].P,FB_Datas[4].P,FB_Datas[5].P,FB_Datas[6].P,FB_Datas[7].P};
-    // const float p = FB_Datas[0].P;
-    // Motor_1_Control->Send_MIT_PD_Control_Data(Motor_1_D, p , 0.0, 0.0, 0.0, 0.0);
+
     Motor_1_Control->Send_MIT_PD_Control_Data(Motor_1_D, p[0] , 0.0, 0.0, 500.0, 100.0);
     Motor_2_Control->Send_MIT_PD_Control_Data(Motor_2_D, p[1] , 0.0, 0.0, 500.0, 100.0);
     Motor_3_Control->Send_MIT_PD_Control_Data(Motor_3_D, p[2] , 0.0, 0.0, 500.0, 100.0);
@@ -517,27 +568,119 @@ Main_Switch_Board = Y_bot->Get_Device_For_Name("Main_Switch_Board");
     Motor_7_Control->Send_MIT_PD_Control_Data(Motor_7_D, p[6] , 0.0, 0.0, 500.0, 100.0);
     Motor_8_Control->Send_MIT_PD_Control_Data(Motor_8_D, p[7] , 0.0, 0.0, 500.0, 100.0);
     Y_bot->Send_Buff_Data();
+    // usleep(100000);
+    // TaiHu_Device_T1 -> Send_MIT_PD_Control_Data(TaiHu_Device_1,thp[0],0.0f,0.0f,0.0f,0.0f);
+    // TaiHu_Device_T2 -> Send_MIT_PD_Control_Data(TaiHu_Device_2,thp[1],0.0f,0.0f,0.0f,0.0f);
+    // TaiHu_Device_T3 -> Send_MIT_PD_Control_Data(TaiHu_Device_3,thp[2],0.0f,0.0f,0.0f,0.0f);
+    // TaiHu_Device_T8 -> Send_MIT_PD_Control_Data(TaiHu_Device_8,thp[3],0.0f,0.0f,0.0f,0.0f);
+    // TaiHu_Device_T9 -> Send_MIT_PD_Control_Data(TaiHu_Device_9,thp[4],0.0f,0.0f,0.0f,0.0f);
+    // TaiHu_Device_T10 -> Send_MIT_PD_Control_Data(TaiHu_Device_10,thp[5],0.0f,0.0f,0.0f,0.0f);
+    // Y_bot->Send_Buff_Data();
 
     usleep(loop_time_step);
-     for(int i =0; i < 8 ; i++)
-        {
-            cout<< "Motor:" << i+1 << "Current:"<< FB_Datas[i].F <<"\t"<< "Position:" << FB_Datas[i].P << endl;
-        }
+    //  for(int i =0; i < 8 ; i++)
+    //     {
+    //         cout<< "Motor:" << i+1 << "Current:"<< FB_Datas[i].F <<"\t"<< "Position:" << FB_Datas[i].P << endl;
+    //     }
         break;
  }
 #endif
 //  Motor_vector.at(m)->Get_Motor_FB_Data(Device_vector.at(m), &p, &v, &c);
+#if 0 // Hip Abduction
 while(true){
     Get_FB();
-    Motor_3_Control->Send_MIT_PD_Control_Data(Motor_3_D, FB_Datas[2].P + 100.0f , 0.0, 0.0, 100.0, 50.0);
-    Motor_4_Control->Send_MIT_PD_Control_Data(Motor_4_D, FB_Datas[3].P - 70.0f , 0.0, 0.0, 100.0, 50.0);
-    cout<< "Motor_3 Move to: " << FB_Datas[2].P << endl;
+    usleep(2000000);
+    Motor_1_Control->Send_MIT_PD_Control_Data(Motor_1_D, p[0]+300.0f , 0.0, 0.0, 100.0, 50.0);
+    // cout<< "Motor_1 Move to: " << FB_Datas[0].P << endl;
     Y_bot->Send_Buff_Data();
+    usleep(2000000);
+    Motor_1_Control->Send_MIT_PD_Control_Data(Motor_1_D, p[0], 0.0, 0.0, 100.0, 50.0);
+    Motor_5_Control->Send_MIT_PD_Control_Data(Motor_5_D, p[4]+300.0f, 0.0, 0.0, 100.0, 50.0);
+    Y_bot->Send_Buff_Data();
+    usleep(2000000);
+    Motor_5_Control->Send_MIT_PD_Control_Data(Motor_5_D, p[4], 0.0, 0.0, 100.0, 50.0);
+    Y_bot->Send_Buff_Data();
+    
+}
+#endif
+#if 1 // Knee 
+while(true){
+    Get_FB();
+    TaiHu_Device_T2 -> Send_MIT_PD_Control_Data(TaiHu_Device_2,-90.0f,0.0f,0.0f,0.0f,0.0f);
+    TaiHu_Device_T9 -> Send_MIT_PD_Control_Data(TaiHu_Device_9,-40.0f,0.0f,0.0f,0.0f,0.0f);
+    Y_bot->Send_Buff_Data();
+    usleep(100000);
+    Motor_3_Control->Send_MIT_PD_Control_Data(Motor_3_D, p[2]+400.0f , 0.0, 0.0, 100.0, 50.0);
+    Motor_7_Control->Send_MIT_PD_Control_Data(Motor_7_D, p[6]+400.0f, 0.0, 0.0, 100.0, 50.0);
+    Y_bot->Send_Buff_Data();
+    usleep(3000000);
+    Motor_3_Control->Send_MIT_PD_Control_Data(Motor_3_D, p[2] , 0.0, 0.0, 100.0, 50.0);
+    Motor_7_Control->Send_MIT_PD_Control_Data(Motor_7_D, p[6], 0.0, 0.0, 100.0, 50.0);
+    Y_bot->Send_Buff_Data();
+    usleep(100000);
+    TaiHu_Device_T2 -> Send_MIT_PD_Control_Data(TaiHu_Device_2,-30.0f,0.0f,0.0f,0.0f,0.0f);
+    TaiHu_Device_T9 -> Send_MIT_PD_Control_Data(TaiHu_Device_9,20.0f,0.0f,0.0f,0.0f,0.0f);
+    usleep(1000000);
+}
+#endif
+#if 0
+int j = 0;
+    float thp[6] = {0.0f,0.0f,0.0f,0.0f,0.0f,0.0f};
+    float thv[6] = {0.0f,0.0f,0.0f,0.0f,0.0f,0.0f};
+    float thf[6] = {0.0f,0.0f,0.0f,0.0f,0.0f,0.0f};
+while(true){
+    // TaiHu_Device_T1 -> Send_MIT_PD_Control_Data(TaiHu_Device_1,1.0f,0.0f,0.0f,0.0f,0.0f);
+    // TaiHu_Device_T2 -> Send_MIT_PD_Control_Data(TaiHu_Device_2,-30.0f,0.0f,0.0f,0.0f,0.0f);
+    // TaiHu_Device_T3 -> Send_MIT_PD_Control_Data(TaiHu_Device_3,110.0f,0.0f,0.0f,0.0f,0.0f);
+    // TaiHu_Device_T8 -> Send_MIT_PD_Control_Data(TaiHu_Device_8,-20.0f,0.0f,0.0f,0.0f,0.0f);
+    // TaiHu_Device_T9 -> Send_MIT_PD_Control_Data(TaiHu_Device_9,20.0f,0.0f,0.0f,0.0f,0.0f);
+    // TaiHu_Device_T10 -> Send_MIT_PD_Control_Data(TaiHu_Device_10,110.0f,0.0f,0.0f,0.0f,0.0f);
+    TaiHu_Device_T1 -> Get_Motor_FB_Data(TaiHu_Device_1, &thp[0],&thv[0],&thf[0]);
+    TaiHu_Device_T2 -> Get_Motor_FB_Data(TaiHu_Device_2, &thp[1],&thv[1],&thf[1]);
+    TaiHu_Device_T3 -> Get_Motor_FB_Data(TaiHu_Device_3, &thp[2],&thv[2],&thf[2]);
+    TaiHu_Device_T8 -> Get_Motor_FB_Data(TaiHu_Device_8, &thp[3],&thv[3],&thf[3]);
+    TaiHu_Device_T9 -> Get_Motor_FB_Data(TaiHu_Device_9, &thp[4],&thv[4],&thf[4]);
+    TaiHu_Device_T10 -> Get_Motor_FB_Data(TaiHu_Device_10, &thp[5],&thv[5],&thf[5]);
 
-    usleep(loop_time_step);
+for (int i =0; i<6; i++){
+        
+cout <<  "P"<< i+1 << "= " << thp[i] << "v"<< i+1 << "= " << thv[i] << "f"<< i+1 << "= " << thf[i]<<endl;
+    }
+    Y_bot -> Send_Buff_Data();
+    usleep(100000);
+   j++;
+   if (j >= 100.0){
+    break;
+   }
+}
+//  TaiHu_Device_T1 -> Send_MIT_PD_Control_Data(TaiHu_Device_1,thp[0],0.0f,0.0f,0.0f,0.0f);
+#endif
+
+#if 0
+while(true){
+    Get_FB();
+
+    for(int j = 0; j <300; ++j){
+        TaiHu_Device_T1 ->Get_Motor_FB_Data(TaiHu_Device_1,&thp[0],&thv[0],&thf[0]);
+        TaiHu_Device_T2 ->Get_Motor_FB_Data(TaiHu_Device_2,&thp[1],&thv[1],&thf[1]);
+        TaiHu_Device_T3 ->Get_Motor_FB_Data(TaiHu_Device_3,&thp[2],&thv[2],&thf[2]);
+        TaiHu_Device_T8 ->Get_Motor_FB_Data(TaiHu_Device_8,&thp[3],&thv[3],&thf[3]);
+        TaiHu_Device_T9 ->Get_Motor_FB_Data(TaiHu_Device_9,&thp[4],&thv[4],&thf[4]);
+        TaiHu_Device_T10 ->Get_Motor_FB_Data(TaiHu_Device_10,&thp[5],&thv[5],&thf[5]);
+        Y_bot->Send_Buff_Data();
+
+        for (int i = 0; i <6; i++){
+            cout << fixed << setprecision(10)<<"TaiHu " << i+1 << ": Pos: " << thp[i] << "\t" << "Vel: " << thv[i] <<"\t"<< "Cur: " << thf[i] << "mz:"<<  FB_Datas[0].F<< endl;
+        }
+        usleep(1000000);
+    }
+
+        
     
 
-}
+    }
+    #endif 
+
 #endif
 
     return 0;
