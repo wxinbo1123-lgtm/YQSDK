@@ -354,107 +354,11 @@ Main_Switch_Board = Y_bot->Get_Device_For_Name("Main_Switch_Board");
 #ifndef HAVE_ROS
     Get_FB();
     constexpr int loop_time_step = 1000 * 10000 / 1000; // 1000Hz
-    // int times = 500;
-    // float test = 0;
-    // float PP_old = 0;
-    // float PP = 0;
-    // float V = 0;
-    // float PP_old2 = 0;
-    // float PP2 = 0;
-    // float V2 = 0;
-    // float theta = 1.0f;
-    // Paramters for pre-tensioning
-    const float Ftar[8] ={ 0.02f, 0.02f, 0.03f, 0.03f,0.02f, 0.02f, 0.03f, 0.03f}; //gear35:0.2=7kg; gear21 0.08
-    const float Kcur[8] = {1000.0f, 1000.0f, 500.0f, 500.0f, 1000.0f, 1000.0f, 500.0f, 500.0f}; //gear35:200; gear21
-    const float Vmax[8] = {300.0f, 300.0f, 80.0f, 80.0f,300.0f, 300.0f, 80.0f, 80.0f}; //gear35:100; gear21
-    const float CurDead[8] = {0.0001,0.0001f,0.0001f,0.0001f,0.0001f,0.0001f,0.0001f,0.0001f}; 
-
-    const float Pmax[8] = {1000.0f,700.0f,3000.0f,3000.0f,3000.0f,3000.0f,3000.0f,3000.0f};
-    const float Pmin[8] = {-90.0f,-90.0f,-90.0f,-90.0f,-90.0f,-90.0f,-90.0f,-90.0f};
-    float kp[8] = {100.0f,100.0f,100.0f,100.0f,100.0f,100.0f,100.0f,100.0f};
-    float kd[8] = {50.0f,50.0f,50.0f,50.0f,50.0f,50.0f,50.0f,50.0f};
-    float PP[8] = {FB_Datas[0].P,FB_Datas[1].P,FB_Datas[2].P,FB_Datas[3].P,FB_Datas[4].P,FB_Datas[5].P,FB_Datas[6].P,FB_Datas[7].P};
-    float V[8]= {0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f};
-    float Fmeas[8] = {0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f};
-    float Ferror[8] ={0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f};
-    float Vcmd[8] = {0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f};
     using clock = chrono::steady_clock;
     auto start_time = clock::now();
-    /* ------------------- 反复握拳 ------------------- */
+    
 #if 1
-    // File export
-    // ofstream force_file("pretensioning21_1.txt");
-    // if (!force_file.is_open()) {
-    //     cout << "Failed to open file for writing." << endl;
-    //     return -1;
-    // }
-    // force_file << "Tarposition(deg)\tposition(deg)\tCurrent(A)" << endl;
-    // ReSharper disable once CppDFAEndlessLoop/
-    // bool force_reached = false;
     while (true) {
-        // Get_FB();
-        // test += 0.0125f;
-       
-        // const float P = sin(test) * 2* 270.0f;
-        
-        // // // if(fabs(FB_Datas[1].F ) < 0.1f) {
-        // // //     test += 0.0125f;
-        // // // }
-        // // // else{
-        // // //     test = test;
-        // // // }
-        // // const float PP = test;
-        // // // test += 1.0f;
-        // const float V = (P - PP_old) * (static_cast<float>(1000000 / loop_time_step));
-        //  PP_old = P;
-        // if(fabs(FB_Datas[0].F ) > 0.25f) {
-        //     force_reached = true;
-        //     V = 0;
-        //     test = test;
-        //  }
-        // if (!force_reached){
-        //      test += 0.5f;
-        //      V = VV;
-        // }
-        // quote pp above
-        // const float PP = test;
-        //  PP_old = PP;
-        // test += 1.0f;
-        // const float VV = (PP - PP_old) * (static_cast<float>(1000000 / loop_time_step));
-        // Motor_1_Control->Send_MIT_PD_Control_Data(Motor_1_D, P , V, 0.0, 100.0, 50.0);
-        //
-        // if (test  > 300.0f) {
-        //     test = 300.0f;
-        // }
-        // // code for pretensioning
-        // Get_FB();
-        // for (int i = 0; i < 1; i++){
-        //     Fmeas[i] = fabs(FB_Datas[i].F);
-        //     Ferror[i] = Ftar[i] - Fmeas[i];
-        //     if (fabs(Ferror[i]) < CurDead[i]){
-        //         Ferror[i] = 0.0f;
-        //     }
-        //     Vcmd[i] = Kcur[i] * Ferror[i]; 
-        //     if (Vcmd[i] > Vmax[i]){
-        //       Vcmd[i]  = Vmax[i];
-        //     }
-        //     else if (Vcmd[i]  < -Vmax[i]){
-        //     Vcmd[i]  = -Vmax[i];
-        //     }
-        //     PP[i] += Vcmd[i] * (static_cast<float>(loop_time_step)/ 1000000.0f );
-        //     if (PP[i] > Pmax[i]){
-        //         PP[i] = Pmax[i];
-        //     }
-        //     else if (PP[i] < Pmin[i]){
-        //      PP[i] = Pmin[i];
-        //     }
-        //     V[i] = Vcmd[i] ;
-        //     // Motor_1_Control->Send_MIT_PD_Control_Data(Motor_1_D, p , v, 0.0, kp[1], kd[1]);
-        //     // p = p+1.0f;
-        //     // Motor_Control[i]->Send_MIT_PD_Control_Data(Motor_D[i],PP[i],V[i],0.0f,kp[i],kd[i]);
-        // }
-
-        // //end of pre tensioning code
          Get_FB();
         auto now = clock::now();
         double elapsed_time = chrono::duration<double>(now-start_time).count();
@@ -463,58 +367,21 @@ Main_Switch_Board = Y_bot->Get_Device_For_Name("Main_Switch_Board");
         }
 
         TaiHu_Device_T1 -> Send_MIT_PD_Control_Data(TaiHu_Device_1,1.0f,0.0f,0.0f,0.0f,0.0f);
-        TaiHu_Device_T2 -> Send_MIT_PD_Control_Data(TaiHu_Device_2,-30.0f,0.0f,0.0f,0.0f,0.0f);
-        TaiHu_Device_T3 -> Send_MIT_PD_Control_Data(TaiHu_Device_3,110.0f,0.0f,0.0f,0.0f,0.0f);
-        TaiHu_Device_T8 -> Send_MIT_PD_Control_Data(TaiHu_Device_8,-20.0f,0.0f,0.0f,0.0f,0.0f);
-        TaiHu_Device_T9 -> Send_MIT_PD_Control_Data(TaiHu_Device_9,20.0f,0.0f,0.0f,0.0f,0.0f);
-        TaiHu_Device_T10 -> Send_MIT_PD_Control_Data(TaiHu_Device_10,110.0f,0.0f,0.0f,0.0f,0.0f);
-        // TaiHu_Device_T1 -> Send_MIT_PD_Control_Data(TaiHu_Device_1, 0.0f,0.0f,300.0f,0.0f,0.0f);
-        // TaiHu_Device_T2 -> Send_MIT_PD_Control_Data(TaiHu_Device_2, 0.0f,0.0f,300.0f,0.0f,0.0f);
-        // TaiHu_Device_T3 -> Send_MIT_PD_Control_Data(TaiHu_Device_3, 0.0f,0.0f,300.0f,0.0f,0.0f);
-        // TaiHu_Device_T8 -> Send_MIT_PD_Control_Data(TaiHu_Device_8, 0.0f,0.0f,300.0f,0.0f,0.0f);
-        // TaiHu_Device_T9 -> Send_MIT_PD_Control_Data(TaiHu_Device_9, 0.0f,0.0f,300.0f,0.0f,0.0f);
-        // TaiHu_Device_T10 -> Send_MIT_PD_Control_Data(TaiHu_Device_10, 0.0f,0.0f,300.0f,0.0f,0.0f);
+        TaiHu_Device_T2 -> Send_MIT_PD_Control_Data(TaiHu_Device_2,-25.0f,0.0f,0.0f,0.0f,0.0f);
+        TaiHu_Device_T3 -> Send_MIT_PD_Control_Data(TaiHu_Device_3,43.0f,0.0f,0.0f,0.0f,0.0f);
+        TaiHu_Device_T8 -> Send_MIT_PD_Control_Data(TaiHu_Device_8,-10.0f,0.0f,0.0f,0.0f,0.0f);
+        TaiHu_Device_T9 -> Send_MIT_PD_Control_Data(TaiHu_Device_9,-60.0f,0.0f,0.0f,0.0f,0.0f);
+        TaiHu_Device_T10 -> Send_MIT_PD_Control_Data(TaiHu_Device_10,30.0f,0.0f,0.0f,0.0f,0.0f);
         Y_bot->Send_Buff_Data();
         usleep(500000);
-        Motor_1_Control->Send_MIT_PD_Control_Data(Motor_1_D, 0.0 , 0.0, 0.03f, 0.0, 0.0);
+        Motor_1_Control->Send_MIT_PD_Control_Data(Motor_1_D, 0.0 , 0.0, 0.02f, 0.0, 0.0);
         Motor_2_Control->Send_MIT_PD_Control_Data(Motor_2_D, 0.0 , 0.0, 0.03f, 0.0, 0.0);
         Motor_3_Control->Send_MIT_PD_Control_Data(Motor_3_D, 0.0 , 0.0, 0.03f, 0.0, 0.0);
         Motor_4_Control->Send_MIT_PD_Control_Data(Motor_4_D, 0.0 , 0.0, 0.035f, 0.0, 0.0);
-        Motor_5_Control->Send_MIT_PD_Control_Data(Motor_5_D, 0.0 , 0.0, 0.03f, 0.0, 0.0);
-        Motor_6_Control->Send_MIT_PD_Control_Data(Motor_6_D, 0.0 , 0.0, 0.04f, 0.0, 0.0);
+        Motor_5_Control->Send_MIT_PD_Control_Data(Motor_5_D, 0.0 , 0.0, 0.02f, 0.0, 0.0);
+        Motor_6_Control->Send_MIT_PD_Control_Data(Motor_6_D, 0.0 , 0.0, 0.06f, 0.0, 0.0);
         Motor_7_Control->Send_MIT_PD_Control_Data(Motor_7_D, 0.0 , 0.0, 0.03f, 0.0, 0.0);
         Motor_8_Control->Send_MIT_PD_Control_Data(Motor_8_D, 0.0 , 0.0, 0.035f, 0.0, 0.0);
-
-        // Motor_1_Control->Send_MIT_PD_Control_Data(Motor_1_D, 0.0 , 0.0, 0.0, 500.0, 100.0);
-        // Motor_2_Control->Send_MIT_PD_Control_Data(Motor_2_D, 0.0 , 0.0, 0.0, 500.0, 100.0);
-        // Motor_3_Control->Send_MIT_PD_Control_Data(Motor_3_D, 0.0 , 0.0, 0.0, 500.0, 100.0);
-        // Motor_4_Control->Send_MIT_PD_Control_Data(Motor_4_D, 0.0 , 0.0, 0.0, 500.0, 100.0);
-        // Motor_5_Control->Send_MIT_PD_Control_Data(Motor_5_D, 0.0 , 0.0, 0.0, 500.0, 100.0);
-        // Motor_6_Control->Send_MIT_PD_Control_Data(Motor_6_D, 0.0 , 0.0, 0.0, 500.0, 100.0);
-        // Motor_7_Control->Send_MIT_PD_Control_Data(Motor_7_D, 0.0 , 0.0, 0.0, 500.0, 100.0);
-        // Motor_8_Control->Send_MIT_PD_Control_Data(Motor_8_D, 0.0 , 0.0, 0.0, 500.0, 100.0);
-
-        // Motor_1_Control->Send_MIT_PD_Control_Data(Motor_1_D, 300.0f, 5.0f, 0.0, kp[0], kd[0]);
-        // Motor_2_Control->Send_MIT_PD_Control_Data(Motor_2_D, 450.0f, 5.0f, 0.0, kp[0], kd[0]);
-        // Motor_3_Control->Send_MIT_PD_Control_Data(Motor_3_D,  0.0, 0.0, 0.0, kp[0], kd[0]);
-        // Motor_4_Control->Send_MIT_PD_Control_Data(Motor_4_D, 0.0, 0.0, 0.0, kp[0], kd[0]);
-        // Motor_5_Control->Send_MIT_PD_Control_Data(Motor_5_D,  0.0, 0.0, 0.0, kp[0], kd[0]);
-        // Motor_6_Control->Send_MIT_PD_Control_Data(Motor_6_D, 0.0, 0.0, 0.0, kp[0], kd[0]);
-        // Motor_7_Control->Send_MIT_PD_Control_Data(Motor_7_D,  0.0, 0.0, 0.0, kp[0], kd[0]);
-        // Motor_8_Control->Send_MIT_PD_Control_Data(Motor_8_D,  0.0, 0.0, 0.0, kp[0], kd[0]);
-
-
-        // for (int i = 0; i < 1; i++) {
-        //     Send_Datas[i].P =  test;
-        //     Send_Datas[i].V = 0;
-        //     Send_Datas[i].F = 0;
-        //     Send_Datas[i].KP = 500;  // 800
-        //     Send_Datas[i].KD = 10;   // 20
-        // }
-        // Send_Datas[0].P = 0.5f / 4 + test / 4;
-        // Send_Datas[1].P = 0.5f / 2 + test / 2;
-        // test++;
-            // Send();
         Y_bot->Send_Buff_Data();
 
         usleep(loop_time_step);
@@ -523,28 +390,11 @@ Main_Switch_Board = Y_bot->Get_Device_For_Name("Main_Switch_Board");
         {
             cout<< "Motor:" << i+1 << "Current:"<< FB_Datas[i].F <<"\t"<< "Position:" << FB_Datas[i].P <<"\t"<< elapsed_time << endl;
         }
-        // Get_FB();
-
-        // For export
-        
-
-        // for (int i = 0; i < 8; i++) {
-        //     cout << "num: "<< i << PP[i] << " " << FB_Datas[i].P  <<" " << fabs(FB_Datas[i].F) << endl;
-            // force_file << PP << " " << fabs(FB_Datas[i].P) << " " << fabs(FB_Datas[i].F) << endl;
-        // }
-        // float force_abs = fabs(FB_Datas[0].F);
-        // float pos_abs = fabs(FB_Datas[0].P);
-        // float force_abs2 = fabs(FB_Datas[1].F);
-        // float pos_abs2 = fabs(FB_Datas[1].P);
-        // force_file << PP << " " << pos_abs << " " << force_abs << " " << PP2 << " " << pos_abs2 << " " << force_abs2<< endl;
-        // force_file << fixed << setprecision(8);
-        // test = test + 10;
-
     }
-
 #endif
+    Get_FB();
+    const float p[8] = {FB_Datas[0].P,FB_Datas[1].P,FB_Datas[2].P,FB_Datas[3].P,FB_Datas[4].P,FB_Datas[5].P,FB_Datas[6].P,FB_Datas[7].P};
 #if 1
-const float p[8] = {FB_Datas[0].P,FB_Datas[1].P,FB_Datas[2].P,FB_Datas[3].P,FB_Datas[4].P,FB_Datas[5].P,FB_Datas[6].P,FB_Datas[7].P};
     float thp[6] = {0.0f,0.0f,0.0f,0.0f,0.0f,0.0f};
     float thv[6] = {0.0f,0.0f,0.0f,0.0f,0.0f,0.0f};
     float thf[6] = {0.0f,0.0f,0.0f,0.0f,0.0f,0.0f};
@@ -568,15 +418,6 @@ const float p[8] = {FB_Datas[0].P,FB_Datas[1].P,FB_Datas[2].P,FB_Datas[3].P,FB_D
     Motor_7_Control->Send_MIT_PD_Control_Data(Motor_7_D, p[6] , 0.0, 0.0, 500.0, 100.0);
     Motor_8_Control->Send_MIT_PD_Control_Data(Motor_8_D, p[7] , 0.0, 0.0, 500.0, 100.0);
     Y_bot->Send_Buff_Data();
-    // usleep(100000);
-    // TaiHu_Device_T1 -> Send_MIT_PD_Control_Data(TaiHu_Device_1,thp[0],0.0f,0.0f,0.0f,0.0f);
-    // TaiHu_Device_T2 -> Send_MIT_PD_Control_Data(TaiHu_Device_2,thp[1],0.0f,0.0f,0.0f,0.0f);
-    // TaiHu_Device_T3 -> Send_MIT_PD_Control_Data(TaiHu_Device_3,thp[2],0.0f,0.0f,0.0f,0.0f);
-    // TaiHu_Device_T8 -> Send_MIT_PD_Control_Data(TaiHu_Device_8,thp[3],0.0f,0.0f,0.0f,0.0f);
-    // TaiHu_Device_T9 -> Send_MIT_PD_Control_Data(TaiHu_Device_9,thp[4],0.0f,0.0f,0.0f,0.0f);
-    // TaiHu_Device_T10 -> Send_MIT_PD_Control_Data(TaiHu_Device_10,thp[5],0.0f,0.0f,0.0f,0.0f);
-    // Y_bot->Send_Buff_Data();
-
     usleep(loop_time_step);
     //  for(int i =0; i < 8 ; i++)
     //     {
@@ -603,38 +444,658 @@ while(true){
     
 }
 #endif
-#if 1 // Knee 
-while(true){
-    Get_FB();
-    TaiHu_Device_T2 -> Send_MIT_PD_Control_Data(TaiHu_Device_2,-90.0f,0.0f,0.0f,0.0f,0.0f);
-    TaiHu_Device_T9 -> Send_MIT_PD_Control_Data(TaiHu_Device_9,-40.0f,0.0f,0.0f,0.0f,0.0f);
-    Y_bot->Send_Buff_Data();
-    usleep(100000);
-    Motor_3_Control->Send_MIT_PD_Control_Data(Motor_3_D, p[2]+400.0f , 0.0, 0.0, 100.0, 50.0);
-    Motor_7_Control->Send_MIT_PD_Control_Data(Motor_7_D, p[6]+400.0f, 0.0, 0.0, 100.0, 50.0);
-    Y_bot->Send_Buff_Data();
-    usleep(3000000);
-    Motor_3_Control->Send_MIT_PD_Control_Data(Motor_3_D, p[2] , 0.0, 0.0, 100.0, 50.0);
-    Motor_7_Control->Send_MIT_PD_Control_Data(Motor_7_D, p[6], 0.0, 0.0, 100.0, 50.0);
-    Y_bot->Send_Buff_Data();
-    usleep(100000);
-    TaiHu_Device_T2 -> Send_MIT_PD_Control_Data(TaiHu_Device_2,-30.0f,0.0f,0.0f,0.0f,0.0f);
-    TaiHu_Device_T9 -> Send_MIT_PD_Control_Data(TaiHu_Device_9,20.0f,0.0f,0.0f,0.0f,0.0f);
-    usleep(1000000);
+#if 1 // Knee open-loop timed motion
+
+while (true) {
+
+    // ============================
+    // Parameters
+    // ============================
+    const int dt_us = 10000;      // 10 ms
+    const float T_forward = 3.0f; // forward motion time, seconds
+    const float T_return  = 3.0f; // return motion time, seconds
+
+    const int N_forward = static_cast<int>(T_forward * 1000000.0f / dt_us);
+    const int N_return  = static_cast<int>(T_return  * 1000000.0f / dt_us);
+
+    // ============================
+    // Initial and target positions
+    // Keep your original displacement
+    // ============================
+    const float mz3_home   = p[2];
+    const float mz7_home   = p[6];
+
+    const float mz3_target = p[2] + 400.0f;
+    const float mz7_target = p[6] + 400.0f;
+
+    const float th2_home   = -25.0f; 
+    const float th9_home   = -60.0f; 
+    const float th10_home  = 30.0f; 
+    const float th3_home = 43.0f; 
+
+    const float th2_target = -90.0f;
+    const float th9_target = -125.0f;
+    const float th3_target = 60.0f;
+    const float th10_target = 73.0f;
+
+    // ============================
+    // Forward motion
+    // TH and MZ move together
+    // ============================
+    for (int k = 0; k <= N_forward; ++k) {
+
+        float r = static_cast<float>(k) / static_cast<float>(N_forward);
+
+        // smoother than linear ramp
+        float s = r * r * (3.0f - 2.0f * r);
+
+        float mz3_cmd = mz3_home + s * (mz3_target - mz3_home);
+        float mz7_cmd = mz7_home + s * (mz7_target - mz7_home);
+
+        float th2_cmd = th2_home + s * (th2_target - th2_home);
+        float th9_cmd = th9_home + s * (th9_target - th9_home);
+        float th3_cmd = th3_home + s * (th3_target - th3_home);
+        float th10_cmd = th10_home + s * (th10_target - th10_home);
+
+
+        TaiHu_Device_T2->Send_MIT_PD_Control_Data(
+            TaiHu_Device_2,
+            th2_cmd,
+            0.0f,
+            0.0f,
+            0.0f,
+            0.0f
+        );
+
+        TaiHu_Device_T9->Send_MIT_PD_Control_Data(
+            TaiHu_Device_9,
+            th9_cmd,
+            0.0f,
+            0.0f,
+            0.0f,
+            0.0f
+        );
+
+        TaiHu_Device_T10->Send_MIT_PD_Control_Data(
+            TaiHu_Device_10,
+            th10_cmd,
+            0.0f,
+            0.0f,
+            0.0f,
+            0.0f
+        );
+
+         TaiHu_Device_T3->Send_MIT_PD_Control_Data(
+            TaiHu_Device_3,
+            th3_cmd,
+            0.0f,
+            0.0f,
+            0.0f,
+            0.0f
+        );
+
+        Motor_3_Control->Send_MIT_PD_Control_Data(
+            Motor_3_D,
+            mz3_cmd,
+            0.0f,
+            0.0f,
+            100.0f,
+            50.0f
+        );
+
+        Motor_7_Control->Send_MIT_PD_Control_Data(
+            Motor_7_D,
+            mz7_cmd,
+            0.0f,
+            0.0f,
+            100.0f,
+            50.0f
+        );
+
+        Y_bot->Send_Buff_Data();
+        usleep(dt_us);
+    }
+
+    usleep(50000);
+
+    // ============================
+    // Return motion
+    // TH and MZ return together
+    // ============================
+    for (int k = 0; k <= N_return; ++k) {
+
+        float r = static_cast<float>(k) / static_cast<float>(N_return);
+
+        // smoother than linear ramp
+        float s = r * r * (3.0f - 2.0f * r);
+
+        float mz3_cmd = mz3_target + s * (mz3_home - mz3_target);
+        float mz7_cmd = mz7_target + s * (mz7_home - mz7_target);
+
+        float th2_cmd = th2_target + s * (th2_home - th2_target);
+        float th9_cmd = th9_target + s * (th9_home - th9_target);
+        float th3_cmd = th3_target + s * (th3_home - th3_target);
+        float th10_cmd = th10_target + s * (th10_home - th10_target);
+
+        TaiHu_Device_T2->Send_MIT_PD_Control_Data(
+            TaiHu_Device_2,
+            th2_cmd,
+            0.0f,
+            0.0f,
+            0.0f,
+            0.0f
+        );
+
+        TaiHu_Device_T9->Send_MIT_PD_Control_Data(
+            TaiHu_Device_9,
+            th9_cmd,
+            0.0f,
+            0.0f,
+            0.0f,
+            0.0f
+        );
+
+        TaiHu_Device_T3->Send_MIT_PD_Control_Data(
+            TaiHu_Device_3,
+            th3_cmd,
+            0.0f,
+            0.0f,
+            0.0f,
+            0.0f
+        );
+        TaiHu_Device_T10->Send_MIT_PD_Control_Data(
+            TaiHu_Device_10,
+            th10_cmd,
+            0.0f,
+            0.0f,
+            0.0f,
+            0.0f
+        );
+
+        Motor_3_Control->Send_MIT_PD_Control_Data(
+            Motor_3_D,
+            mz3_cmd,
+            0.0f,
+            0.0f,
+            100.0f,
+            50.0f
+        );
+
+        Motor_7_Control->Send_MIT_PD_Control_Data(
+            Motor_7_D,
+            mz7_cmd,
+            0.0f,
+            0.0f,
+            100.0f,
+            50.0f
+        );
+
+        Y_bot->Send_Buff_Data();
+        usleep(dt_us);
+    }
+
+    usleep(50000);
 }
+
 #endif
+
+#if 0 // Two-leg opposite swing, 10 cycles, then return home
+
+while (true) {
+
+    // ============================
+    // Parameters
+    // ============================
+    const int dt_us = 10000;        // 10 ms
+    const float T_phase = 1.0f;     // 每个 phase 的动作时间
+    const float T_home  = 1.0f;     // 回 home 的动作时间
+
+    const int N_phase = static_cast<int>(T_phase * 1000000.0f / dt_us);
+    const int N_home  = static_cast<int>(T_home  * 1000000.0f / dt_us);
+
+    const int swing_times = 2;
+
+    // ============================
+    // Right leg: TH8, TH9, TH10, MZ6
+    // ============================
+    const float r_th8_home  = -10.0f;
+    const float r_th9_home  = -50.0f;
+    const float r_th10_home = 30.0f;
+    const float r_mz6_home  = p[5];
+
+    const float r_th8_lift  = 80.0f;
+    const float r_th9_lift  = 50.0f;
+    const float r_th10_lift = -40.0f;
+    const float r_mz6_lift  = p[5] - 1000.0f;
+
+    const float r_th8_swing  = -50.0f;
+    const float r_th9_swing  = -90.0f;
+    const float r_th10_swing = 70.0f;
+    const float r_mz6_swing  = p[5] + 180.0f;
+
+    // ============================
+    // Left leg: TH1, TH2, TH3, MZ2
+    // ============================
+    const float l_th1_home = 1.0f;
+    const float l_th2_home = -30.0f;
+    const float l_th3_home = 43.0f;
+    const float l_mz2_home = p[1];
+
+    const float l_th1_lift = 91.0f;
+    const float l_th2_lift = 70.0f;
+    const float l_th3_lift = -27.0f;
+    const float l_mz2_lift = p[1] - 1000.0f;
+
+    const float l_th1_swing = -39.0f;
+    const float l_th2_swing = -70.0f;
+    const float l_th3_swing = 83.0f;
+    const float l_mz2_swing = p[1] + 180.0f;
+
+    // ============================
+    // Current command state
+    // Start from home
+    // ============================
+    float r_th8_now  = r_th8_home;
+    float r_th9_now  = r_th9_home;
+    float r_th10_now = r_th10_home;
+    float r_mz6_now  = r_mz6_home;
+
+    float l_th1_now = l_th1_home;
+    float l_th2_now = l_th2_home;
+    float l_th3_now = l_th3_home;
+    float l_mz2_now = l_mz2_home;
+
+    // ============================
+    // 10 opposite swing cycles
+    // ============================
+    for (int cycle = 0; cycle < swing_times; ++cycle) {
+
+        // =====================================================
+        // Phase A:
+        // Right leg -> lift
+        // Left leg  -> back swing
+        // =====================================================
+        for (int k = 0; k <= N_phase; ++k) {
+
+            float r = static_cast<float>(k) / static_cast<float>(N_phase);
+
+            float r_th8_cmd  = r_th8_now  + r * (r_th8_lift  - r_th8_now);
+            float r_th9_cmd  = r_th9_now  + r * (r_th9_lift  - r_th9_now);
+            float r_th10_cmd = r_th10_now + r * (r_th10_lift - r_th10_now);
+            float r_mz6_cmd  = r_mz6_now  + r * (r_mz6_lift  - r_mz6_now);
+
+            float l_th1_cmd = l_th1_now + r * (l_th1_swing - l_th1_now);
+            float l_th2_cmd = l_th2_now + r * (l_th2_swing - l_th2_now);
+            float l_th3_cmd = l_th3_now + r * (l_th3_swing - l_th3_now);
+            float l_mz2_cmd = l_mz2_now + r * (l_mz2_swing - l_mz2_now);
+
+            // Right leg TH8, TH9, TH10
+            TaiHu_Device_T8->Send_MIT_PD_Control_Data(
+                TaiHu_Device_8, r_th8_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+            );
+
+            TaiHu_Device_T9->Send_MIT_PD_Control_Data(
+                TaiHu_Device_9, r_th9_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+            );
+
+            TaiHu_Device_T10->Send_MIT_PD_Control_Data(
+                TaiHu_Device_10, r_th10_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+            );
+
+            // Left leg TH1, TH2, TH3
+            TaiHu_Device_T1->Send_MIT_PD_Control_Data(
+                TaiHu_Device_1, l_th1_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+            );
+
+            TaiHu_Device_T2->Send_MIT_PD_Control_Data(
+                TaiHu_Device_2, l_th2_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+            );
+
+            TaiHu_Device_T3->Send_MIT_PD_Control_Data(
+                TaiHu_Device_3, l_th3_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+            );
+
+            // MZ6 and MZ2
+            Motor_6_Control->Send_MIT_PD_Control_Data(
+                Motor_6_D, r_mz6_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+            );
+
+            Motor_2_Control->Send_MIT_PD_Control_Data(
+                Motor_2_D, l_mz2_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+            );
+
+            Y_bot->Send_Buff_Data();
+            usleep(dt_us);
+        }
+
+        // Update current command state after Phase A
+        r_th8_now  = r_th8_lift;
+        r_th9_now  = r_th9_lift;
+        r_th10_now = r_th10_lift;
+        r_mz6_now  = r_mz6_lift;
+
+        l_th1_now = l_th1_swing;
+        l_th2_now = l_th2_swing;
+        l_th3_now = l_th3_swing;
+        l_mz2_now = l_mz2_swing;
+
+        usleep(200000);
+
+        // =====================================================
+        // Phase B:
+        // Right leg -> back swing
+        // Left leg  -> lift
+        // =====================================================
+        for (int k = 0; k <= N_phase; ++k) {
+
+            float r = static_cast<float>(k) / static_cast<float>(N_phase);
+
+            float r_th8_cmd  = r_th8_now  + r * (r_th8_swing  - r_th8_now);
+            float r_th9_cmd  = r_th9_now  + r * (r_th9_swing  - r_th9_now);
+            float r_th10_cmd = r_th10_now + r * (r_th10_swing - r_th10_now);
+            float r_mz6_cmd  = r_mz6_now  + r * (r_mz6_swing  - r_mz6_now);
+
+            float l_th1_cmd = l_th1_now + r * (l_th1_lift - l_th1_now);
+            float l_th2_cmd = l_th2_now + r * (l_th2_lift - l_th2_now);
+            float l_th3_cmd = l_th3_now + r * (l_th3_lift - l_th3_now);
+            float l_mz2_cmd = l_mz2_now + r * (l_mz2_lift - l_mz2_now);
+
+            // Right leg TH8, TH9, TH10
+            TaiHu_Device_T8->Send_MIT_PD_Control_Data(
+                TaiHu_Device_8, r_th8_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+            );
+
+            TaiHu_Device_T9->Send_MIT_PD_Control_Data(
+                TaiHu_Device_9, r_th9_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+            );
+
+            TaiHu_Device_T10->Send_MIT_PD_Control_Data(
+                TaiHu_Device_10, r_th10_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+            );
+
+            // Left leg TH1, TH2, TH3
+            TaiHu_Device_T1->Send_MIT_PD_Control_Data(
+                TaiHu_Device_1, l_th1_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+            );
+
+            TaiHu_Device_T2->Send_MIT_PD_Control_Data(
+                TaiHu_Device_2, l_th2_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+            );
+
+            TaiHu_Device_T3->Send_MIT_PD_Control_Data(
+                TaiHu_Device_3, l_th3_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+            );
+
+            // MZ6 and MZ2
+            Motor_6_Control->Send_MIT_PD_Control_Data(
+                Motor_6_D, r_mz6_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+            );
+
+            Motor_2_Control->Send_MIT_PD_Control_Data(
+                Motor_2_D, l_mz2_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+            );
+
+            Y_bot->Send_Buff_Data();
+            usleep(dt_us);
+        }
+
+        // Update current command state after Phase B
+        r_th8_now  = r_th8_swing;
+        r_th9_now  = r_th9_swing;
+        r_th10_now = r_th10_swing;
+        r_mz6_now  = r_mz6_swing;
+
+        l_th1_now = l_th1_lift;
+        l_th2_now = l_th2_lift;
+        l_th3_now = l_th3_lift;
+        l_mz2_now = l_mz2_lift;
+
+        usleep(200000);
+    }
+
+    // ============================
+    // Return both legs to home
+    // ============================
+    for (int k = 0; k <= N_home; ++k) {
+
+        float r = static_cast<float>(k) / static_cast<float>(N_home);
+
+        float r_th8_cmd  = r_th8_now  + r * (r_th8_home  - r_th8_now);
+        float r_th9_cmd  = r_th9_now  + r * (r_th9_home  - r_th9_now);
+        float r_th10_cmd = r_th10_now + r * (r_th10_home - r_th10_now);
+        float r_mz6_cmd  = r_mz6_now  + r * (r_mz6_home  - r_mz6_now);
+
+        float l_th1_cmd = l_th1_now + r * (l_th1_home - l_th1_now);
+        float l_th2_cmd = l_th2_now + r * (l_th2_home - l_th2_now);
+        float l_th3_cmd = l_th3_now + r * (l_th3_home - l_th3_now);
+        float l_mz2_cmd = l_mz2_now + r * (l_mz2_home - l_mz2_now);
+
+        // Right leg TH8, TH9, TH10
+        TaiHu_Device_T8->Send_MIT_PD_Control_Data(
+            TaiHu_Device_8, r_th8_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+        );
+
+        TaiHu_Device_T9->Send_MIT_PD_Control_Data(
+            TaiHu_Device_9, r_th9_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+        );
+
+        TaiHu_Device_T10->Send_MIT_PD_Control_Data(
+            TaiHu_Device_10, r_th10_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+        );
+
+        // Left leg TH1, TH2, TH3
+        TaiHu_Device_T1->Send_MIT_PD_Control_Data(
+            TaiHu_Device_1, l_th1_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+        );
+
+        TaiHu_Device_T2->Send_MIT_PD_Control_Data(
+            TaiHu_Device_2, l_th2_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+        );
+
+        TaiHu_Device_T3->Send_MIT_PD_Control_Data(
+            TaiHu_Device_3, l_th3_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+        );
+
+        // MZ6 and MZ2
+        Motor_6_Control->Send_MIT_PD_Control_Data(
+            Motor_6_D, r_mz6_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+        );
+
+        Motor_2_Control->Send_MIT_PD_Control_Data(
+            Motor_2_D, l_mz2_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+        );
+
+        Y_bot->Send_Buff_Data();
+        usleep(dt_us);
+    }
+
+    break;
+}
+
+#endif
+
+#if 0 // Final MZ3-MZ4 alternating motion, 10 cycles, then return home
+
+while (true) {
+    Get_FB();
+    // ============================
+    // Parameters
+    // ============================
+    const int dt_us = 10000;       // 10 ms
+    const float T_phase = 3.0f;    // 每个 phase 的动作时间
+    const float T_home  = 3.0f;    // 回 home 的动作时间
+
+    const int N_phase = static_cast<int>(T_phase * 1000000.0f / dt_us);
+    const int N_home  = static_cast<int>(T_home  * 1000000.0f / dt_us);
+
+    const int move_times = 5;
+
+    // ============================
+    // Home positions
+    // ============================
+    const float mz3_home = p[2];
+    const float mz4_home = p[3];
+
+    // ============================
+    // Phase A target
+    // MZ3 收, MZ4 放
+    // ============================
+    const float mz3_phaseA = p[2] + 200.0f;
+    const float mz4_phaseA = p[3] - 200.0f;
+
+    // ============================
+    // Phase B target
+    // MZ4 收, MZ3 放
+    // ============================
+    const float mz3_phaseB = p[2] - 100.0f;
+    const float mz4_phaseB = p[3] + 50.0f;
+
+    // ============================
+    // Current command state
+    // Start from home
+    // ============================
+    float mz3_now = mz3_home;
+    float mz4_now = mz4_home;
+
+    // ============================
+    // Repeat 10 times
+    // ============================
+    for (int cycle = 0; cycle < move_times; ++cycle) {
+
+        // =====================================================
+        // Phase A:
+        // MZ3 -> p[2] + 100
+        // MZ4 -> p[3] - 100
+        // =====================================================
+        for (int k = 0; k <= N_phase; ++k) {
+
+            float r = static_cast<float>(k) / static_cast<float>(N_phase);
+
+            float mz3_cmd = mz3_now + r * (mz3_phaseA - mz3_now);
+            float mz4_cmd = mz4_now + r * (mz4_phaseA - mz4_now);
+             Motor_4_Control->Send_MIT_PD_Control_Data(
+                Motor_4_D,
+                mz4_cmd,
+                0.0f,
+                0.0f,
+                100.0f,
+                50.0f
+            );
+
+            Motor_3_Control->Send_MIT_PD_Control_Data(
+                Motor_3_D,
+                mz3_cmd,
+                0.0f,
+                0.0f,
+                100.0f,
+                50.0f
+            );
+
+
+
+            Y_bot->Send_Buff_Data();
+            cout << FB_Datas[2].P <<"\t" << FB_Datas[3].P << endl;
+            usleep(dt_us);
+        }
+
+        mz3_now = mz3_phaseA;
+        mz4_now = mz4_phaseA;
+        break;
+        usleep(200000);
+
+        // =====================================================
+        // Phase B:
+        // MZ3 -> p[2] - 100
+        // MZ4 -> p[3] + 50
+        // =====================================================
+        for (int k = 0; k <= N_phase; ++k) {
+
+            float r = static_cast<float>(k) / static_cast<float>(N_phase);
+
+            float mz3_cmd = mz3_now + r * (mz3_phaseB - mz3_now);
+            float mz4_cmd = mz4_now + r * (mz4_phaseB - mz4_now);
+
+            Motor_3_Control->Send_MIT_PD_Control_Data(
+                Motor_3_D,
+                mz3_cmd,
+                0.0f,
+                0.0f,
+                100.0f,
+                50.0f
+            );
+
+            Motor_4_Control->Send_MIT_PD_Control_Data(
+                Motor_4_D,
+                mz4_cmd,
+                0.0f,
+                0.0f,
+                100.0f,
+                50.0f
+            );
+
+            Y_bot->Send_Buff_Data();
+            usleep(dt_us);
+        }
+
+        mz3_now = mz3_phaseB;
+        mz4_now = mz4_phaseB;
+
+        usleep(200000);
+    }
+
+    // ============================
+    // Return to home
+    // MZ3 -> p[2]
+    // MZ4 -> p[3]
+    // ============================
+    for (int k = 0; k <= N_home; ++k) {
+
+        float r = static_cast<float>(k) / static_cast<float>(N_home);
+
+        float mz3_cmd = mz3_now + r * (mz3_home - mz3_now);
+        float mz4_cmd = mz4_now + r * (mz4_home - mz4_now);
+            Motor_4_Control->Send_MIT_PD_Control_Data(
+            Motor_4_D,
+            mz4_cmd,
+            0.0f,
+            0.0f,
+            100.0f,
+            50.0f
+        );
+        Y_bot->Send_Buff_Data();
+        Motor_3_Control->Send_MIT_PD_Control_Data(
+            Motor_3_D,
+            mz3_cmd,
+            0.0f,
+            0.0f,
+            100.0f,
+            50.0f
+        );
+
+
+
+        Y_bot->Send_Buff_Data();
+        usleep(dt_us);
+    }
+
+    break;
+}
+
+#endif
+
 #if 0
 int j = 0;
     float thp[6] = {0.0f,0.0f,0.0f,0.0f,0.0f,0.0f};
     float thv[6] = {0.0f,0.0f,0.0f,0.0f,0.0f,0.0f};
     float thf[6] = {0.0f,0.0f,0.0f,0.0f,0.0f,0.0f};
+
 while(true){
     // TaiHu_Device_T1 -> Send_MIT_PD_Control_Data(TaiHu_Device_1,1.0f,0.0f,0.0f,0.0f,0.0f);
     // TaiHu_Device_T2 -> Send_MIT_PD_Control_Data(TaiHu_Device_2,-30.0f,0.0f,0.0f,0.0f,0.0f);
-    // TaiHu_Device_T3 -> Send_MIT_PD_Control_Data(TaiHu_Device_3,110.0f,0.0f,0.0f,0.0f,0.0f);
-    // TaiHu_Device_T8 -> Send_MIT_PD_Control_Data(TaiHu_Device_8,-20.0f,0.0f,0.0f,0.0f,0.0f);
-    // TaiHu_Device_T9 -> Send_MIT_PD_Control_Data(TaiHu_Device_9,20.0f,0.0f,0.0f,0.0f,0.0f);
-    // TaiHu_Device_T10 -> Send_MIT_PD_Control_Data(TaiHu_Device_10,110.0f,0.0f,0.0f,0.0f,0.0f);
+    // TaiHu_Device_T3 -> Send_MIT_PD_Control_Data(TaiHu_Device_3,50.0f,0.0f,0.0f,0.0f,0.0f);
+    // TaiHu_Device_T8 -> Send_MIT_PD_Control_Data(TaiHu_Device_8,-50.0f,0.0f,0.0f,0.0f,0.0f);
+    // TaiHu_Device_T9 -> Send_MIT_PD_Control_Data(TaiHu_Device_9,-90.0f,0.0f,0.0f,0.0f,0.0f);
+    // TaiHu_Device_T10 -> Send_MIT_PD_Control_Data(TaiHu_Device_10,40.0f,0.0f,0.0f,0.0f,0.0f);
     TaiHu_Device_T1 -> Get_Motor_FB_Data(TaiHu_Device_1, &thp[0],&thv[0],&thf[0]);
     TaiHu_Device_T2 -> Get_Motor_FB_Data(TaiHu_Device_2, &thp[1],&thv[1],&thf[1]);
     TaiHu_Device_T3 -> Get_Motor_FB_Data(TaiHu_Device_3, &thp[2],&thv[2],&thf[2]);
@@ -655,32 +1116,6 @@ cout <<  "P"<< i+1 << "= " << thp[i] << "v"<< i+1 << "= " << thv[i] << "f"<< i+1
 }
 //  TaiHu_Device_T1 -> Send_MIT_PD_Control_Data(TaiHu_Device_1,thp[0],0.0f,0.0f,0.0f,0.0f);
 #endif
-
-#if 0
-while(true){
-    Get_FB();
-
-    for(int j = 0; j <300; ++j){
-        TaiHu_Device_T1 ->Get_Motor_FB_Data(TaiHu_Device_1,&thp[0],&thv[0],&thf[0]);
-        TaiHu_Device_T2 ->Get_Motor_FB_Data(TaiHu_Device_2,&thp[1],&thv[1],&thf[1]);
-        TaiHu_Device_T3 ->Get_Motor_FB_Data(TaiHu_Device_3,&thp[2],&thv[2],&thf[2]);
-        TaiHu_Device_T8 ->Get_Motor_FB_Data(TaiHu_Device_8,&thp[3],&thv[3],&thf[3]);
-        TaiHu_Device_T9 ->Get_Motor_FB_Data(TaiHu_Device_9,&thp[4],&thv[4],&thf[4]);
-        TaiHu_Device_T10 ->Get_Motor_FB_Data(TaiHu_Device_10,&thp[5],&thv[5],&thf[5]);
-        Y_bot->Send_Buff_Data();
-
-        for (int i = 0; i <6; i++){
-            cout << fixed << setprecision(10)<<"TaiHu " << i+1 << ": Pos: " << thp[i] << "\t" << "Vel: " << thv[i] <<"\t"<< "Cur: " << thf[i] << "mz:"<<  FB_Datas[0].F<< endl;
-        }
-        usleep(1000000);
-    }
-
-        
-    
-
-    }
-    #endif 
-
 #endif
 
     return 0;
