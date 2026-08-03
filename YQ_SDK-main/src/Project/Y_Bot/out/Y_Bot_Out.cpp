@@ -362,7 +362,7 @@ Main_Switch_Board = Y_bot->Get_Device_For_Name("Main_Switch_Board");
          Get_FB();
         auto now = clock::now();
         double elapsed_time = chrono::duration<double>(now-start_time).count();
-        if (elapsed_time >=3.0){
+        if (elapsed_time >=5.0){
             break;
         }
 
@@ -370,11 +370,11 @@ Main_Switch_Board = Y_bot->Get_Device_For_Name("Main_Switch_Board");
         TaiHu_Device_T2 -> Send_MIT_PD_Control_Data(TaiHu_Device_2,-25.0f,0.0f,0.0f,0.0f,0.0f);
         TaiHu_Device_T3 -> Send_MIT_PD_Control_Data(TaiHu_Device_3,43.0f,0.0f,0.0f,0.0f,0.0f);
         TaiHu_Device_T8 -> Send_MIT_PD_Control_Data(TaiHu_Device_8,-10.0f,0.0f,0.0f,0.0f,0.0f);
-        TaiHu_Device_T9 -> Send_MIT_PD_Control_Data(TaiHu_Device_9,-60.0f,0.0f,0.0f,0.0f,0.0f);
-        TaiHu_Device_T10 -> Send_MIT_PD_Control_Data(TaiHu_Device_10,30.0f,0.0f,0.0f,0.0f,0.0f);
+        TaiHu_Device_T9 -> Send_MIT_PD_Control_Data(TaiHu_Device_9,-40.0f,0.0f,0.0f,0.0f,0.0f);
+        TaiHu_Device_T10 -> Send_MIT_PD_Control_Data(TaiHu_Device_10,40.0f,0.0f,0.0f,0.0f,0.0f);
         Y_bot->Send_Buff_Data();
         usleep(500000);
-        Motor_1_Control->Send_MIT_PD_Control_Data(Motor_1_D, 0.0 , 0.0, 0.02f, 0.0, 0.0);
+        Motor_1_Control->Send_MIT_PD_Control_Data(Motor_1_D, 0.0 , 0.0, 0.035f, 0.0, 0.0);
         Motor_2_Control->Send_MIT_PD_Control_Data(Motor_2_D, 0.0 , 0.0, 0.03f, 0.0, 0.0);
         Motor_3_Control->Send_MIT_PD_Control_Data(Motor_3_D, 0.0 , 0.0, 0.03f, 0.0, 0.0);
         Motor_4_Control->Send_MIT_PD_Control_Data(Motor_4_D, 0.0 , 0.0, 0.035f, 0.0, 0.0);
@@ -427,24 +427,215 @@ Main_Switch_Board = Y_bot->Get_Device_For_Name("Main_Switch_Board");
  }
 #endif
 //  Motor_vector.at(m)->Get_Motor_FB_Data(Device_vector.at(m), &p, &v, &c);
-#if 0 // Hip Abduction
-while(true){
-    Get_FB();
-    usleep(2000000);
-    Motor_1_Control->Send_MIT_PD_Control_Data(Motor_1_D, p[0]+300.0f , 0.0, 0.0, 100.0, 50.0);
-    // cout<< "Motor_1 Move to: " << FB_Datas[0].P << endl;
-    Y_bot->Send_Buff_Data();
-    usleep(2000000);
-    Motor_1_Control->Send_MIT_PD_Control_Data(Motor_1_D, p[0], 0.0, 0.0, 100.0, 50.0);
-    Motor_5_Control->Send_MIT_PD_Control_Data(Motor_5_D, p[4]+300.0f, 0.0, 0.0, 100.0, 50.0);
-    Y_bot->Send_Buff_Data();
-    usleep(2000000);
-    Motor_5_Control->Send_MIT_PD_Control_Data(Motor_5_D, p[4], 0.0, 0.0, 100.0, 50.0);
-    Y_bot->Send_Buff_Data();
-    
+#if 0 // Hip abduction 
+
+while (true) {
+
+    // ============================
+    // Parameters
+    // ============================
+    const int dt_us = 10000;       // 10 ms
+    const float T_phase = 2.0f;    // 每个 phase 的动作时间
+    const float T_home  = 1.0f;    // 最后回 home 的动作时间
+
+    const int N_phase = static_cast<int>(T_phase * 1000000.0f / dt_us);
+    const int N_home  = static_cast<int>(T_home  * 1000000.0f / dt_us);
+
+    const int move_times = 2;
+
+    // ============================
+    // Home positions
+    // ============================
+    const float mz1_home  = p[0];
+    const float mz5_home  = p[4];
+
+    const float th3_home  = 43.0f;
+    const float th10_home = 40.0f;
+
+    // ============================
+    // Phase A target:
+    // MZ1 收, MZ5 不动
+    // ============================
+    const float mz1_A  = p[0] + 400.0f;
+    const float mz5_A  = p[4];
+
+    const float th3_A  = 13.0f;
+    const float th10_A = 40.0f;
+
+    // ============================
+    // Phase B target:
+    // MZ1 回, MZ5 收
+    // ============================
+    const float mz1_B  = p[0];
+    const float mz5_B  = p[4] + 400.0f;
+
+    const float th3_B  = 43.0f;
+    const float th10_B = 10.0f;
+
+    cout << "[START] Hip abduction: MZ1 then MZ5" << endl;
+
+    // ============================
+    // First move: home -> A
+    // ============================
+    for (int k = 0; k <= N_phase; ++k) {
+
+        float r = static_cast<float>(k) / static_cast<float>(N_phase);
+
+        float mz1_cmd  = mz1_home  + r * (mz1_A  - mz1_home);
+        float mz5_cmd  = mz5_home  + r * (mz5_A  - mz5_home);
+
+        float th3_cmd  = th3_home  + r * (th3_A  - th3_home);
+        float th10_cmd = th10_home + r * (th10_A - th10_home);
+
+        Motor_1_Control->Send_MIT_PD_Control_Data(
+            Motor_1_D, mz1_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+        );
+
+        Motor_5_Control->Send_MIT_PD_Control_Data(
+            Motor_5_D, mz5_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+        );
+
+        TaiHu_Device_T3->Send_MIT_PD_Control_Data(
+            TaiHu_Device_3, th3_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+        );
+
+        TaiHu_Device_T10->Send_MIT_PD_Control_Data(
+            TaiHu_Device_10, th10_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+        );
+
+        Y_bot->Send_Buff_Data();
+        usleep(dt_us);
+    }
+
+    usleep(500000);
+
+    // ============================
+    // Repeat A <-> B
+    // ============================
+    for (int cycle = 0; cycle < move_times; ++cycle) {
+
+        cout << "[Cycle " << cycle + 1 << "] A -> B" << endl;
+
+        // =====================================================
+        // A -> B:
+        // MZ1: p[0]+300 -> p[0]
+        // MZ5: p[4]     -> p[4]+300
+        // =====================================================
+        for (int k = 0; k <= N_phase; ++k) {
+
+            float r = static_cast<float>(k) / static_cast<float>(N_phase);
+
+            float mz1_cmd  = mz1_A  + r * (mz1_B  - mz1_A);
+            float mz5_cmd  = mz5_A  + r * (mz5_B  - mz5_A);
+
+            float th3_cmd  = th3_A  + r * (th3_B  - th3_A);
+            float th10_cmd = th10_A + r * (th10_B - th10_A);
+
+            Motor_1_Control->Send_MIT_PD_Control_Data(
+                Motor_1_D, mz1_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+            );
+
+            Motor_5_Control->Send_MIT_PD_Control_Data(
+                Motor_5_D, mz5_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+            );
+
+            TaiHu_Device_T3->Send_MIT_PD_Control_Data(
+                TaiHu_Device_3, th3_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+            );
+
+            TaiHu_Device_T10->Send_MIT_PD_Control_Data(
+                TaiHu_Device_10, th10_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+            );
+
+            Y_bot->Send_Buff_Data();
+            usleep(dt_us);
+        }
+
+        usleep(500000);
+
+        cout << "[Cycle " << cycle + 1 << "] B -> A" << endl;
+
+        // =====================================================
+        // B -> A:
+        // MZ1: p[0]     -> p[0]+300
+        // MZ5: p[4]+300 -> p[4]
+        // =====================================================
+        for (int k = 0; k <= N_phase; ++k) {
+
+            float r = static_cast<float>(k) / static_cast<float>(N_phase);
+
+            float mz1_cmd  = mz1_B  + r * (mz1_A  - mz1_B);
+            float mz5_cmd  = mz5_B  + r * (mz5_A  - mz5_B);
+
+            float th3_cmd  = th3_B  + r * (th3_A  - th3_B);
+            float th10_cmd = th10_B + r * (th10_A - th10_B);
+
+            Motor_1_Control->Send_MIT_PD_Control_Data(
+                Motor_1_D, mz1_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+            );
+
+            Motor_5_Control->Send_MIT_PD_Control_Data(
+                Motor_5_D, mz5_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+            );
+
+            TaiHu_Device_T3->Send_MIT_PD_Control_Data(
+                TaiHu_Device_3, th3_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+            );
+
+            TaiHu_Device_T10->Send_MIT_PD_Control_Data(
+                TaiHu_Device_10, th10_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+            );
+
+            Y_bot->Send_Buff_Data();
+            usleep(dt_us);
+        }
+
+        usleep(500000);
+    }
+
+    // ============================
+    // Return home
+    // 最后停在 A，所以 A -> home
+    // ============================
+    cout << "[RETURN HOME]" << endl;
+
+    for (int k = 0; k <= N_home; ++k) {
+
+        float r = static_cast<float>(k) / static_cast<float>(N_home);
+
+        float mz1_cmd  = mz1_A  + r * (mz1_home  - mz1_A);
+        float mz5_cmd  = mz5_A  + r * (mz5_home  - mz5_A);
+
+        float th3_cmd  = th3_A  + r * (th3_home  - th3_A);
+        float th10_cmd = th10_A + r * (th10_home - th10_A);
+
+        Motor_1_Control->Send_MIT_PD_Control_Data(
+            Motor_1_D, mz1_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+        );
+
+        Motor_5_Control->Send_MIT_PD_Control_Data(
+            Motor_5_D, mz5_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+        );
+
+        TaiHu_Device_T3->Send_MIT_PD_Control_Data(
+            TaiHu_Device_3, th3_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+        );
+
+        TaiHu_Device_T10->Send_MIT_PD_Control_Data(
+            TaiHu_Device_10, th10_cmd, 0.0f, 0.0f, 0.0f, 0.0f
+        );
+
+        Y_bot->Send_Buff_Data();
+        usleep(dt_us);
+    }
+
+    cout << "[FINISHED] Hip abduction returned to home" << endl;
+
+    break;
 }
+
 #endif
-#if 1 // Knee open-loop timed motion
+#if 0 // Knee Flexion
 
 while (true) {
 
@@ -470,13 +661,13 @@ while (true) {
 
     const float th2_home   = -25.0f; 
     const float th9_home   = -60.0f; 
-    const float th10_home  = 30.0f; 
+    const float th10_home  = 40.0f; 
     const float th3_home = 43.0f; 
 
     const float th2_target = -90.0f;
     const float th9_target = -125.0f;
     const float th3_target = 60.0f;
-    const float th10_target = 73.0f;
+    const float th10_target = 60.0f;
 
     // ============================
     // Forward motion
@@ -639,7 +830,7 @@ while (true) {
 
 #endif
 
-#if 0 // Two-leg opposite swing, 10 cycles, then return home
+#if 0 // Swing Leg
 
 while (true) {
 
@@ -647,30 +838,30 @@ while (true) {
     // Parameters
     // ============================
     const int dt_us = 10000;        // 10 ms
-    const float T_phase = 1.0f;     // 每个 phase 的动作时间
-    const float T_home  = 1.0f;     // 回 home 的动作时间
+    const float T_phase = 1.5f;     // 每个 phase 的动作时间
+    const float T_home  = 1.5f;     // 回 home 的动作时间
 
     const int N_phase = static_cast<int>(T_phase * 1000000.0f / dt_us);
     const int N_home  = static_cast<int>(T_home  * 1000000.0f / dt_us);
 
-    const int swing_times = 2;
+    const int swing_times = 5;
 
     // ============================
     // Right leg: TH8, TH9, TH10, MZ6
     // ============================
     const float r_th8_home  = -10.0f;
     const float r_th9_home  = -50.0f;
-    const float r_th10_home = 30.0f;
+    const float r_th10_home = 40.0f;
     const float r_mz6_home  = p[5];
 
     const float r_th8_lift  = 80.0f;
     const float r_th9_lift  = 50.0f;
-    const float r_th10_lift = -40.0f;
-    const float r_mz6_lift  = p[5] - 1000.0f;
+    const float r_th10_lift = -30.0f;
+    const float r_mz6_lift  = p[5] -1000.0f;
 
     const float r_th8_swing  = -50.0f;
     const float r_th9_swing  = -90.0f;
-    const float r_th10_swing = 70.0f;
+    const float r_th10_swing = 80.0f;
     const float r_mz6_swing  = p[5] + 180.0f;
 
     // ============================
@@ -914,16 +1105,16 @@ while (true) {
 
 #endif
 
-#if 0 // Final MZ3-MZ4 alternating motion, 10 cycles, then return home
+#if 1 // Ankle motion
 
 while (true) {
-    Get_FB();
+
     // ============================
     // Parameters
     // ============================
     const int dt_us = 10000;       // 10 ms
-    const float T_phase = 3.0f;    // 每个 phase 的动作时间
-    const float T_home  = 3.0f;    // 回 home 的动作时间
+    const float T_phase = 0.5f;    // 每个 phase 的动作时间
+    const float T_home  = 1.0f;    // 回 home 的动作时间
 
     const int N_phase = static_cast<int>(T_phase * 1000000.0f / dt_us);
     const int N_home  = static_cast<int>(T_home  * 1000000.0f / dt_us);
@@ -935,150 +1126,183 @@ while (true) {
     // ============================
     const float mz3_home = p[2];
     const float mz4_home = p[3];
+    const float mz7_home = p[6];
+    const float mz8_home = p[7];
 
     // ============================
-    // Phase A target
+    // Phase A targets
     // MZ3 收, MZ4 放
+    // MZ7 放, MZ8 收
     // ============================
-    const float mz3_phaseA = p[2] + 200.0f;
-    const float mz4_phaseA = p[3] - 200.0f;
+    const float mz3_A = p[2] + 420.0f;
+    const float mz4_A = p[3] - 350.0f;
 
-    // ============================
-    // Phase B target
-    // MZ4 收, MZ3 放
-    // ============================
-    const float mz3_phaseB = p[2] - 100.0f;
-    const float mz4_phaseB = p[3] + 50.0f;
+    const float mz7_A = p[6] - 260.0f;
+    const float mz8_A = p[7] + 200.0f;
 
     // ============================
-    // Current command state
-    // Start from home
+    // Phase B targets
+    // MZ3 放, MZ4 收
+    // MZ7 收, MZ8 放
     // ============================
-    float mz3_now = mz3_home;
-    float mz4_now = mz4_home;
+    const float mz3_B = p[2] - 260.0f;
+    const float mz4_B = p[3] + 200.0f;
 
-    // ============================
-    // Repeat 10 times
-    // ============================
-    for (int cycle = 0; cycle < move_times; ++cycle) {
-
-        // =====================================================
-        // Phase A:
-        // MZ3 -> p[2] + 100
-        // MZ4 -> p[3] - 100
-        // =====================================================
-        for (int k = 0; k <= N_phase; ++k) {
-
-            float r = static_cast<float>(k) / static_cast<float>(N_phase);
-
-            float mz3_cmd = mz3_now + r * (mz3_phaseA - mz3_now);
-            float mz4_cmd = mz4_now + r * (mz4_phaseA - mz4_now);
-             Motor_4_Control->Send_MIT_PD_Control_Data(
-                Motor_4_D,
-                mz4_cmd,
-                0.0f,
-                0.0f,
-                100.0f,
-                50.0f
-            );
-
-            Motor_3_Control->Send_MIT_PD_Control_Data(
-                Motor_3_D,
-                mz3_cmd,
-                0.0f,
-                0.0f,
-                100.0f,
-                50.0f
-            );
-
-
-
-            Y_bot->Send_Buff_Data();
-            cout << FB_Datas[2].P <<"\t" << FB_Datas[3].P << endl;
-            usleep(dt_us);
-        }
-
-        mz3_now = mz3_phaseA;
-        mz4_now = mz4_phaseA;
-        break;
-        usleep(200000);
-
-        // =====================================================
-        // Phase B:
-        // MZ3 -> p[2] - 100
-        // MZ4 -> p[3] + 50
-        // =====================================================
-        for (int k = 0; k <= N_phase; ++k) {
-
-            float r = static_cast<float>(k) / static_cast<float>(N_phase);
-
-            float mz3_cmd = mz3_now + r * (mz3_phaseB - mz3_now);
-            float mz4_cmd = mz4_now + r * (mz4_phaseB - mz4_now);
-
-            Motor_3_Control->Send_MIT_PD_Control_Data(
-                Motor_3_D,
-                mz3_cmd,
-                0.0f,
-                0.0f,
-                100.0f,
-                50.0f
-            );
-
-            Motor_4_Control->Send_MIT_PD_Control_Data(
-                Motor_4_D,
-                mz4_cmd,
-                0.0f,
-                0.0f,
-                100.0f,
-                50.0f
-            );
-
-            Y_bot->Send_Buff_Data();
-            usleep(dt_us);
-        }
-
-        mz3_now = mz3_phaseB;
-        mz4_now = mz4_phaseB;
-
-        usleep(200000);
-    }
+    const float mz7_B = p[6] + 420.0f;
+    const float mz8_B = p[7] - 350.0f;
 
     // ============================
-    // Return to home
-    // MZ3 -> p[2]
-    // MZ4 -> p[3]
+    // First move: home -> A
     // ============================
-    for (int k = 0; k <= N_home; ++k) {
+    for (int k = 0; k <= N_phase; ++k) {
 
-        float r = static_cast<float>(k) / static_cast<float>(N_home);
+        float r = static_cast<float>(k) / static_cast<float>(N_phase);
 
-        float mz3_cmd = mz3_now + r * (mz3_home - mz3_now);
-        float mz4_cmd = mz4_now + r * (mz4_home - mz4_now);
-            Motor_4_Control->Send_MIT_PD_Control_Data(
-            Motor_4_D,
-            mz4_cmd,
-            0.0f,
-            0.0f,
-            100.0f,
-            50.0f
-        );
-        Y_bot->Send_Buff_Data();
+        float mz3_cmd = mz3_home + r * (mz3_A - mz3_home);
+        float mz4_cmd = mz4_home + r * (mz4_A - mz4_home);
+        float mz7_cmd = mz7_home + r * (mz7_A - mz7_home);
+        float mz8_cmd = mz8_home + r * (mz8_A - mz8_home);
+
         Motor_3_Control->Send_MIT_PD_Control_Data(
-            Motor_3_D,
-            mz3_cmd,
-            0.0f,
-            0.0f,
-            100.0f,
-            50.0f
+            Motor_3_D, mz3_cmd, 0.0f, 0.0f, 100.0f, 50.0f
         );
 
+        Motor_4_Control->Send_MIT_PD_Control_Data(
+            Motor_4_D, mz4_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+        );
 
+        Motor_7_Control->Send_MIT_PD_Control_Data(
+            Motor_7_D, mz7_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+        );
+
+        Motor_8_Control->Send_MIT_PD_Control_Data(
+            Motor_8_D, mz8_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+        );
 
         Y_bot->Send_Buff_Data();
         usleep(dt_us);
     }
 
+    usleep(200000);
+
+    // ============================
+    // Repeat A <-> B for 10 times
+    // Since we are already at A,
+    // each cycle does A -> B -> A
+    // ============================
+    for (int cycle = 0; cycle < move_times; ++cycle) {
+
+        cout << "[Cycle " << cycle + 1 << "] A -> B" << endl;
+
+        // =====================================================
+        // Phase B: A -> B
+        // =====================================================
+        for (int k = 0; k <= N_phase; ++k) {
+
+            float r = static_cast<float>(k) / static_cast<float>(N_phase);
+
+            float mz3_cmd = mz3_A + r * (mz3_B - mz3_A);
+            float mz4_cmd = mz4_A + r * (mz4_B - mz4_A);
+            float mz7_cmd = mz7_A + r * (mz7_B - mz7_A);
+            float mz8_cmd = mz8_A + r * (mz8_B - mz8_A);
+
+            Motor_3_Control->Send_MIT_PD_Control_Data(
+                Motor_3_D, mz3_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+            );
+
+            Motor_4_Control->Send_MIT_PD_Control_Data(
+                Motor_4_D, mz4_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+            );
+
+            Motor_7_Control->Send_MIT_PD_Control_Data(
+                Motor_7_D, mz7_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+            );
+
+            Motor_8_Control->Send_MIT_PD_Control_Data(
+                Motor_8_D, mz8_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+            );
+
+            Y_bot->Send_Buff_Data();
+            usleep(dt_us);
+        }
+        
+        usleep(200000);
+
+        cout << "[Cycle " << cycle + 1 << "] B -> A" << endl;
+
+        // =====================================================
+        // Phase A: B -> A
+        // =====================================================
+        for (int k = 0; k <= N_phase; ++k) {
+
+            float r = static_cast<float>(k) / static_cast<float>(N_phase);
+
+            float mz3_cmd = mz3_B + r * (mz3_A - mz3_B);
+            float mz4_cmd = mz4_B + r * (mz4_A - mz4_B);
+            float mz7_cmd = mz7_B + r * (mz7_A - mz7_B);
+            float mz8_cmd = mz8_B + r * (mz8_A - mz8_B);
+
+            Motor_3_Control->Send_MIT_PD_Control_Data(
+                Motor_3_D, mz3_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+            );
+
+            Motor_4_Control->Send_MIT_PD_Control_Data(
+                Motor_4_D, mz4_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+            );
+
+            Motor_7_Control->Send_MIT_PD_Control_Data(
+                Motor_7_D, mz7_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+            );
+
+            Motor_8_Control->Send_MIT_PD_Control_Data(
+                Motor_8_D, mz8_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+            );
+
+            Y_bot->Send_Buff_Data();
+            usleep(dt_us);
+        }
+
+        usleep(200000);
+    }
+
+    // ============================
+    // Return home
+    // 当前最后停在 A，所以 A -> home
+    // ============================
+    cout << "[RETURN HOME]" << endl;
+
+    for (int k = 0; k <= N_home; ++k) {
+
+        float r = static_cast<float>(k) / static_cast<float>(N_home);
+
+        float mz3_cmd = mz3_A + r * (mz3_home - mz3_A);
+        float mz4_cmd = mz4_A + r * (mz4_home - mz4_A);
+        float mz7_cmd = mz7_A + r * (mz7_home - mz7_A);
+        float mz8_cmd = mz8_A + r * (mz8_home - mz8_A);
+
+        Motor_3_Control->Send_MIT_PD_Control_Data(
+            Motor_3_D, mz3_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+        );
+
+        Motor_4_Control->Send_MIT_PD_Control_Data(
+            Motor_4_D, mz4_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+        );
+
+        Motor_7_Control->Send_MIT_PD_Control_Data(
+            Motor_7_D, mz7_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+        );
+
+        Motor_8_Control->Send_MIT_PD_Control_Data(
+            Motor_8_D, mz8_cmd, 0.0f, 0.0f, 100.0f, 50.0f
+        );
+
+        Y_bot->Send_Buff_Data();
+        usleep(dt_us);
+    }
+
+    cout << "[FINISHED] Returned to home" << endl;
     break;
+    
 }
 
 #endif
@@ -1094,7 +1318,7 @@ while(true){
     // TaiHu_Device_T2 -> Send_MIT_PD_Control_Data(TaiHu_Device_2,-30.0f,0.0f,0.0f,0.0f,0.0f);
     // TaiHu_Device_T3 -> Send_MIT_PD_Control_Data(TaiHu_Device_3,50.0f,0.0f,0.0f,0.0f,0.0f);
     // TaiHu_Device_T8 -> Send_MIT_PD_Control_Data(TaiHu_Device_8,-50.0f,0.0f,0.0f,0.0f,0.0f);
-    // TaiHu_Device_T9 -> Send_MIT_PD_Control_Data(TaiHu_Device_9,-90.0f,0.0f,0.0f,0.0f,0.0f);
+    TaiHu_Device_T9 -> Send_MIT_PD_Control_Data(TaiHu_Device_9,-50.0f,0.0f,0.0f,0.0f,0.0f);
     // TaiHu_Device_T10 -> Send_MIT_PD_Control_Data(TaiHu_Device_10,40.0f,0.0f,0.0f,0.0f,0.0f);
     TaiHu_Device_T1 -> Get_Motor_FB_Data(TaiHu_Device_1, &thp[0],&thv[0],&thf[0]);
     TaiHu_Device_T2 -> Get_Motor_FB_Data(TaiHu_Device_2, &thp[1],&thv[1],&thf[1]);
